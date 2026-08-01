@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agung Jaya Motor 2 | Premium Used Cars</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Google Fonts: Montserrat (Elegance) & Rajdhani (Digital Cluster) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
@@ -51,32 +58,56 @@
     </script>
 
     <style>
-        body { 
-            background-color: #050505; 
-            color: #8e9bae;
+        body {
             overflow-x: hidden;
         }
-        
+
         /* Sleek scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #1f2229; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #e50914; }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1f2229;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e50914;
+        }
 
         .text-gradient-metal {
+            background: linear-gradient(to right, #111827, #6b7280);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dark .text-gradient-metal {
             background: linear-gradient(to right, #ffffff, #a1a1aa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .dark-map {
+        .dark .dark-map {
             filter: invert(90%) hue-rotate(180deg) brightness(80%) contrast(120%);
         }
 
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(229,9,20,0.3); }
-            50% { box-shadow: 0 0 30px rgba(229,9,20,0.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(229, 9, 20, 0.6);
+            }
         }
+
         .engine-start-btn {
             animation: pulse-glow 2s infinite;
         }
@@ -87,6 +118,7 @@
             width: 100%;
             background: transparent;
         }
+
         input[type=range]::-webkit-slider-thumb {
             -webkit-appearance: none;
             height: 20px;
@@ -95,8 +127,9 @@
             background: #e50914;
             cursor: pointer;
             margin-top: -8px;
-            box-shadow: 0 0 10px rgba(229,9,20,0.8);
+            box-shadow: 0 0 10px rgba(229, 9, 20, 0.8);
         }
+
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 4px;
@@ -106,11 +139,36 @@
         }
 
         /* Custom Details/Summary */
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Swiper Customization */
+        .swiper-pagination-bullet {
+            background: #6b7280;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .dark .swiper-pagination-bullet {
+            background: #8e9bae;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #e50914 !important;
+            opacity: 1 !important;
+            width: 24px;
+            border-radius: 4px;
+        }
     </style>
 </head>
-<body class="antialiased font-body relative selection:bg-dash-red selection:text-white">
+
+<body
+    class="antialiased font-body relative selection:bg-dash-red selection:text-white bg-[#f4f5f7] dark:bg-[#050505] text-gray-900 dark:text-[#8e9bae]">
 
     <!-- Ambient Lighting Background -->
     <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
@@ -119,133 +177,297 @@
     </div>
 
     <div class="fixed top-0 left-0 right-0 z-50 px-4 py-4 w-full flex justify-center">
-        <header class="w-full max-w-[1200px] bg-dash-panel/80 backdrop-blur-xl border-b border-white/5 border-t border-white/10 rounded-2xl px-6 py-3 flex justify-between items-center shadow-panel">
+        <header
+            class="w-full max-w-[1200px] bg-[#f4f5f7]/80 dark:bg-dash-panel/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/5 border-t border-gray-200 dark:border-white/10 rounded-2xl px-6 py-3 flex justify-between items-center shadow-md dark:shadow-panel">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="text-dash-red relative">
-                    <i class="ph-fill ph-steering-wheel text-3xl group-hover:rotate-45 transition-transform duration-700"></i>
+                    <i
+                        class="ph-fill ph-steering-wheel text-3xl group-hover:rotate-45 transition-transform duration-700"></i>
                 </div>
                 <div class="flex flex-col leading-none">
-                    <span class="font-heading font-black text-xl text-white tracking-[0.2em] uppercase">Agung Jaya</span>
-                    <span class="font-digital text-xs text-dash-silver tracking-[0.3em] uppercase">Motor II • Depok</span>
+                    <span
+                        class="font-heading font-black text-xl text-gray-900 dark:text-white tracking-[0.2em] uppercase">Agung
+                        Jaya</span>
+                    <span
+                        class="font-digital text-xs text-gray-500 dark:text-dash-silver tracking-[0.3em] uppercase">Motor
+                        II • Depok</span>
                 </div>
             </a>
 
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="#showroom" class="text-[10px] font-bold tracking-[0.15em] text-dash-silver hover:text-white uppercase transition-colors">Showroom</a>
-                <a href="#diagnostics" class="text-[10px] font-bold tracking-[0.15em] text-dash-silver hover:text-white uppercase transition-colors">Quality</a>
-                <a href="#finance" class="text-[10px] font-bold tracking-[0.15em] text-dash-silver hover:text-white uppercase transition-colors">Finance</a>
-                <a href="#reviews" class="text-[10px] font-bold tracking-[0.15em] text-dash-silver hover:text-white uppercase transition-colors">Pilot Logs</a>
+                <a href="#showroom"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Showroom</a>
+                <a href="#diagnostics"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Quality</a>
+                <a href="#finance"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Finance</a>
+                <a href="#reviews"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Pilot
+                    Logs</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/6287888087542" class="engine-start-btn bg-dash-red text-white px-6 py-2.5 rounded-full font-heading font-bold text-[10px] tracking-widest uppercase transition-all flex items-center gap-2 border border-red-400/30">
+                <button id="theme-toggle"
+                    class="text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors w-9 h-9 flex items-center justify-center border border-gray-200 dark:border-white/5 rounded-full bg-white dark:bg-dash-screen shadow-sm dark:shadow-none">
+                    <i class="ph-fill ph-moon hidden dark:block text-lg"></i>
+                    <i class="ph-fill ph-sun block dark:hidden text-lg"></i>
+                </button>
+                <a href="https://wa.me/6287888087542"
+                    class="engine-start-btn bg-dash-red text-white px-6 py-2.5 rounded-full font-heading font-bold text-[10px] tracking-widest uppercase transition-all hidden md:flex items-center gap-2 border border-red-400/30">
                     <i class="ph-bold ph-whatsapp-logo text-base"></i> Hubungi Kami
                 </a>
             </div>
         </header>
     </div>
 
-    <section id="home" class="relative pt-32 pb-10 px-4 min-h-[90vh] flex items-center z-10">
-        <div class="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <div class="relative z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-dash-screen border border-dash-gold/30 rounded-md mb-6 shadow-inset-glow">
-                    <i class="ph-fill ph-check-circle text-dash-gold text-sm"></i>
-                    <span class="font-digital text-[10px] tracking-widest uppercase text-dash-gold">Dealer Terverifikasi 100%</span>
-                </div>
-                
-                <h1 class="font-heading text-4xl md:text-6xl font-black text-white leading-[1.1] mb-4 tracking-tight uppercase">
-                    Mobil Bekas <br>
-                    <span class="text-gradient-metal">Kualitas Baru.</span>
-                </h1>
-                
-                <p class="text-sm md:text-base text-dash-silver max-w-md mb-8 leading-relaxed font-light">
-                    Koleksi kendaraan premium diinspeksi ketat. Jaminan bebas tabrak dan banjir. Proses tukar tambah dan kredit cepat dibantu sampai tuntas (BCA & Clipan).
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                    <a href="#showroom" class="text-center bg-dash-red text-white px-8 py-4 rounded-sm font-heading font-bold text-xs uppercase tracking-widest hover:bg-red-700 transition-colors">
-                        Lihat Stok Mobil
-                    </a>
-                    <a href="https://wa.me/6287888087542" class="text-center bg-transparent border border-white/20 text-white px-8 py-4 rounded-sm font-heading font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
-                        Konsultasi Kredit
-                    </a>
-                </div>
+    <section id="home"
+        class="relative pt-32 lg:pt-20 pb-10 min-h-[90vh] lg:min-h-screen flex items-center z-10 w-full overflow-hidden">
+        <div class="swiper hero-swiper w-full h-full absolute inset-0">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide px-4 flex items-center justify-center">
+                    <div
+                        class="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+                        <div class="relative z-10 pt-32 lg:pt-0">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-dash-screen border border-yellow-500/30 dark:border-dash-gold/30 rounded-md mb-6 shadow-inset-glow">
+                                <i class="ph-fill ph-check-circle text-yellow-600 dark:text-dash-gold text-sm"></i>
+                                <span
+                                    class="font-digital text-[10px] tracking-widest uppercase text-yellow-600 dark:text-dash-gold">Dealer
+                                    Terverifikasi 100%</span>
+                            </div>
 
-                <!-- Trust Partners -->
-                <div class="pt-6 border-t border-white/10">
-                    <div class="text-[9px] uppercase tracking-[0.2em] text-dash-silver mb-3">Official Finance Partners</div>
-                    <div class="flex items-center gap-6 opacity-70 grayscale">
-                        <!-- Mockup logos text for BCA and Clipan -->
-                        <div class="font-heading font-black text-xl tracking-tighter text-white">BCA<span class="font-light text-sm tracking-normal">finance</span></div>
-                        <div class="font-heading font-bold text-lg text-white">Clipan<span class="text-dash-red">Finance</span></div>
+                            <h1
+                                class="font-heading text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-[1.1] mb-4 tracking-tight uppercase">
+                                Mobil Bekas <br>
+                                <span class="text-gradient-metal">Kualitas Baru.</span>
+                            </h1>
+
+                            <p
+                                class="text-sm md:text-base text-gray-500 dark:text-dash-silver max-w-md mb-8 leading-relaxed font-light">
+                                Koleksi kendaraan premium diinspeksi ketat. Jaminan bebas tabrak dan banjir. Proses
+                                tukar tambah dan kredit cepat dibantu sampai tuntas (BCA & Clipan).
+                            </p>
+
+                            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                                <a href="#showroom"
+                                    class="text-center bg-dash-red text-white px-8 py-4 rounded-sm font-heading font-bold text-xs uppercase tracking-widest hover:bg-red-700 transition-colors">
+                                    Lihat Stok Mobil
+                                </a>
+                                <a href="https://wa.me/6287888087542"
+                                    class="text-center bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white px-8 py-4 rounded-sm font-heading font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
+                                    Konsultasi Kredit
+                                </a>
+                            </div>
+
+                            <!-- Trust Partners -->
+                            <div class="pt-6 border-t border-gray-200 dark:border-white/10">
+                                <div
+                                    class="text-[9px] uppercase tracking-[0.2em] text-gray-500 dark:text-dash-silver mb-3">
+                                    Official Finance Partners</div>
+                                <div class="flex items-center gap-6 opacity-70 grayscale">
+                                    <div
+                                        class="font-heading font-black text-xl tracking-tighter text-gray-900 dark:text-white">
+                                        BCA<span class="font-light text-sm tracking-normal">finance</span></div>
+                                    <div class="font-heading font-bold text-lg text-gray-900 dark:text-white">
+                                        Clipan<span class="text-dash-red">Finance</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Visual -->
+                        <div class="relative h-[300px] lg:h-[500px] w-full flex justify-center items-center">
+                            <div
+                                class="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] border border-gray-300 dark:border-[1px] border-gray-200 dark:border-white/5 rounded-full flex items-center justify-center">
+                                <div
+                                    class="w-[80%] h-[80%] border border-dash-red/20 rounded-full border-t-dash-red animate-[spin_10s_linear_infinite]">
+                                </div>
+                            </div>
+
+                            <img src="images/Yaris.png" alt="Toyota Yaris"
+                                class="relative z-10 w-[110%] max-w-none transform -translate-x-4 drop-shadow-[0_20px_50px_rgba(229,9,20,0.2)]">
+
+                            <div
+                                class="absolute bottom-4 right-0 bg-white/80 dark:bg-dash-panel/80 border border-yellow-500/30 dark:border-dash-gold/30 p-4 rounded-xl shadow-md dark:shadow-panel backdrop-blur-md z-20">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-dash-gold/10 flex items-center justify-center text-yellow-600 dark:text-dash-gold">
+                                        <i class="ph-fill ph-shield-check text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="text-[9px] uppercase tracking-widest text-gray-500 dark:text-dash-silver">
+                                            Garansi</div>
+                                        <div
+                                            class="font-digital text-sm text-gray-900 dark:text-white font-bold tracking-widest">
+                                            MESIN & TRANSMISI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide px-4 flex items-center justify-center">
+                    <div
+                        class="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+                        <div class="relative z-10 pt-32 lg:pt-0">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-dash-screen border border-yellow-500/30 dark:border-dash-gold/30 rounded-md mb-6 shadow-inset-glow">
+                                <i class="ph-fill ph-star text-yellow-600 dark:text-dash-gold text-sm"></i>
+                                <span
+                                    class="font-digital text-[10px] tracking-widest uppercase text-yellow-600 dark:text-dash-gold">Kondisi
+                                    Istimewa</span>
+                            </div>
+
+                            <h1
+                                class="font-heading text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-[1.1] mb-4 tracking-tight uppercase">
+                                Upgrade <br>
+                                <span class="text-gradient-metal">Kenyamanan Anda.</span>
+                            </h1>
+
+                            <p
+                                class="text-sm md:text-base text-gray-500 dark:text-dash-silver max-w-md mb-8 leading-relaxed font-light">
+                                Temukan MPV dan SUV terbaik untuk keluarga Anda. Kondisi super antik, siap pakai keluar
+                                kota. Kami menjamin kualitas dan memberikan harga terbaik.
+                            </p>
+
+                            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                                <a href="#showroom"
+                                    class="text-center bg-dash-red text-white px-8 py-4 rounded-sm font-heading font-bold text-xs uppercase tracking-widest hover:bg-red-700 transition-colors">
+                                    Jelajahi Sekarang
+                                </a>
+                                <a href="https://wa.me/6287888087542"
+                                    class="text-center bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white px-8 py-4 rounded-sm font-heading font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-colors">
+                                    Tukar Tambah
+                                </a>
+                            </div>
+
+                            <!-- Trust Partners -->
+                            <div class="pt-6 border-t border-gray-200 dark:border-white/10">
+                                <div
+                                    class="text-[9px] uppercase tracking-[0.2em] text-gray-500 dark:text-dash-silver mb-3">
+                                    Official Finance Partners</div>
+                                <div class="flex items-center gap-6 opacity-70 grayscale">
+                                    <div
+                                        class="font-heading font-black text-xl tracking-tighter text-gray-900 dark:text-white">
+                                        BCA<span class="font-light text-sm tracking-normal">finance</span></div>
+                                    <div class="font-heading font-bold text-lg text-gray-900 dark:text-white">
+                                        Clipan<span class="text-dash-red">Finance</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Visual -->
+                        <div class="relative h-[300px] lg:h-[500px] w-full flex justify-center items-center">
+                            <div
+                                class="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] border border-gray-300 dark:border-[1px] border-gray-200 dark:border-white/5 rounded-full flex items-center justify-center">
+                                <div
+                                    class="w-[80%] h-[80%] border border-dash-red/20 rounded-full border-b-dash-red animate-[spin_12s_linear_infinite_reverse]">
+                                </div>
+                            </div>
+
+                            <img src="images/hero_2.webp" alt="Mitsubishi Pajero"
+                                class="relative z-10 w-[110%] max-w-none transform -translate-x-4 drop-shadow-[0_20px_50px_rgba(229,9,20,0.2)]">
+
+                            <div
+                                class="absolute bottom-4 left-0 md:left-10 bg-white/80 dark:bg-dash-panel/80 border border-blue-500/30 dark:border-blue-500/30 p-4 rounded-xl shadow-md dark:shadow-panel backdrop-blur-md z-20">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                        <i class="ph-fill ph-check-fat text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="text-[9px] uppercase tracking-widest text-gray-500 dark:text-dash-silver">
+                                            Lulus</div>
+                                        <div
+                                            class="font-digital text-sm text-gray-900 dark:text-white font-bold tracking-widest">
+                                            INSPEKSI 150 TITIK</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Right Visual -->
-            <div class="relative h-[300px] lg:h-[500px] w-full flex justify-center items-center">
-                <div class="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] border-[1px] border-white/5 rounded-full flex items-center justify-center">
-                    <div class="w-[80%] h-[80%] border border-dash-red/20 rounded-full border-t-dash-red animate-[spin_10s_linear_infinite]"></div>
-                </div>
-                
-                <!-- Using a placeholder for a high-end car -->
-                <img src="https://placehold.co/800x400/050505/333333?text=Siluet+Mobil" alt="Luxury Car" class="relative z-10 w-[110%] max-w-none transform -translate-x-4 drop-shadow-[0_20px_50px_rgba(229,9,20,0.2)] mix-blend-screen opacity-90">
-                
-                <div class="absolute bottom-4 right-0 bg-dash-panel border border-dash-gold/30 p-4 rounded-xl shadow-panel backdrop-blur-md z-20">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-dash-gold/10 flex items-center justify-center text-dash-gold">
-                            <i class="ph-fill ph-shield-check text-xl"></i>
-                        </div>
-                        <div>
-                            <div class="text-[9px] uppercase tracking-widest text-dash-silver">Garansi</div>
-                            <div class="font-digital text-sm text-white font-bold tracking-widest">MESIN & TRANSMISI</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="swiper-pagination !bottom-8 z-20"></div>
+
+            <div
+                class="swiper-button-prev !text-dash-red !w-12 !h-12 after:!text-xl bg-white/30 dark:bg-black/30 backdrop-blur rounded-full opacity-0 md:opacity-100 hover:bg-white/50 dark:hover:bg-black/50 transition-all border border-white/20">
+            </div>
+            <div
+                class="swiper-button-next !text-dash-red !w-12 !h-12 after:!text-xl bg-white/30 dark:bg-black/30 backdrop-blur rounded-full opacity-0 md:opacity-100 hover:bg-white/50 dark:hover:bg-black/50 transition-all border border-white/20">
             </div>
         </div>
     </section>
 
-    <section id="diagnostics" class="py-16 px-4 bg-dash-panel relative z-20 border-y border-white/5">
+    <section id="diagnostics"
+        class="py-16 px-4 bg-transparent dark:bg-dash-panel relative z-20 border-y border-gray-200 dark:border-white/5">
         <div class="max-w-[1200px] mx-auto">
             <div class="text-center mb-12">
-                <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2">System Diagnostics</div>
-                <h2 class="font-heading text-2xl md:text-3xl font-black text-white uppercase tracking-wider">Mengapa Memilih Kami?</h2>
+                <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2">System Diagnostics
+                </div>
+                <h2
+                    class="font-heading text-2xl md:text-3xl font-black text-gray-900 dark:text-white uppercase tracking-wider">
+                    Mengapa Memilih Kami?</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Trust Card 1 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
-                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-gray-100 dark:bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
                         <i class="ph-light ph-magnifying-glass text-2xl text-dash-red"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">100% Lulus Inspeksi</h3>
-                    <p class="text-xs text-dash-silver leading-relaxed font-light">Setiap unit melewati pengecekan ketat. Jaminan bebas dari insiden tabrak besar dan banjir.</p>
+                    <h3
+                        class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase tracking-widest mb-2">
+                        100% Lulus Inspeksi</h3>
+                    <p class="text-xs text-gray-500 dark:text-dash-silver leading-relaxed font-light">Setiap unit
+                        melewati pengecekan ketat. Jaminan bebas dari insiden tabrak besar dan banjir.</p>
                 </div>
                 <!-- Trust Card 2 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
-                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-gray-100 dark:bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
                         <i class="ph-light ph-files text-2xl text-dash-red"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">Legalitas Terjamin</h3>
-                    <p class="text-xs text-dash-silver leading-relaxed font-light">BPKB, STNK, dan Faktur asli diverifikasi. Keabsahan dokumen dijamin keamanannya.</p>
+                    <h3
+                        class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase tracking-widest mb-2">
+                        Legalitas Terjamin</h3>
+                    <p class="text-xs text-gray-500 dark:text-dash-silver leading-relaxed font-light">BPKB, STNK, dan
+                        Faktur asli diverifikasi. Keabsahan dokumen dijamin keamanannya.</p>
                 </div>
                 <!-- Trust Card 3 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
-                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-gray-100 dark:bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
                         <i class="ph-light ph-arrows-left-right text-2xl text-dash-red"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">Tukar Tambah</h3>
-                    <p class="text-xs text-dash-silver leading-relaxed font-light">Valuasi mobil lama Anda dengan harga tinggi yang transparan untuk ditukar dengan unit kami.</p>
+                    <h3
+                        class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase tracking-widest mb-2">
+                        Tukar Tambah</h3>
+                    <p class="text-xs text-gray-500 dark:text-dash-silver leading-relaxed font-light">Valuasi mobil lama
+                        Anda dengan harga tinggi yang transparan untuk ditukar dengan unit kami.</p>
                 </div>
                 <!-- Trust Card 4 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
-                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-dash-red/50 transition-colors group">
+                    <div
+                        class="w-12 h-12 bg-gray-100 dark:bg-white/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-dash-red/10 transition-colors">
                         <i class="ph-light ph-bank text-2xl text-dash-red"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">Kredit Cepat (1 Hari)</h3>
-                    <p class="text-xs text-dash-silver leading-relaxed font-light">Didukung BCA & ClipanFinance. Syarat mudah, data dibantu sampai approval turun.</p>
+                    <h3
+                        class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase tracking-widest mb-2">
+                        Kredit Cepat (1 Hari)</h3>
+                    <p class="text-xs text-gray-500 dark:text-dash-silver leading-relaxed font-light">Didukung BCA &
+                        ClipanFinance. Syarat mudah, data dibantu sampai approval turun.</p>
                 </div>
             </div>
         </div>
@@ -254,193 +476,444 @@
     <section id="showroom" class="py-20 px-4 max-w-[1200px] mx-auto z-10 relative">
         <div class="flex flex-col md:flex-row justify-between items-end gap-4 mb-10">
             <div>
-                <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
+                <div
+                    class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
                     <span class="w-2 h-2 bg-dash-red rounded-full animate-pulse"></span> Inventory Module
                 </div>
-                <h2 class="font-heading text-3xl font-black text-white uppercase tracking-wider">Unit Siap Jalan</h2>
+                <h2 class="font-heading text-3xl font-black text-gray-900 dark:text-white uppercase tracking-wider">Unit
+                    Siap Jalan</h2>
             </div>
-            <a href="https://wa.me/6287888087542" class="text-xs text-dash-silver hover:text-dash-red flex items-center gap-2 uppercase tracking-widest font-bold">
+            <a href="https://wa.me/6287888087542"
+                class="text-xs text-gray-500 dark:text-dash-silver hover:text-dash-red flex items-center gap-2 uppercase tracking-widest font-bold">
                 Tanya Stok Lainnya <i class="ph-bold ph-arrow-right"></i>
             </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Car Card 1 -->
-            <div class="group bg-dash-screen border border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
-                <div class="relative w-full aspect-[4/3] bg-black overflow-hidden">
-                    <img src="https://placehold.co/800x600/111/444?text=Honda+Brio" alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                    <div class="absolute top-3 left-3 bg-dash-red text-white font-heading font-bold text-[9px] px-2 py-1 rounded-sm tracking-widest uppercase z-10">BEST DEAL</div>
-                    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-dash-screen to-transparent z-0"></div>
+            <div
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
+                <div class="relative w-full aspect-[16/9] bg-gray-100 dark:bg-black overflow-hidden">
+                    <img src="images/toyota-yaris.webp" alt="Toyota Yaris"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute top-3 left-3 bg-dash-red text-white font-heading font-bold text-[9px] px-2 py-1 rounded-sm tracking-widest uppercase z-10">
+                        BEST DEAL</div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 dark:from-dash-screen to-transparent z-0">
+                    </div>
                 </div>
-                <div class="p-5 relative z-10 -mt-8">
-                    <h3 class="font-heading font-bold text-lg text-white uppercase tracking-wide mb-1">Honda Brio E</h3>
-                    <p class="font-digital text-dash-silver text-xs tracking-widest mb-4">1.2L • HATCHBACK</p>
-                    
-                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-white/5 py-3">
+                <div class="p-5 relative z-10">
+                    <h3
+                        class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase tracking-wide mb-1">
+                        Toyota Yaris</h3>
+                    <p class="font-digital text-gray-600 dark:text-dash-silver text-xs tracking-widest mb-4">1.5L GR
+                        SPORT • HATCHBACK</p>
+
+                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-gray-200 dark:border-white/5 py-3">
                         <div class="text-center">
-                            <i class="ph-light ph-calendar-blank text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">2021</div>
+                            <i class="ph-light ph-calendar-blank text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                2021</div>
                         </div>
-                        <div class="text-center border-x border-white/5">
-                            <i class="ph-light ph-steering-wheel text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">AUTO</div>
+                        <div class="text-center border-x border-gray-200 dark:border-white/5">
+                            <i class="ph-light ph-steering-wheel text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                AUTO</div>
                         </div>
                         <div class="text-center">
-                            <i class="ph-light ph-gauge text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">32K</div>
+                            <i class="ph-light ph-gauge text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">32K
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="flex justify-between items-end">
                         <div>
-                            <p class="text-[9px] text-dash-silver uppercase tracking-widest mb-1">Harga Tunai</p>
-                            <p class="font-digital font-bold text-xl text-white">Rp 145<span class="text-sm text-dash-red">Jt</span></p>
+                            <p
+                                class="text-[9px] text-gray-600 dark:text-dash-silver font-bold uppercase tracking-widest mb-1">
+                                Harga Tunai</p>
+                            <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Rp 145<span
+                                    class="text-sm text-dash-red">Jt</span></p>
                         </div>
-                        <a href="https://wa.me/6287888087542?text=Halo%20saya%20tertarik%20dengan%20Honda%20Brio" class="bg-white/10 hover:bg-dash-red text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                        <a href="https://wa.me/6287888087542?text=Halo%20saya%20tertarik%20dengan%20Honda%20Brio"
+                            class="bg-gray-200 dark:bg-white/10 hover:bg-dash-red text-gray-900 dark:text-white hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                             <i class="ph-bold ph-whatsapp-logo"></i>
                         </a>
                     </div>
-                    <div class="mt-2 text-[9px] text-dash-silver font-digital tracking-widest bg-dash-panel p-2 rounded text-center">TDP Mulai 15 Juta</div>
+                    <div
+                        class="mt-2 text-[9px] text-gray-700 dark:text-dash-silver font-bold font-digital tracking-widest bg-gray-100 dark:bg-dash-panel p-2 rounded text-center">
+                        TDP Mulai 15 Juta</div>
                 </div>
             </div>
 
             <!-- Car Card 2 -->
-            <div class="group bg-dash-screen border border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
-                <div class="relative w-full aspect-[4/3] bg-black overflow-hidden">
-                    <img src="https://placehold.co/800x600/111/444?text=Toyota+Avanza" alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-dash-screen to-transparent z-0"></div>
+            <div
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
+                <div class="relative w-full aspect-[16/9] bg-gray-100 dark:bg-black overflow-hidden">
+                    <img src="images/Kijang Inova.webp" alt="Kijang Innova"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 dark:from-dash-screen to-transparent z-0">
+                    </div>
                 </div>
-                <div class="p-5 relative z-10 -mt-8">
-                    <h3 class="font-heading font-bold text-lg text-white uppercase tracking-wide mb-1">Toyota Avanza</h3>
-                    <p class="font-digital text-dash-silver text-xs tracking-widest mb-4">1.5L VELOZ • MPV</p>
-                    
-                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-white/5 py-3">
+                <div class="p-5 relative z-10">
+                    <h3
+                        class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase tracking-wide mb-1">
+                        Kijang Innova</h3>
+                    <p class="font-digital text-gray-600 dark:text-dash-silver text-xs tracking-widest mb-4">2.0L ZENIX
+                        • MPV</p>
+
+                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-gray-200 dark:border-white/5 py-3">
                         <div class="text-center">
-                            <i class="ph-light ph-calendar-blank text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">2019</div>
+                            <i class="ph-light ph-calendar-blank text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                2019</div>
                         </div>
-                        <div class="text-center border-x border-white/5">
-                            <i class="ph-light ph-steering-wheel text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">MANUAL</div>
+                        <div class="text-center border-x border-gray-200 dark:border-white/5">
+                            <i class="ph-light ph-steering-wheel text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                MANUAL</div>
                         </div>
                         <div class="text-center">
-                            <i class="ph-light ph-gauge text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">65K</div>
+                            <i class="ph-light ph-gauge text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">65K
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="flex justify-between items-end">
                         <div>
-                            <p class="text-[9px] text-dash-silver uppercase tracking-widest mb-1">Harga Tunai</p>
-                            <p class="font-digital font-bold text-xl text-white">Rp 195<span class="text-sm text-dash-red">Jt</span></p>
+                            <p
+                                class="text-[9px] text-gray-600 dark:text-dash-silver font-bold uppercase tracking-widest mb-1">
+                                Harga Tunai</p>
+                            <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Rp 195<span
+                                    class="text-sm text-dash-red">Jt</span></p>
                         </div>
-                        <a href="https://wa.me/6287888087542" class="bg-white/10 hover:bg-dash-red text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                        <a href="https://wa.me/6287888087542"
+                            class="bg-gray-200 dark:bg-white/10 hover:bg-dash-red text-gray-900 dark:text-white hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                             <i class="ph-bold ph-whatsapp-logo"></i>
                         </a>
                     </div>
-                    <div class="mt-2 text-[9px] text-dash-silver font-digital tracking-widest bg-dash-panel p-2 rounded text-center">TDP Mulai 20 Juta</div>
+                    <div
+                        class="mt-2 text-[9px] text-gray-700 dark:text-dash-silver font-bold font-digital tracking-widest bg-gray-100 dark:bg-dash-panel p-2 rounded text-center">
+                        TDP Mulai 20 Juta</div>
                 </div>
             </div>
 
             <!-- Car Card 3 -->
-            <div class="group bg-dash-screen border border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
-                <div class="relative w-full aspect-[4/3] bg-black overflow-hidden">
-                    <img src="https://placehold.co/800x600/111/444?text=Daihatsu+Xenia" alt="Car" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80">
-                    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-dash-screen to-transparent z-0"></div>
+            <div
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
+                <div class="relative w-full aspect-[16/9] bg-gray-100 dark:bg-black overflow-hidden">
+                    <img src="images/honda_brio_2.jpeg" alt="Car"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 dark:from-dash-screen to-transparent z-0">
+                    </div>
                 </div>
-                <div class="p-5 relative z-10 -mt-8">
-                    <h3 class="font-heading font-bold text-lg text-white uppercase tracking-wide mb-1">Daihatsu Xenia</h3>
-                    <p class="font-digital text-dash-silver text-xs tracking-widest mb-4">1.3L R • MPV</p>
-                    
-                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-white/5 py-3">
+                <div class="p-5 relative z-10">
+                    <h3
+                        class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase tracking-wide mb-1">
+                        Honda Brio E</h3>
+                    <p class="font-digital text-gray-600 dark:text-dash-silver text-xs tracking-widest mb-4">1.2L RS •
+                        HATCHBACK</p>
+
+                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-gray-200 dark:border-white/5 py-3">
                         <div class="text-center">
-                            <i class="ph-light ph-calendar-blank text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">2018</div>
+                            <i class="ph-light ph-calendar-blank text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                2018</div>
                         </div>
-                        <div class="text-center border-x border-white/5">
-                            <i class="ph-light ph-steering-wheel text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">MANUAL</div>
+                        <div class="text-center border-x border-gray-200 dark:border-white/5">
+                            <i class="ph-light ph-steering-wheel text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                MANUAL</div>
                         </div>
                         <div class="text-center">
-                            <i class="ph-light ph-gauge text-dash-silver text-lg"></i>
-                            <div class="font-digital text-[11px] text-white tracking-widest mt-1">80K</div>
+                            <i class="ph-light ph-gauge text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">80K
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="flex justify-between items-end">
                         <div>
-                            <p class="text-[9px] text-dash-silver uppercase tracking-widest mb-1">Harga Tunai</p>
-                            <p class="font-digital font-bold text-xl text-white">Rp 150<span class="text-sm text-dash-red">Jt</span></p>
+                            <p
+                                class="text-[9px] text-gray-600 dark:text-dash-silver font-bold uppercase tracking-widest mb-1">
+                                Harga Tunai</p>
+                            <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Rp 150<span
+                                    class="text-sm text-dash-red">Jt</span></p>
                         </div>
-                        <a href="https://wa.me/6287888087542" class="bg-white/10 hover:bg-dash-red text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                        <a href="https://wa.me/6287888087542"
+                            class="bg-gray-200 dark:bg-white/10 hover:bg-dash-red text-gray-900 dark:text-white hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                             <i class="ph-bold ph-whatsapp-logo"></i>
                         </a>
                     </div>
-                    <div class="mt-2 text-[9px] text-dash-silver font-digital tracking-widest bg-dash-panel p-2 rounded text-center">TDP Mulai 12 Juta</div>
+                    <div
+                        class="mt-2 text-[9px] text-gray-700 dark:text-dash-silver font-bold font-digital tracking-widest bg-gray-100 dark:bg-dash-panel p-2 rounded text-center">
+                        TDP Mulai 12 Juta</div>
+                </div>
+            </div>
+
+            <!-- Car Card 4 -->
+            <div
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
+                <div class="relative w-full aspect-[16/9] bg-gray-100 dark:bg-black overflow-hidden">
+                    <img src="images/hrv.jpeg" alt="Honda HR-V"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 dark:from-dash-screen to-transparent z-0">
+                    </div>
+                </div>
+                <div class="p-5 relative z-10">
+                    <h3
+                        class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase tracking-wide mb-1">
+                        Honda HR-V</h3>
+                    <p class="font-digital text-gray-600 dark:text-dash-silver text-xs tracking-widest mb-4">1.5L E CVT
+                        •
+                        SUV</p>
+
+                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-gray-200 dark:border-white/5 py-3">
+                        <div class="text-center">
+                            <i class="ph-light ph-calendar-blank text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                2020</div>
+                        </div>
+                        <div class="text-center border-x border-gray-200 dark:border-white/5">
+                            <i class="ph-light ph-steering-wheel text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                AUTO</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="ph-light ph-gauge text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">45K
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p
+                                class="text-[9px] text-gray-600 dark:text-dash-silver font-bold uppercase tracking-widest mb-1">
+                                Harga Tunai</p>
+                            <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Rp 245<span
+                                    class="text-sm text-dash-red">Jt</span></p>
+                        </div>
+                        <a href="https://wa.me/6287888087542"
+                            class="bg-gray-200 dark:bg-white/10 hover:bg-dash-red text-gray-900 dark:text-white hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="ph-bold ph-whatsapp-logo"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="mt-2 text-[9px] text-gray-700 dark:text-dash-silver font-bold font-digital tracking-widest bg-gray-100 dark:bg-dash-panel p-2 rounded text-center">
+                        TDP Mulai 30 Juta</div>
+                </div>
+            </div>
+
+            <!-- Car Card 5 -->
+            <div
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
+                <div class="relative w-full aspect-[16/9] bg-gray-100 dark:bg-black overflow-hidden">
+                    <img src="images/harga-pajero-sport.webp" alt="Mitsubishi Pajero"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 dark:from-dash-screen to-transparent z-0">
+                    </div>
+                </div>
+                <div class="p-5 relative z-10">
+                    <h3
+                        class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase tracking-wide mb-1">
+                        Mitsubishi Pajero</h3>
+                    <p class="font-digital text-gray-600 dark:text-dash-silver text-xs tracking-widest mb-4">2.4L DAKAR
+                        •
+                        SUV</p>
+
+                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-gray-200 dark:border-white/5 py-3">
+                        <div class="text-center">
+                            <i class="ph-light ph-calendar-blank text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                2018</div>
+                        </div>
+                        <div class="text-center border-x border-gray-200 dark:border-white/5">
+                            <i class="ph-light ph-steering-wheel text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                AUTO</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="ph-light ph-gauge text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">75K
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p
+                                class="text-[9px] text-gray-600 dark:text-dash-silver font-bold uppercase tracking-widest mb-1">
+                                Harga Tunai</p>
+                            <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Rp 395<span
+                                    class="text-sm text-dash-red">Jt</span></p>
+                        </div>
+                        <a href="https://wa.me/6287888087542"
+                            class="bg-gray-200 dark:bg-white/10 hover:bg-dash-red text-gray-900 dark:text-white hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="ph-bold ph-whatsapp-logo"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="mt-2 text-[9px] text-gray-700 dark:text-dash-silver font-bold font-digital tracking-widest bg-gray-100 dark:bg-dash-panel p-2 rounded text-center">
+                        TDP Mulai 50 Juta</div>
+                </div>
+            </div>
+
+            <!-- Car Card 6 -->
+            <div
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-dash-red/30 transition-all duration-300">
+                <div class="relative w-full aspect-[16/9] bg-gray-100 dark:bg-black overflow-hidden">
+                    <img src="images/Honda brio.webp" alt="Honda Brio RS"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute top-3 left-3 bg-dash-red text-white font-heading font-bold text-[9px] px-2 py-1 rounded-sm tracking-widest uppercase z-10">
+                        NEW ARRIVAL</div>
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 dark:from-dash-screen to-transparent z-0">
+                    </div>
+                </div>
+                <div class="p-5 relative z-10">
+                    <h3
+                        class="font-heading font-bold text-lg text-gray-900 dark:text-white uppercase tracking-wide mb-1">
+                        Honda Brio RS</h3>
+                    <p class="font-digital text-gray-600 dark:text-dash-silver text-xs tracking-widest mb-4">1.2L RS •
+                        HATCHBACK</p>
+
+                    <div class="grid grid-cols-3 gap-2 mb-4 border-y border-gray-200 dark:border-white/5 py-3">
+                        <div class="text-center">
+                            <i class="ph-light ph-calendar-blank text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                2022</div>
+                        </div>
+                        <div class="text-center border-x border-gray-200 dark:border-white/5">
+                            <i class="ph-light ph-steering-wheel text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">
+                                AUTO</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="ph-light ph-gauge text-gray-700 dark:text-dash-silver text-lg"></i>
+                            <div class="font-digital text-[11px] text-gray-900 dark:text-white tracking-widest mt-1">15K
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p
+                                class="text-[9px] text-gray-600 dark:text-dash-silver font-bold uppercase tracking-widest mb-1">
+                                Harga Tunai</p>
+                            <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Rp 185<span
+                                    class="text-sm text-dash-red">Jt</span></p>
+                        </div>
+                        <a href="https://wa.me/6287888087542"
+                            class="bg-gray-200 dark:bg-white/10 hover:bg-dash-red text-gray-900 dark:text-white hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="ph-bold ph-whatsapp-logo"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="mt-2 text-[9px] text-gray-700 dark:text-dash-silver font-bold font-digital tracking-widest bg-gray-100 dark:bg-dash-panel p-2 rounded text-center">
+                        TDP Mulai 25 Juta</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="finance" class="py-20 px-4 bg-dash-panel border-t border-white/5">
+    <section id="finance"
+        class="py-20 px-4 bg-transparent dark:bg-dash-panel border-t border-gray-200 dark:border-white/5">
         <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
+
             <!-- Process Protocol -->
             <div>
-                <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Acquisition Protocol</div>
-                <h2 class="font-heading text-3xl font-black text-white uppercase tracking-wider mb-8">Cara Beli Mudah</h2>
-                
-                <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-dash-red before:via-white/10 before:to-transparent">
-                    
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-dash-red bg-dash-panel text-dash-red font-digital font-bold shadow-ambient shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">01</div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-dash-screen border border-white/5 p-4 rounded-lg">
-                            <h4 class="font-heading font-bold text-white text-sm uppercase mb-1">Pilih Unit & Test Drive</h4>
-                            <p class="text-xs text-dash-silver font-light">Datang ke lokasi atau cek katalog. Silakan test drive sepuasnya.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white/20 bg-dash-panel text-dash-silver font-digital font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">02</div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-dash-screen border border-white/5 p-4 rounded-lg">
-                            <h4 class="font-heading font-bold text-white text-sm uppercase mb-1">Kesepakatan Harga</h4>
-                            <p class="text-xs text-dash-silver font-light">Nego harga tunai atau diskusikan TDP dan Angsuran jika kredit.</p>
+                <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Acquisition Protocol
+                </div>
+                <h2
+                    class="font-heading text-3xl font-black text-gray-900 dark:text-white uppercase tracking-wider mb-8">
+                    Cara Beli Mudah</h2>
+
+                <div
+                    class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-dash-red before:via-white/10 before:to-transparent">
+
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-dash-red bg-transparent dark:bg-dash-panel text-dash-red font-digital font-bold shadow-lg dark:shadow-ambient shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            01</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-4 rounded-lg">
+                            <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase mb-1">
+                                Pilih Unit & Test Drive</h4>
+                            <p class="text-xs text-gray-500 dark:text-dash-silver font-light">Datang ke lokasi atau cek
+                                katalog. Silakan test drive sepuasnya.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white/20 bg-dash-panel text-dash-silver font-digital font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">03</div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-dash-screen border border-white/5 p-4 rounded-lg">
-                            <h4 class="font-heading font-bold text-white text-sm uppercase mb-1">Proses Dokumen</h4>
-                            <p class="text-xs text-dash-silver font-light">Data dijemput. Proses approval lising dibantu maksimal 1x24 jam.</p>
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 dark:border-white/20 bg-transparent dark:bg-dash-panel text-gray-500 dark:text-dash-silver font-digital font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            02</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-4 rounded-lg">
+                            <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase mb-1">
+                                Kesepakatan Harga</h4>
+                            <p class="text-xs text-gray-500 dark:text-dash-silver font-light">Nego harga tunai atau
+                                diskusikan TDP dan Angsuran jika kredit.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white/20 bg-dash-panel text-dash-silver font-digital font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">04</div>
-                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-dash-screen border border-white/5 p-4 rounded-lg">
-                            <h4 class="font-heading font-bold text-white text-sm uppercase mb-1">Serah Terima</h4>
-                            <p class="text-xs text-dash-silver font-light">Mobil di-detailing ulang sebelum dibawa pulang. Ready to go!</p>
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 dark:border-white/20 bg-transparent dark:bg-dash-panel text-gray-500 dark:text-dash-silver font-digital font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            03</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-4 rounded-lg">
+                            <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase mb-1">
+                                Proses Dokumen</h4>
+                            <p class="text-xs text-gray-500 dark:text-dash-silver font-light">Data dijemput. Proses
+                                approval lising dibantu maksimal 1x24 jam.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-gray-300 dark:border-white/20 bg-transparent dark:bg-dash-panel text-gray-500 dark:text-dash-silver font-digital font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            04</div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-4 rounded-lg">
+                            <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm uppercase mb-1">
+                                Serah Terima</h4>
+                            <p class="text-xs text-gray-500 dark:text-dash-silver font-light">Mobil di-detailing ulang
+                                sebelum dibawa pulang. Ready to go!</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Financial Simulator UI (Visual Representation) -->
-            <div class="bg-dash-screen border border-white/10 rounded-2xl p-6 md:p-8 shadow-panel relative">
-                <div class="flex items-center gap-2 mb-6 border-b border-white/5 pb-4">
+            <div
+                class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/10 rounded-2xl p-6 md:p-8 shadow-md dark:shadow-panel relative">
+                <div class="flex items-center gap-2 mb-6 border-b border-gray-200 dark:border-white/5 pb-4">
                     <i class="ph-fill ph-calculator text-dash-red text-xl"></i>
-                    <h3 class="font-heading font-bold text-white tracking-widest text-sm uppercase">Financial Telemetry</h3>
+                    <h3 class="font-heading font-bold text-gray-900 dark:text-white tracking-widest text-sm uppercase">
+                        Financial Telemetry</h3>
                 </div>
 
                 <div class="space-y-6">
                     <div>
                         <div class="flex justify-between text-xs font-digital tracking-widest uppercase mb-2">
-                            <span class="text-dash-silver">Down Payment (DP)</span>
-                            <span class="text-dash-gold font-bold">Rp 30.000.000</span>
+                            <span class="text-gray-500 dark:text-dash-silver">Down Payment (DP)</span>
+                            <span class="text-yellow-600 dark:text-dash-gold font-bold">Rp 30.000.000</span>
                         </div>
                         <input type="range" min="10" max="100" value="30" class="w-full">
-                        <div class="flex justify-between text-[9px] text-white/30 mt-1">
+                        <div class="flex justify-between text-[9px] text-gray-400 dark:text-white/30 mt-1">
                             <span>Min DP</span>
                             <span>Max DP</span>
                         </div>
@@ -448,23 +921,29 @@
 
                     <div>
                         <div class="flex justify-between text-xs font-digital tracking-widest uppercase mb-2">
-                            <span class="text-dash-silver">Tenor (Bulan)</span>
-                            <span class="text-white font-bold">48 Bulan</span>
+                            <span class="text-gray-500 dark:text-dash-silver">Tenor (Bulan)</span>
+                            <span class="text-gray-900 dark:text-white font-bold">48 Bulan</span>
                         </div>
                         <input type="range" min="12" max="60" value="48" step="12" class="w-full">
-                        <div class="flex justify-between text-[9px] text-white/30 mt-1">
+                        <div class="flex justify-between text-[9px] text-gray-400 dark:text-white/30 mt-1">
                             <span>1 Thn</span>
                             <span>5 Thn</span>
                         </div>
                     </div>
 
-                    <div class="bg-black/50 border border-white/5 rounded-lg p-4 flex flex-col items-center justify-center mt-4">
-                        <span class="text-[9px] text-dash-silver uppercase tracking-[0.2em] mb-1">Estimasi Angsuran / Bulan</span>
-                        <div class="font-digital text-3xl text-dash-red font-bold">Rp 3.450<span class="text-lg">.000</span></div>
-                        <span class="text-[8px] text-white/40 mt-1">*Hanya estimasi. Angka pasti via lising.</span>
+                    <div
+                        class="bg-gray-100 dark:bg-black/50 border border-gray-200 dark:border-white/5 rounded-lg p-4 flex flex-col items-center justify-center mt-4">
+                        <span
+                            class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-[0.2em] mb-1">Estimasi
+                            Angsuran / Bulan</span>
+                        <div class="font-digital text-3xl text-dash-red font-bold">Rp 3.450<span
+                                class="text-lg">.000</span></div>
+                        <span class="text-[8px] text-gray-500 dark:text-white/40 mt-1">*Hanya estimasi. Angka pasti via
+                            lising.</span>
                     </div>
 
-                    <a href="https://wa.me/6287888087542" class="w-full bg-white text-black hover:bg-dash-chrome font-heading font-bold text-xs uppercase tracking-widest py-4 rounded transition-all flex items-center justify-center gap-2 mt-2">
+                    <a href="https://wa.me/6287888087542"
+                        class="w-full bg-white text-black hover:bg-dash-chrome font-heading font-bold text-xs uppercase tracking-widest py-4 rounded transition-all flex items-center justify-center gap-2 mt-2">
                         Kirim Pengajuan <i class="ph-bold ph-paper-plane-right"></i>
                     </a>
                 </div>
@@ -476,54 +955,87 @@
         <div class="max-w-[1200px] mx-auto">
             <div class="text-center mb-12">
                 <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Driver Feedback</div>
-                <h2 class="font-heading text-3xl font-black text-white uppercase tracking-wider">Pilot Logs</h2>
+                <h2 class="font-heading text-3xl font-black text-gray-900 dark:text-white uppercase tracking-wider">
+                    Pilot Logs</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Review 1 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl relative">
-                    <i class="ph-fill ph-quotes text-4xl text-white/5 absolute top-4 right-4"></i>
-                    <div class="flex text-dash-gold text-sm mb-4">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl relative">
+                    <i class="ph-fill ph-quotes text-4xl text-gray-200 dark:text-white/5 absolute top-4 right-4"></i>
+                    <div class="flex text-yellow-600 dark:text-dash-gold text-sm mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
-                    <p class="text-sm text-dash-silver font-light italic mb-6 leading-relaxed">"Proses kredit Avanza dibantu sampai goal padahal data agak kurang. Salesnya ramah dan transparan soal kondisi mobil."</p>
-                    <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-                        <div class="w-8 h-8 bg-dash-panel rounded-full flex items-center justify-center text-white font-heading font-bold text-xs">B</div>
+                    <p class="text-sm text-gray-500 dark:text-dash-silver font-light italic mb-6 leading-relaxed">
+                        "Proses kredit Avanza dibantu sampai goal padahal data agak kurang. Salesnya ramah dan
+                        transparan soal kondisi mobil."</p>
+                    <div class="flex items-center gap-3 border-t border-gray-200 dark:border-white/5 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-dash-panel">
+                            <img src="images/testimoni/testimoni_1.webp" alt="Bapak Budi"
+                                class="w-full h-full object-cover">
+                        </div>
                         <div>
-                            <div class="font-heading font-bold text-white text-[10px] uppercase tracking-widest">Bapak Budi</div>
-                            <div class="font-digital text-dash-silver text-[9px] tracking-widest">Pembeli Avanza 2019</div>
+                            <div
+                                class="font-heading font-bold text-gray-900 dark:text-white text-[10px] uppercase tracking-widest">
+                                Bapak Budi</div>
+                            <div class="font-digital text-gray-500 dark:text-dash-silver text-[9px] tracking-widest">
+                                Pembeli Avanza 2019</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl relative">
-                    <i class="ph-fill ph-quotes text-4xl text-white/5 absolute top-4 right-4"></i>
-                    <div class="flex text-dash-gold text-sm mb-4">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl relative">
+                    <i class="ph-fill ph-quotes text-4xl text-gray-200 dark:text-white/5 absolute top-4 right-4"></i>
+                    <div class="flex text-yellow-600 dark:text-dash-gold text-sm mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
-                    <p class="text-sm text-dash-silver font-light italic mb-6 leading-relaxed">"Tukar tambah mobil lama dihargai sangat masuk akal. Beli Brio E di sini kondisi seperti baru, mesin kering no rembes."</p>
-                    <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-                        <div class="w-8 h-8 bg-dash-panel rounded-full flex items-center justify-center text-white font-heading font-bold text-xs">A</div>
+                    <p class="text-sm text-gray-500 dark:text-dash-silver font-light italic mb-6 leading-relaxed">"Tukar
+                        tambah mobil lama dihargai sangat masuk akal. Beli Brio E di sini kondisi seperti baru, mesin
+                        kering no rembes."</p>
+                    <div class="flex items-center gap-3 border-t border-gray-200 dark:border-white/5 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-dash-panel">
+                            <img src="images/testimoni/testimoni_2.webp" alt="Agnes" class="w-full h-full object-cover">
+                        </div>
                         <div>
-                            <div class="font-heading font-bold text-white text-[10px] uppercase tracking-widest">Agnes</div>
-                            <div class="font-digital text-dash-silver text-[9px] tracking-widest">Pembeli Honda Brio</div>
+                            <div
+                                class="font-heading font-bold text-gray-900 dark:text-white text-[10px] uppercase tracking-widest">
+                                Agnes</div>
+                            <div class="font-digital text-gray-500 dark:text-dash-silver text-[9px] tracking-widest">
+                                Pembeli Honda Brio</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-dash-screen border border-white/5 p-6 rounded-xl relative">
-                    <i class="ph-fill ph-quotes text-4xl text-white/5 absolute top-4 right-4"></i>
-                    <div class="flex text-dash-gold text-sm mb-4">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                <div
+                    class="bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 p-6 rounded-xl relative">
+                    <i class="ph-fill ph-quotes text-4xl text-gray-200 dark:text-white/5 absolute top-4 right-4"></i>
+                    <div class="flex text-yellow-600 dark:text-dash-gold text-sm mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
-                    <p class="text-sm text-dash-silver font-light italic mb-6 leading-relaxed">"Surat-surat dijamin aman. BPKB dan Faktur lengkap. Recommended showroom di daerah Tanah Baru Depok."</p>
-                    <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-                        <div class="w-8 h-8 bg-dash-panel rounded-full flex items-center justify-center text-white font-heading font-bold text-xs">D</div>
+                    <p class="text-sm text-gray-500 dark:text-dash-silver font-light italic mb-6 leading-relaxed">
+                        "Surat-surat dijamin aman. BPKB dan Faktur lengkap. Recommended showroom di daerah Tanah Baru
+                        Depok."</p>
+                    <div class="flex items-center gap-3 border-t border-gray-200 dark:border-white/5 pt-4">
+                        <div
+                            class="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-dash-panel">
+                            <img src="images/testimoni/testimoni_3.webp" alt="Deni S."
+                                class="w-full h-full object-cover">
+                        </div>
                         <div>
-                            <div class="font-heading font-bold text-white text-[10px] uppercase tracking-widest">Deni S.</div>
-                            <div class="font-digital text-dash-silver text-[9px] tracking-widest">Pembelian Tunai</div>
+                            <div
+                                class="font-heading font-bold text-gray-900 dark:text-white text-[10px] uppercase tracking-widest">
+                                Deni S.</div>
+                            <div class="font-digital text-gray-500 dark:text-dash-silver text-[9px] tracking-widest">
+                                Pembelian Tunai</div>
                         </div>
                     </div>
                 </div>
@@ -533,115 +1045,214 @@
 
     <section class="py-10 px-4 max-w-[800px] mx-auto relative z-10 mb-20">
         <div class="text-center mb-10">
-            <div class="text-dash-silver text-[10px] font-bold uppercase tracking-[0.3em] mb-2">System Database</div>
-            <h2 class="font-heading text-2xl font-black text-white uppercase tracking-wider">Tanya Jawab (FAQ)</h2>
+            <div class="text-gray-500 dark:text-dash-silver text-[10px] font-bold uppercase tracking-[0.3em] mb-2">
+                System Database</div>
+            <h2 class="font-heading text-2xl font-black text-gray-900 dark:text-white uppercase tracking-wider">Tanya
+                Jawab (FAQ)</h2>
         </div>
 
         <div class="space-y-3">
-            <details class="group bg-dash-screen border border-white/5 rounded-lg open:border-dash-red/30 transition-colors">
-                <summary class="flex justify-between items-center font-heading font-bold text-xs text-white uppercase tracking-widest p-5 cursor-pointer">
+            <details
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-lg open:border-dash-red/30 transition-colors">
+                <summary
+                    class="flex justify-between items-center font-heading font-bold text-xs text-gray-900 dark:text-white uppercase tracking-widest p-5 cursor-pointer">
                     Apakah melayani tukar tambah (Trade-in)?
-                    <i class="ph-bold ph-plus group-open:hidden text-dash-silver"></i>
+                    <i class="ph-bold ph-plus group-open:hidden text-gray-500 dark:text-dash-silver"></i>
                     <i class="ph-bold ph-minus hidden group-open:block text-dash-red"></i>
                 </summary>
-                <div class="px-5 pb-5 text-sm text-dash-silver font-light border-t border-white/5 pt-4">
-                    Tentu saja. Bawa mobil lama Anda ke showroom kami untuk dilakukan inspeksi dan valuasi harga terbaik yang bisa digunakan sebagai DP atau memotong harga cash mobil yang baru.
-                </div>
-            </details>
-            
-            <details class="group bg-dash-screen border border-white/5 rounded-lg open:border-dash-red/30 transition-colors">
-                <summary class="flex justify-between items-center font-heading font-bold text-xs text-white uppercase tracking-widest p-5 cursor-pointer">
-                    Bagaimana jika pengajuan kredit ditolak lising?
-                    <i class="ph-bold ph-plus group-open:hidden text-dash-silver"></i>
-                    <i class="ph-bold ph-minus hidden group-open:block text-dash-red"></i>
-                </summary>
-                <div class="px-5 pb-5 text-sm text-dash-silver font-light border-t border-white/5 pt-4">
-                    Kami bekerjasama erat dengan BCA Finance & ClipanFinance. Tim kami akan bantu analisa data Anda di awal. Jika memang reject dari pihak lising murni karena BI checking buruk, Booking Fee / DP akan dikembalikan 100%.
+                <div
+                    class="px-5 pb-5 text-sm text-gray-500 dark:text-dash-silver font-light border-t border-gray-200 dark:border-white/5 pt-4">
+                    Tentu saja. Bawa mobil lama Anda ke showroom kami untuk dilakukan inspeksi dan valuasi harga terbaik
+                    yang bisa digunakan sebagai DP atau memotong harga cash mobil yang baru.
                 </div>
             </details>
 
-            <details class="group bg-dash-screen border border-white/5 rounded-lg open:border-dash-red/30 transition-colors">
-                <summary class="flex justify-between items-center font-heading font-bold text-xs text-white uppercase tracking-widest p-5 cursor-pointer">
-                    Apakah dokumen kendaraan dijamin asli?
-                    <i class="ph-bold ph-plus group-open:hidden text-dash-silver"></i>
+            <details
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-lg open:border-dash-red/30 transition-colors">
+                <summary
+                    class="flex justify-between items-center font-heading font-bold text-xs text-gray-900 dark:text-white uppercase tracking-widest p-5 cursor-pointer">
+                    Bagaimana jika pengajuan kredit ditolak lising?
+                    <i class="ph-bold ph-plus group-open:hidden text-gray-500 dark:text-dash-silver"></i>
                     <i class="ph-bold ph-minus hidden group-open:block text-dash-red"></i>
                 </summary>
-                <div class="px-5 pb-5 text-sm text-dash-silver font-light border-t border-white/5 pt-4">
-                    Pasti. Kami menggaransi 100% legalitas kendaraan (BPKB, STNK, Faktur). Kami mengecek keabsahan surat di Samsat sebelum mobil kami beli untuk dijual kembali.
+                <div
+                    class="px-5 pb-5 text-sm text-gray-500 dark:text-dash-silver font-light border-t border-gray-200 dark:border-white/5 pt-4">
+                    Kami bekerjasama erat dengan BCA Finance & ClipanFinance. Tim kami akan bantu analisa data Anda di
+                    awal. Jika memang reject dari pihak lising murni karena BI checking buruk, Booking Fee / DP akan
+                    dikembalikan 100%.
+                </div>
+            </details>
+
+            <details
+                class="group bg-white dark:bg-dash-screen border border-gray-200 dark:border-white/5 rounded-lg open:border-dash-red/30 transition-colors">
+                <summary
+                    class="flex justify-between items-center font-heading font-bold text-xs text-gray-900 dark:text-white uppercase tracking-widest p-5 cursor-pointer">
+                    Apakah dokumen kendaraan dijamin asli?
+                    <i class="ph-bold ph-plus group-open:hidden text-gray-500 dark:text-dash-silver"></i>
+                    <i class="ph-bold ph-minus hidden group-open:block text-dash-red"></i>
+                </summary>
+                <div
+                    class="px-5 pb-5 text-sm text-gray-500 dark:text-dash-silver font-light border-t border-gray-200 dark:border-white/5 pt-4">
+                    Pasti. Kami menggaransi 100% legalitas kendaraan (BPKB, STNK, Faktur). Kami mengecek keabsahan surat
+                    di Samsat sebelum mobil kami beli untuk dijual kembali.
                 </div>
             </details>
         </div>
     </section>
 
-    <section class="border-t border-white/10 bg-dash-panel relative z-10 pt-16">
+    <section
+        class="border-t border-gray-200 dark:border-white/10 bg-transparent dark:bg-dash-panel relative z-10 pt-16">
         <div class="max-w-[1200px] mx-auto px-4 pb-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
+
                 <div>
-                    <div class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
+                    <div
+                        class="text-dash-red text-[10px] font-bold uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
                         <i class="ph-fill ph-map-pin"></i> Coordinates
                     </div>
-                    <h2 class="font-heading text-4xl font-black text-white uppercase tracking-wide mb-8">Kunjungi Showroom</h2>
-                    
+                    <h2
+                        class="font-heading text-4xl font-black text-gray-900 dark:text-white uppercase tracking-wide mb-8">
+                        Kunjungi Showroom</h2>
+
                     <div class="space-y-6">
-                        <div class="flex gap-4 p-4 border border-white/5 bg-dash-screen rounded-lg">
-                            <div class="text-dash-silver mt-1"><i class="ph-light ph-crosshair text-2xl"></i></div>
+                        <div
+                            class="flex gap-4 p-4 border border-gray-200 dark:border-white/5 bg-white dark:bg-dash-screen rounded-lg">
+                            <div class="text-gray-500 dark:text-dash-silver mt-1"><i
+                                    class="ph-light ph-crosshair text-2xl"></i></div>
                             <div>
-                                <h5 class="font-digital text-[10px] text-dash-silver uppercase tracking-[0.2em] mb-1">Alamat Lengkap</h5>
-                                <p class="text-white text-sm font-light">Agung Jaya Motor 2<br>Jl. Raya Tanah Baru RT.02/11 Kp Jemblongan<br>Depok, Jawa Barat.</p>
+                                <h5
+                                    class="font-digital text-[10px] text-gray-500 dark:text-dash-silver uppercase tracking-[0.2em] mb-1">
+                                    Alamat Lengkap</h5>
+                                <p class="text-gray-900 dark:text-white text-sm font-light">Agung Jaya Motor 2<br>Jl.
+                                    Raya Tanah Baru RT.02/11 Kp Jemblongan<br>Depok, Jawa Barat.</p>
                             </div>
                         </div>
-                        
-                        <div class="flex gap-4 p-4 border border-white/5 bg-dash-screen rounded-lg">
-                            <div class="text-dash-silver mt-1"><i class="ph-light ph-headset text-2xl"></i></div>
+
+                        <div
+                            class="flex gap-4 p-4 border border-gray-200 dark:border-white/5 bg-white dark:bg-dash-screen rounded-lg">
+                            <div class="text-gray-500 dark:text-dash-silver mt-1"><i
+                                    class="ph-light ph-headset text-2xl"></i></div>
                             <div>
-                                <h5 class="font-digital text-[10px] text-dash-silver uppercase tracking-[0.2em] mb-1">Telepon / WhatsApp</h5>
-                                <p class="text-white text-sm font-digital tracking-widest">
-                                    <a href="https://wa.me/6287888087542" class="hover:text-dash-red">0878-8808-7542</a> <br> 
+                                <h5
+                                    class="font-digital text-[10px] text-gray-500 dark:text-dash-silver uppercase tracking-[0.2em] mb-1">
+                                    Telepon / WhatsApp</h5>
+                                <p class="text-gray-900 dark:text-white text-sm font-digital tracking-widest">
+                                    <a href="https://wa.me/6287888087542" class="hover:text-dash-red">0878-8808-7542</a>
+                                    <br>
                                     <a href="https://wa.me/6282298770809" class="hover:text-dash-red">0822-9877-0809</a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="h-[400px] rounded-xl overflow-hidden border border-white/10 relative bg-black shadow-ambient">
-                    <div class="absolute top-4 left-4 z-10 bg-black/80 backdrop-blur border border-white/10 p-2 rounded flex items-center gap-2">
+
+                <div
+                    class="h-[400px] rounded-xl overflow-hidden border border-gray-200 dark:border-white/10 relative bg-gray-100 dark:bg-black shadow-lg dark:shadow-ambient">
+                    <div
+                        class="absolute top-4 left-4 z-10 bg-white/90 dark:bg-black/80 backdrop-blur border border-gray-200 dark:border-white/10 p-2 rounded flex items-center gap-2">
                         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span class="font-digital text-[10px] text-white uppercase tracking-widest">Location Pinned</span>
+                        <span
+                            class="font-digital text-[10px] text-gray-900 dark:text-white uppercase tracking-widest">Location
+                            Pinned</span>
                     </div>
                     <!-- Maps using precise coordinates provided -->
-                    <iframe 
-                        src="https://maps.google.com/maps?q=-6.3957494,106.80719&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <iframe
+                        src="https://maps.google.com/maps?q=-6.3957494,106.80719&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         class="dark-map absolute inset-0">
                     </iframe>
                 </div>
             </div>
         </div>
-        
-        <footer class="border-t border-white/5 bg-black py-6">
-            <div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-                <p class="font-digital text-[10px] text-dash-silver uppercase tracking-widest">&copy; 2026 AGUNG JAYA MOTOR 2. Hak Cipta Dilindungi.</p>
-                <div class="flex gap-4 font-digital text-[10px] text-white/40 uppercase tracking-widest">
+
+        <footer class="border-t border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-black pt-6 pb-24 md:pb-6">
+            <div
+                class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p class="font-digital text-[10px] text-gray-500 dark:text-dash-silver uppercase tracking-widest">&copy;
+                    2026 AGUNG JAYA MOTOR 2. Hak Cipta Dilindungi.</p>
+                <div
+                    class="flex gap-4 font-digital text-[10px] text-gray-500 dark:text-white/40 uppercase tracking-widest">
                     <span>Melayani Jual Beli Cash & Credit</span>
                 </div>
             </div>
         </footer>
     </section>
 
-    <a href="https://wa.me/6287888087542" class="fixed bottom-6 right-6 z-50 group flex items-center gap-3">
-        <span class="bg-black/80 backdrop-blur border border-white/10 text-white text-[10px] font-digital uppercase tracking-widest px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
+    <!-- Mobile Bottom Navigation -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 dark:bg-dash-panel/90 backdrop-blur-xl border-t border-gray-200 dark:border-white/10 z-[100]">
+        <div class="flex justify-around items-center h-16 px-2 relative">
+            <a href="#home" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-house text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Beranda</span>
+            </a>
+            
+            <a href="#showroom" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-car-profile text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Mobil</span>
+            </a>
+
+            <!-- Center WhatsApp Floating Button -->
+            <div class="w-full flex justify-center relative">
+                <a href="https://wa.me/6287888087542" class="absolute -top-8 w-14 h-14 bg-dash-red rounded-full flex items-center justify-center text-white shadow-ambient-strong border-[4px] border-white dark:border-[#0f1115] engine-start-btn">
+                    <i class="ph-fill ph-whatsapp-logo text-white text-3xl"></i>
+                </a>
+            </div>
+
+            <a href="#diagnostics" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-wallet text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Finance</span>
+            </a>
+
+            <a href="#" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-phone-call text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Kontak</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Desktop Floating WhatsApp Button -->
+    <a href="https://wa.me/6287888087542" class="fixed bottom-6 right-6 z-50 group hidden md:flex items-center gap-3">
+        <span
+            class="bg-white/90 dark:bg-black/80 backdrop-blur border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-[10px] font-digital uppercase tracking-widest px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
             Tanya Sales
         </span>
-        <div class="w-14 h-14 bg-dash-red rounded-full flex items-center justify-center text-white shadow-ambient-strong border-2 border-red-400/20 hover:scale-110 transition-transform engine-start-btn">
-            <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+        <div
+            class="w-14 h-14 bg-dash-red rounded-full flex items-center justify-center text-white shadow-ambient-strong border-2 border-red-400/20 hover:scale-110 transition-transform engine-start-btn">
+            <i class="ph-fill ph-whatsapp-logo text-white text-2xl"></i>
         </div>
     </a>
 
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+    </script>
 </body>
+
 </html>
