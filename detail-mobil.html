@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Mobil | Agung Jaya Motor 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        digital: ['Rajdhani', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        dash: {
+                            base: '#050505',
+                            panel: '#0f1115',
+                            screen: '#14171c',
+                            red: '#e50914',
+                            glow: '#ff2a2a',
+                            silver: '#8e9bae',
+                            chrome: '#e2e8f0',
+                            gold: '#facc15'
+                        }
+                    },
+                    boxShadow: {
+                        'ambient': '0 0 30px rgba(229, 9, 20, 0.15)',
+                        'ambient-strong': '0 0 30px rgba(229, 9, 20, 0.4)',
+                        'panel': 'inset 0 1px 0 rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.5)',
+                        'inset-glow': 'inset 0 0 20px rgba(255,0,0,0.05)'
+                    },
+                    backgroundImage: {
+                        'metallic': 'linear-gradient(145deg, #1f2229 0%, #0f1115 100%)',
+                        'text-metal': 'linear-gradient(to right, #ffffff, #8e9bae)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2229;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e50914;
+        }
+        .text-gradient-metal {
+            background: linear-gradient(to right, #111827, #6b7280);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .text-gradient-metal {
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(229, 9, 20, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(229, 9, 20, 0.6); }
+        }
+        .engine-start-btn {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="antialiased font-body relative selection:bg-dash-red selection:text-white bg-[#f4f5f7] dark:bg-[#050505] text-gray-900 dark:text-[#8e9bae]">
+
+    <!-- Ambient Lighting Background -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-dash-red/10 rounded-full blur-[150px]"></div>
+        <div class="absolute top-[40%] -right-[10%] w-[40%] h-[40%] bg-blue-900/10 rounded-full blur-[150px]"></div>
+    </div>
+
+    <div class="fixed top-0 left-0 right-0 z-50 px-4 py-4 w-full flex justify-center pointer-events-none">
+        <header
+            class="pointer-events-auto w-full max-w-[1200px] md:bg-[#f4f5f7]/80 md:dark:bg-dash-panel/80 md:backdrop-blur-xl md:border-b md:border-t md:border-gray-200 md:dark:border-white/10 md:rounded-2xl md:px-6 md:py-3 flex justify-end md:justify-between items-center md:shadow-md md:dark:shadow-panel">
+            <a href="index.html" class="hidden md:flex items-center gap-3 group">
+                <div class="text-dash-red relative">
+                    <i class="ph-fill ph-steering-wheel text-3xl group-hover:rotate-45 transition-transform duration-700"></i>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="font-heading font-black text-xl text-gray-900 dark:text-white tracking-[0.2em] uppercase">Agung Jaya</span>
+                    <span class="font-digital text-xs text-gray-500 dark:text-dash-silver tracking-[0.3em] uppercase">Motor II • Depok</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html#showroom"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Showroom</a>
+                <a href="index.html#diagnostics"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Quality</a>
+                <a href="index.html#finance"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Finance</a>
+                <a href="index.html#reviews"
+                    class="text-[10px] font-bold tracking-[0.15em] text-gray-500 dark:text-dash-silver hover:text-gray-900 dark:hover:text-white uppercase transition-colors">Pilot Logs</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors w-9 h-9 flex items-center justify-center border border-gray-200 dark:border-white/5 rounded-full bg-white dark:bg-dash-screen shadow-sm dark:shadow-none">
+                    <i class="ph-fill ph-moon hidden dark:block text-lg"></i>
+                    <i class="ph-fill ph-sun block dark:hidden text-lg"></i>
+                </button>
+                <a href="https://wa.me/6287888087542"
+                    class="engine-start-btn bg-dash-red text-white px-6 py-2.5 rounded-full font-heading font-bold text-[10px] tracking-widest uppercase transition-all hidden md:flex items-center gap-2 border border-red-400/30">
+                    <i class="ph-bold ph-whatsapp-logo text-base"></i> Hubungi Kami
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Content for Detail Page -->
+    <main class="pt-32 pb-16 px-4 max-w-[1200px] mx-auto relative z-10 min-h-screen">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex items-center text-[10px] text-gray-500 dark:text-dash-silver font-digital tracking-widest uppercase mb-8">
+            <a href="index.html" class="hover:text-dash-red transition-colors">Beranda</a>
+            <i class="ph-bold ph-caret-right mx-2"></i>
+            <a href="index.html#showroom" class="hover:text-dash-red transition-colors">Mobil</a>
+            <i class="ph-bold ph-caret-right mx-2"></i>
+            <span class="text-gray-900 dark:text-white font-bold">Toyota Yaris GR SPORT</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left: Gallery Section -->
+            <div class="space-y-4">
+                <!-- Main Image -->
+                <div class="w-full aspect-[4/3] bg-gray-200 dark:bg-dash-panel rounded-2xl overflow-hidden border border-gray-200 dark:border-white/5 relative shadow-lg">
+                    <img id="main-image" src="images/toyota-yaris.webp" alt="Toyota Yaris GR SPORT" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-dash-red text-white font-heading font-bold text-[10px] px-3 py-1.5 rounded-sm tracking-widest uppercase z-10 shadow-lg">
+                        BEST DEAL
+                    </div>
+                </div>
+                
+                <!-- Thumbnail Grid -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div onclick="changeMainImage('images/toyota-yaris.webp')" class="thumbnail-btn aspect-[4/3] bg-gray-200 dark:bg-dash-panel rounded-lg overflow-hidden border-2 border-dash-red cursor-pointer relative shadow-sm">
+                        <img src="images/toyota-yaris.webp" alt="Thumb 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div onclick="changeMainImage('images/Yaris.png')" class="thumbnail-btn aspect-[4/3] bg-gray-200 dark:bg-dash-panel rounded-lg overflow-hidden border border-gray-200 dark:border-white/5 opacity-60 hover:opacity-100 transition-all cursor-pointer relative shadow-sm hover:border-dash-red/50">
+                        <img src="images/Yaris.png" alt="Thumb 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <!-- Empty placeholders for demo purposes -->
+                    <div class="aspect-[4/3] bg-gray-200 dark:bg-dash-screen rounded-lg overflow-hidden border border-gray-200 dark:border-white/5 opacity-50 flex items-center justify-center">
+                        <i class="ph-light ph-image text-3xl text-gray-400 dark:text-dash-silver"></i>
+                    </div>
+                    <div class="aspect-[4/3] bg-gray-200 dark:bg-dash-screen rounded-lg overflow-hidden border border-gray-200 dark:border-white/5 opacity-50 flex items-center justify-center">
+                        <i class="ph-light ph-image text-3xl text-gray-400 dark:text-dash-silver"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Details Section -->
+            <div class="flex flex-col">
+                <!-- Title & Badge -->
+                <div class="mb-6 border-b border-gray-200 dark:border-white/5 pb-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-dash-screen border border-yellow-500/30 dark:border-dash-gold/30 rounded-md mb-4 shadow-inset-glow">
+                        <i class="ph-fill ph-check-circle text-yellow-600 dark:text-dash-gold text-sm"></i>
+                        <span class="font-digital text-[10px] tracking-widest uppercase text-yellow-600 dark:text-dash-gold">Lulus Inspeksi 150 Titik</span>
+                    </div>
+                    <h1 class="font-heading text-3xl md:text-5xl font-black text-gray-900 dark:text-white uppercase tracking-tight mb-2">Toyota Yaris</h1>
+                    <p class="font-digital text-gray-500 dark:text-dash-silver text-sm md:text-base tracking-[0.2em] uppercase">1.5L GR SPORT • HATCHBACK</p>
+                </div>
+
+                <!-- Price -->
+                <div class="flex flex-col sm:flex-row sm:items-end gap-6 mb-8 border-b border-gray-200 dark:border-white/5 pb-8">
+                    <div>
+                        <p class="text-[10px] text-gray-500 dark:text-dash-silver uppercase tracking-widest font-bold mb-1">Harga Tunai</p>
+                        <p class="font-digital font-bold text-4xl text-gray-900 dark:text-white">Rp 145<span class="text-2xl text-dash-red">.000.000</span></p>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen px-5 py-3 rounded-xl border border-gray-200 dark:border-white/5 sm:ml-auto">
+                        <p class="text-[10px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 flex items-center gap-2">
+                            <i class="ph-fill ph-wallet text-dash-red"></i> Estimasi TDP
+                        </p>
+                        <p class="font-digital font-bold text-xl text-gray-900 dark:text-white">Mulai Rp 15 Juta</p>
+                    </div>
+                </div>
+
+                <!-- Specifications Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-calendar-blank text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Tahun</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">2021</span>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-steering-wheel text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Transmisi</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">Automatic</span>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-gauge text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Kilometer</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">32.000 KM</span>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-engine text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Bahan Bakar</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">Bensin</span>
+                    </div>
+                    <!-- Additional Specs -->
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-palette text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Warna</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">Putih Metalik</span>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-car-profile text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Plat Nomor</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">B (Genap)</span>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-map-pin-line text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Lokasi</span>
+                        <span class="font-digital font-bold text-sm text-gray-900 dark:text-white tracking-wider">Depok</span>
+                    </div>
+                    <div class="bg-white dark:bg-dash-screen p-4 rounded-xl border border-gray-200 dark:border-white/5 flex flex-col hover:border-dash-red/30 transition-colors">
+                        <i class="ph-light ph-file-text text-gray-400 dark:text-dash-silver text-2xl mb-3"></i>
+                        <span class="text-[9px] text-gray-500 dark:text-dash-silver uppercase tracking-widest mb-1 font-bold">Pajak</span>
+                        <span class="font-digital font-bold text-sm text-green-600 dark:text-green-400 tracking-wider">Hidup (08-27)</span>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-10 text-gray-600 dark:text-dash-silver font-light text-sm leading-relaxed space-y-4 bg-white dark:bg-dash-screen p-6 rounded-2xl border border-gray-200 dark:border-white/5">
+                    <h3 class="font-heading font-bold text-gray-900 dark:text-white uppercase tracking-widest mb-4 border-b border-gray-200 dark:border-white/10 pb-2">Deskripsi Kendaraan</h3>
+                    <p>Toyota Yaris 1.5 GR SPORT tahun 2021 dengan kondisi sangat terawat. Tipe tertinggi dengan fitur keselamatan lengkap. Eksterior mulus tanpa cacat, interior bersih dan wangi bebas asap rokok. Mesin sangat responsif, transmisi halus, kaki-kaki senyap.</p>
+                    <ul class="space-y-3 pt-2">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5"></i>
+                            <span>Pajak hidup panjang sampai Agustus 2027</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5"></i>
+                            <span>Dokumen lengkap (BPKB, STNK, Faktur) dan dijamin keasliannya</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5"></i>
+                            <span>Lulus inspeksi 150 titik (Bebas dari insiden tabrak besar & banjir)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5"></i>
+                            <span>Bisa Cash, Kredit, atau Tukar Tambah dengan penawaran terbaik</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-auto sticky bottom-20 md:static z-20">
+                    <a href="https://wa.me/6287888087542?text=Halo%20saya%20tertarik%20dengan%20Toyota%20Yaris%20GR%20SPORT%20seharga%20Rp145Jt" 
+                        class="engine-start-btn flex-1 bg-dash-red text-white py-4 px-6 rounded-xl font-heading font-bold text-[11px] md:text-xs uppercase tracking-widest text-center flex items-center justify-center gap-3 hover:bg-red-700 transition-colors shadow-lg">
+                        <i class="ph-bold ph-whatsapp-logo text-2xl"></i> Hubungi Penjual
+                    </a>
+                    <a href="https://wa.me/6287888087542?text=Halo%20saya%20ingin%20konsultasi%20kredit%20untuk%20Toyota%20Yaris%20GR%20SPORT" 
+                        class="flex-1 bg-white dark:bg-dash-screen border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white py-4 px-6 rounded-xl font-heading font-bold text-[11px] md:text-xs uppercase tracking-widest text-center flex items-center justify-center gap-3 hover:border-dash-red hover:text-dash-red transition-colors shadow-sm">
+                        <i class="ph-bold ph-calculator text-2xl"></i> Simulasi Kredit
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 dark:border-white/5 bg-gray-100 dark:bg-black pt-8 pb-24 md:pb-8 relative z-10">
+        <div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <p class="font-digital text-[10px] text-gray-500 dark:text-dash-silver uppercase tracking-widest">&copy; 2026 AGUNG JAYA MOTOR 2. Hak Cipta Dilindungi.</p>
+            <div class="flex gap-4 font-digital text-[10px] text-gray-500 dark:text-white/40 uppercase tracking-widest">
+                <span>Melayani Jual Beli Cash & Credit</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 dark:bg-dash-panel/90 backdrop-blur-xl border-t border-gray-200 dark:border-white/10 z-[100]">
+        <div class="flex justify-around items-center h-16 px-2 relative">
+            <a href="index.html" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-house text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Beranda</span>
+            </a>
+            <a href="index.html#showroom" class="flex flex-col items-center justify-center w-full text-dash-red transition-colors">
+                <i class="ph-fill ph-car-profile text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Mobil</span>
+            </a>
+            <!-- Center WhatsApp Floating Button -->
+            <div class="w-full flex justify-center relative">
+                <a href="https://wa.me/6287888087542" class="absolute -top-8 w-14 h-14 bg-dash-red rounded-full flex items-center justify-center text-white shadow-ambient-strong border-[4px] border-white dark:border-[#0f1115] engine-start-btn">
+                    <i class="ph-fill ph-whatsapp-logo text-white text-3xl"></i>
+                </a>
+            </div>
+            <a href="index.html#diagnostics" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-wallet text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Finance</span>
+            </a>
+            <a href="https://wa.me/6287888087542" class="flex flex-col items-center justify-center w-full text-gray-500 dark:text-dash-silver hover:text-dash-red transition-colors">
+                <i class="ph-light ph-phone-call text-2xl mb-1"></i>
+                <span class="text-[9px] uppercase tracking-wider font-digital">Kontak</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Desktop Floating WhatsApp Button -->
+    <a href="https://wa.me/6287888087542" class="fixed bottom-6 right-6 z-50 group hidden md:flex items-center gap-3">
+        <span class="bg-white/90 dark:bg-black/80 backdrop-blur border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-[10px] font-digital uppercase tracking-widest px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+            Tanya Sales
+        </span>
+        <div class="w-14 h-14 bg-dash-red rounded-full flex items-center justify-center text-white shadow-ambient-strong border-2 border-red-400/20 hover:scale-110 transition-transform engine-start-btn">
+            <i class="ph-fill ph-whatsapp-logo text-white text-2xl"></i>
+        </div>
+    </a>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+
+        // Image Gallery Script
+        function changeMainImage(src) {
+            document.getElementById('main-image').src = src;
+            
+            // Update active state of thumbnails
+            const thumbnails = document.querySelectorAll('.thumbnail-btn');
+            thumbnails.forEach(thumb => {
+                if(thumb.querySelector('img').src.includes(src)) {
+                    thumb.classList.remove('border-gray-200', 'dark:border-white/5', 'opacity-60');
+                    thumb.classList.add('border-2', 'border-dash-red', 'opacity-100');
+                } else {
+                    thumb.classList.remove('border-2', 'border-dash-red', 'opacity-100');
+                    thumb.classList.add('border', 'border-gray-200', 'dark:border-white/5', 'opacity-60');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
