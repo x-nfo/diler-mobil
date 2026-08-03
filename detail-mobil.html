@@ -176,10 +176,13 @@
                         <h4 class="text-xs font-bold text-black">Bebas Tabrak & Banjir</h4>
                         <p class="text-[10px] text-ajm-slate mt-0.5">Jaminan 100% Uang Kembali</p>
                     </div>
-                    <div class="bg-white p-4 rounded-2xl border border-zinc-200 text-center shadow-soft">
-                        <i class="ph-bold ph-file-text text-2xl text-black mb-1"></i>
-                        <h4 class="text-xs font-bold text-black">Surat Dijamin Asli</h4>
-                        <p class="text-[10px] text-ajm-slate mt-0.5">BPKB, STNK & Faktur Ready</p>
+                    <div class="bg-white p-4 rounded-2xl border border-zinc-200 text-center shadow-soft flex flex-col items-center justify-center">
+                        <div class="flex items-center justify-center gap-1.5 mb-1.5">
+                            <img src="images/BCA_Finance.svg.webp" alt="BCA Finance" class="h-[16px] md:h-[20px] max-w-[80px] w-auto object-contain">
+                            <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance" class="h-[16px] md:h-[20px] max-w-[80px] w-auto object-contain">
+                        </div>
+                        <h4 class="text-xs font-bold text-black">Mitra BCA & Clipan</h4>
+                        <p class="text-[10px] text-ajm-slate mt-0.5">Pinjaman Kredit Cepat</p>
                     </div>
                     <div class="bg-white p-4 rounded-2xl border border-zinc-200 text-center shadow-soft">
                         <i class="ph-bold ph-wrench text-2xl text-black mb-1"></i>
@@ -220,7 +223,7 @@
                             class="mt-3 p-3.5 rounded-xl bg-zinc-100 border border-zinc-200 flex items-center justify-between">
                             <div>
                                 <span class="text-[10px] font-bold text-ajm-slate uppercase tracking-wider">Estimasi
-                                    Kredit</span>
+                                    Kredit (BCA & Clipan Finance)</span>
                                 <p class="text-sm md:text-base font-extrabold text-black">Mulai Rp 3,4 Jt / bulan</p>
                             </div>
                             <span class="text-[10px] font-bold bg-black text-white px-2.5 py-1 rounded-md">DP
@@ -395,6 +398,21 @@
             <!-- Tab Content 3: Kalkulator Kredit -->
             <div id="tab-kredit" class="tab-content hidden py-6 space-y-6">
                 <div class="max-w-xl mx-auto space-y-5">
+                    <!-- Partner Selection -->
+                    <div>
+                        <label class="block text-xs font-bold text-black mb-2">Pilih Mitra Pembiayaan (Leasing):</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button type="button" onclick="setDetailLeasing('BCA Finance', this)"
+                                class="detail-leasing-btn active-detail-leasing h-12 py-2.5 px-4 rounded-xl border-2 border-black bg-white flex items-center justify-center transition-all shadow-sm">
+                                <img src="images/BCA_Finance.svg.webp" alt="BCA Finance" class="h-5 md:h-6 max-h-7 max-w-[120px] w-auto object-contain">
+                            </button>
+                            <button type="button" onclick="setDetailLeasing('Clipan Finance', this)"
+                                class="detail-leasing-btn h-12 py-2.5 px-4 rounded-xl border border-zinc-300 bg-white hover:border-black flex items-center justify-center transition-all">
+                                <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance" class="h-5 md:h-6 max-h-7 max-w-[120px] w-auto object-contain">
+                            </button>
+                        </div>
+                    </div>
+
                     <div>
                         <label class="block text-xs font-bold text-black mb-2">Pilih Uang Muka (DP): <span id="dp-val"
                                 class="font-extrabold text-sm">Rp 30.000.000</span></label>
@@ -425,8 +443,7 @@
                         <span class="text-xs font-bold text-ajm-slate uppercase">Estimasi Angsuran Bulanan</span>
                         <p class="text-3xl font-extrabold text-black mt-1" id="monthly-installment">Rp 3.450.000 / bln
                         </p>
-                        <p class="text-[10px] text-ajm-slate mt-2">*Simulasi estimasi tidak mengikat, pengajuan dibantu
-                            sales AJM sampai approved</p>
+                        <p class="text-[10px] text-ajm-slate mt-2" id="leasing-note">*Simulasi estimasi tidak mengikat, pengajuan pinjaman dibantu sales AJM via BCA Finance</p>
                     </div>
                 </div>
             </div>
@@ -562,7 +579,19 @@
 
         // Credit Calculator Logic
         let selectedTenor = 36;
+        let selectedDetailLeasing = 'BCA Finance';
         const carPrice = 215000000;
+
+        function setDetailLeasing(leasingName, btnEl) {
+            selectedDetailLeasing = leasingName;
+            document.querySelectorAll('.detail-leasing-btn').forEach(el => {
+                el.classList.remove('active-detail-leasing', 'border-2', 'border-black', 'shadow-sm');
+                el.classList.add('border', 'border-zinc-300');
+            });
+            btnEl.classList.remove('border', 'border-zinc-300', 'border');
+            btnEl.classList.add('active-detail-leasing', 'border-2', 'border-black', 'shadow-sm');
+            updateCreditCalc();
+        }
 
         function setTenor(tenorMonths, btnEl) {
             selectedTenor = tenorMonths;
@@ -585,6 +614,11 @@
             const monthly = Math.round((loanAmount + totalInterest) / selectedTenor);
 
             document.getElementById('monthly-installment').innerText = 'Rp ' + monthly.toLocaleString('id-ID') + ' / bln';
+
+            const leasingNote = document.getElementById('leasing-note');
+            if (leasingNote) {
+                leasingNote.innerText = `*Simulasi estimasi tidak mengikat, pengajuan pinjaman dibantu sales AJM via ${selectedDetailLeasing} sampai approved`;
+            }
         }
 
         // Favorite Button Toggle

@@ -118,7 +118,7 @@
                 <!-- Background Image (Crashed Car Placeholder) -->
                 <div class="absolute inset-0 w-full h-full overflow-hidden bg-ajm-navy">
                     <img src="images/hero_4.png" alt="Wrecked Car" class="w-full h-full object-cover opacity-60">
-                    <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/15">
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-zinc-950">
                     </div>
                 </div>
 
@@ -139,7 +139,7 @@
                 </header>
 
                 <!-- Hero Content -->
-                <div class="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-10 pt-48 pb-16 md:pt-64 md:pb-32">
+                <div class="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-10 pt-28 pb-16 md:pt-64 md:pb-32">
                     <div
                         class="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-2 mb-5 bg-white/10 backdrop-blur-md">
                         <div class="w-2 h-2 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"></div>
@@ -151,22 +151,35 @@
                     <h1
                         class="text-[40px] md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-5 md:mb-6">
                         Mobil Bekas <br>
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">Kualitas
-                            Baru.</span>
+                        <span class="text-zinc-200">Kualitas Baru.</span>
                     </h1>
 
                     <p
                         class="text-ajm-lightblue/90 text-[15px] md:text-lg max-w-[320px] md:max-w-2xl leading-relaxed font-medium md:font-normal">
                         Koleksi kendaraan premium diinspeksi ketat. Jaminan bebas tabrak dan banjir. Proses tukar tambah
-                        dan kredit cepat dibantu sampai tuntas.
+                        dan pengajuan kredit cepat dibantu sampai tuntas.
                     </p>
+
+                    <!-- Mitra Pembiayaan Badge dengan Logo -->
+                    <div class="mt-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                        <span class="text-xs text-zinc-300 font-medium shrink-0">Mitra Pembiayaan Resmi:</span>
+                        <div class="flex items-center gap-2">
+                            <div class="inline-flex items-center px-2.5 py-1 rounded shadow-sm  ">
+                                <img src="images/BCA_Finance.svg.webp" alt="BCA Finance"
+                                    class="h-[18px] md:h-[22px] max-w-[90px] md:max-w-[110px] w-auto object-contain">
+                            </div>
+                            <div class="inline-flex items-center px-2.5 py-1 rounded shadow-sm ">
+                                <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance"
+                                    class="h-[18px] md:h-[22px] max-w-[90px] md:max-w-[110px] w-auto object-contain">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Overlapping Bottom Card (Categories) -->
             <div
-                class="relative z-20 -mt-8 md:-mt-16 bg-white rounded-b-[32px] md:rounded-b-[48px] rounded-t-[32px] md:rounded-t-[48px]  pt-8 px-5 md:px-10 pb-6 w-[calc(100%+40px)] -mx-5 md:w-full md:mx-auto mb-16 max-w-[1280px] shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+                class="relative z-20 -mt-5 md:-mt-16 bg-white rounded-b-[32px] md:rounded-b-[48px] rounded-t-[32px] md:rounded-t-[48px]  pt-8 px-5 md:px-10 pb-6 w-[calc(100%+40px)] -mx-5 md:w-full md:mx-auto mb-16 max-w-[1280px] shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
 
                 <!-- Category Icons -->
                 <div class="flex justify-between items-center mx-auto md:mx-2xl overflow-x-auto no-scrollbar pb-2">
@@ -540,13 +553,89 @@
                 </div>
             </div>
 
-            <!-- Interactive Feature Banner Slider (Optimized Mobile Slider) -->
+            <!-- Interactive Feature & Promo Banner Slider -->
             <div class="mt-6 md:mt-12 mb-8 md:mb-16 max-w-[1280px] mx-auto w-full">
+                <!-- Section Title -->
+                <div class="flex justify-between items-center mb-4 md:mb-6 px-5 md:px-0">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                        <h3 class="text-base md:text-2xl font-bold text-black tracking-tight">Promo Spesial & Keunggulan
+                            AJM</h3>
+                    </div>
+                    <span class="text-xs text-zinc-400 font-medium hidden sm:block">&larr; Geser untuk promo lainnya
+                        &rarr;</span>
+                </div>
+
                 <div class="relative overflow-hidden">
 
                     <!-- Scrollable Cards Track -->
                     <div id="feature-banner-track"
                         class="flex gap-3 md:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-3 pt-1 px-5 -mx-5 md:mx-0 md:px-0 scroll-smooth">
+
+                        <!-- Slide Promo 1: Diskon Special 15% (Solid Vibrant Yellow Background) -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20tertarik%20dengan%20Promo%20Diskon%20Kredit"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-amber-400 text-zinc-950 rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-md hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden border border-amber-500/40">
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Badge Percent Icon -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-amber-400 flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-percent text-2xl md:text-3xl"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <div
+                                        class="inline-flex items-center gap-1 bg-zinc-950 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wider">
+                                        <i class="ph-bold ph-lightning text-amber-400"></i> PROMO DISKON 15%
+                                    </div>
+                                    <h4 class="font-extrabold text-xs md:text-sm text-zinc-950 leading-tight">
+                                        Diskon Spesial Unit Pilihan <br>
+                                        <span class="text-black font-black text-sm md:text-base">Potongan s/d Rp 20
+                                            Juta</span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-800 font-bold mt-1">
+                                        Khusus pengajuan minggu ini!
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-xl text-zinc-950 font-black group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                        <!-- Slide Promo 2: Cashback DP BCA & Clipan (Solid Dark Background) -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20Promo%20Cashback%20DP%20BCA%20Clipan"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-zinc-900 text-white rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-md hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden border border-zinc-800">
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Badge Icon -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-amber-400 text-zinc-950 flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-ticket text-2xl md:text-3xl"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <div
+                                        class="inline-flex items-center gap-1 bg-amber-400 text-zinc-950 text-[10px] font-black px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wider">
+                                        <i class="ph-bold ph-bank"></i> SPECIAL LEASING DEAL
+                                    </div>
+                                    <h4 class="font-extrabold text-xs md:text-sm text-white leading-tight">
+                                        Subsidi DP BCA & Clipan <br>
+                                        <span class="text-amber-400 font-black">Cashback DP s/d 10%</span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-300 font-medium mt-1">
+                                        Free angsuran & garansi mesin 1 thn
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-white group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
 
                         <!-- Slide 1: Inspeksi 100+ Titik -->
                         <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20detail%20hasil%20inspeksi%20unit"
@@ -1242,8 +1331,10 @@
                                 <div
                                     class="w-[calc(100%-3.5rem)] md:w-[calc(50%-2.5rem)] bg-white border border-gray-100 p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-soft">
                                     <h4 class="font-bold text-ajm-navy text-sm md:text-base mb-1">Proses Dokumen</h4>
-                                    <p class="text-xs md:text-sm text-ajm-slate font-medium">Data dijemput. Proses
-                                        approval lising dibantu maksimal 1x24 jam.</p>
+                                    <p class="text-xs md:text-sm text-ajm-slate font-medium">Data dijemput. Pengajuan
+                                        pinjaman dibantu via <strong class="text-ajm-navy">BCA Finance</strong> &
+                                        <strong class="text-ajm-navy">Clipan Finance</strong> (approval 1x24 jam).
+                                    </p>
                                 </div>
                             </div>
 
@@ -1274,6 +1365,23 @@
                         </div>
 
                         <div class="space-y-5">
+                            <!-- Leasing Partner Selector -->
+                            <div>
+                                <label class="block text-xs md:text-sm font-bold text-ajm-navy mb-2">Pilih Mitra
+                                    Pembiayaan (Leasing)</label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button type="button" onclick="setIndexLeasing('BCA Finance', this)"
+                                        class="sim-leasing-btn active-leasing h-12 py-2.5 px-4 rounded-xl border-2 border-black bg-white flex items-center justify-center transition-all shadow-sm">
+                                        <img src="images/BCA_Finance.svg.webp" alt="BCA Finance"
+                                            class="h-5 md:h-6 max-h-7 max-w-[120px] w-auto object-contain">
+                                    </button>
+                                    <button type="button" onclick="setIndexLeasing('Clipan Finance', this)"
+                                        class="sim-leasing-btn h-12 py-2.5 px-4 rounded-xl border border-gray-200 bg-white hover:border-gray-300 flex items-center justify-center transition-all">
+                                        <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance"
+                                            class="h-5 md:h-6 max-h-7 max-w-[120px] w-auto object-contain">
+                                    </button>
+                                </div>
+                            </div>
                             <!-- Car Selection -->
                             <div>
                                 <label for="sim-car-select"
@@ -1376,6 +1484,72 @@
                 </div>
             </div>
 
+            <!-- Feature Highlight: Mitra Pembiayaan BCA Finance & Clipan Finance -->
+            <div class="md:px-10 max-w-[1280px] mx-auto w-full flex flex-col mt-16 md:mt-20">
+                <div
+                    class="bg-zinc-900 text-white rounded-3xl p-6 md:p-10 relative overflow-hidden border border-zinc-800">
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-5 space-y-4">
+                            <div
+                                class="inline-flex items-center gap-2 bg-zinc-800 px-3.5 py-1.5 rounded-full border border-zinc-700 text-xs font-bold text-zinc-200">
+                                <i class="ph-bold ph-hand-coins text-amber-400"></i>
+                                <span>Kelebihan Utama AJM</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white leading-tight">
+                                Pengajuan Pinjaman & Kredit Resmi via BCA & Clipan Finance
+                            </h3>
+                            <p class="text-xs md:text-sm text-zinc-300 leading-relaxed font-normal">
+                                Nikmati kemudahan mengajukan pinjaman dan pembiayaan mobil bekas impian Anda di AJM.
+                                Kami bekerjasama resmi dengan leasing terkemuka untuk memberikan suku bunga terbaik dan
+                                proses approval super cepat.
+                            </p>
+                        </div>
+
+                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Card BCA Finance -->
+                            <div
+                                class="bg-zinc-800/90 border border-zinc-700/60 rounded-2xl p-5 hover:border-zinc-500 transition-all group">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div
+                                        class="px-3 py-1.5 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                                        <img src="images/BCA_Finance.svg.webp" alt="BCA Finance Logo"
+                                            class="h-[22px] max-w-[100px] w-auto object-contain">
+                                    </div>
+                                    <span
+                                        class="text-[10px] bg-blue-600 text-white font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">Mitra
+                                        Resmi</span>
+                                </div>
+                                <h4 class="font-bold text-sm text-white mb-1">Suku Bunga Kompetitif & Tenor Panjang</h4>
+                                <p class="text-xs text-zinc-300 leading-relaxed">
+                                    Pengajuan kredit via BCA Finance dengan bunga super ringan, tenor fleksibel hingga 5
+                                    tahun, dan jaringan pembayaran terluas.
+                                </p>
+                            </div>
+
+                            <!-- Card Clipan Finance -->
+                            <div
+                                class="bg-zinc-800/90 border border-zinc-700/60 rounded-2xl p-5 hover:border-zinc-500 transition-all group">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div
+                                        class="px-3 py-1.5 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                                        <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance Logo"
+                                            class="h-[22px] max-w-[100px] w-auto object-contain">
+                                    </div>
+                                    <span
+                                        class="text-[10px] bg-amber-400 text-zinc-950 font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">Mitra
+                                        Resmi</span>
+                                </div>
+                                <h4 class="font-bold text-sm text-white mb-1">DP Terjangkau & Approval Cepat</h4>
+                                <p class="text-xs text-zinc-300 leading-relaxed">
+                                    Proses pengajuan praktis via Clipan Finance dengan DP mulai 15%, verifikasi data
+                                    dibantu, dan persetujuan kilat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- FAQ Section -->
             <div id="faq" class="md:px-10 max-w-[800px] mx-auto w-full flex flex-col mt-16 md:mt-24 mb-10">
                 <div class="text-center mb-8 md:mb-10">
@@ -1383,6 +1557,22 @@
                 </div>
 
                 <div class="space-y-4 px-5 md:px-0">
+                    <details class="group bg-white border border-gray-100 rounded-2xl shadow-soft overflow-hidden">
+                        <summary
+                            class="flex justify-between items-center font-bold text-sm md:text-base text-ajm-navy p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
+                            <span>Apakah bisa mengajukan pinjaman/kredit via BCA Finance & Clipan Finance?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph-bold ph-caret-down text-ajm-slate"></i>
+                            </span>
+                        </summary>
+                        <div class="px-5 pb-5 pt-1 text-sm text-ajm-slate font-medium leading-relaxed">
+                            Tentu saja! Salah satu keunggulan utama AJM adalah kemudahan pengajuan pinjaman/kredit yang
+                            didukung resmi oleh mitra pembiayaan ternama seperti <strong class="text-ajm-navy">BCA
+                                Finance</strong> dan <strong class="text-ajm-navy">Clipan Finance</strong>. Tim sales
+                            kami akan membantu analisa dokumen dan proses pengajuan hingga approved.
+                        </div>
+                    </details>
+
                     <details class="group bg-white border border-gray-100 rounded-2xl shadow-soft overflow-hidden">
                         <summary
                             class="flex justify-between items-center font-bold text-sm md:text-base text-ajm-navy p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
@@ -1585,10 +1775,25 @@
     <script>
             (function () {
                 let currentTenor = 48;
+                let selectedLeasing = 'BCA Finance';
 
                 function formatRupiah(amount) {
                     return 'Rp ' + Math.round(amount).toLocaleString('id-ID');
                 }
+
+                window.setIndexLeasing = function (leasingName, btnEl) {
+                    selectedLeasing = leasingName;
+                    const buttons = document.querySelectorAll('.sim-leasing-btn');
+                    buttons.forEach(btn => {
+                        btn.classList.remove('active-leasing', 'border-2', 'border-black', 'shadow-sm');
+                        btn.classList.add('border', 'border-gray-200');
+                    });
+                    if (btnEl) {
+                        btnEl.classList.remove('border-gray-200', 'border');
+                        btnEl.classList.add('active-leasing', 'border-2', 'border-black', 'shadow-sm');
+                    }
+                    updateSimulator();
+                };
 
                 window.setIndexTenor = function (tenorMonths, btnEl) {
                     currentTenor = tenorMonths;
@@ -1672,8 +1877,9 @@
                             `💰 *Harga*: ${formatRupiah(carPrice)}\n` +
                             `💵 *Uang Muka (DP)*: ${formatRupiah(dpAmount)} (${dpPercent}%)\n` +
                             `📅 *Tenor*: ${currentTenor} Bulan (${currentTenor / 12} Thn)\n` +
+                            `🏦 *Mitra Pembiayaan*: ${selectedLeasing}\n` +
                             `💳 *Estimasi Angsuran*: ${formatRupiah(monthlyInstallment)}/bulan\n\n` +
-                            `Mohon bantuan info persyaratannya. Terima kasih!`;
+                            `Mohon bantuan info pengajuan pinjaman/kredit via ${selectedLeasing}. Terima kasih!`;
                         waBtnEl.href = `https://wa.me/6287888087542?text=${encodeURIComponent(textMsg)}`;
                     }
                 }
