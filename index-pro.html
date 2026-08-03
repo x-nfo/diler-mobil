@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MobilBekas Premium | Kualitas Terjamin, Harga Transparan</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans for a clean, modern, premium corporate look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0f172a', // Deep corporate navy for trust
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'floating': '0 20px 40px -10px rgba(0,0,0,0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f8fafc] text-gray-800 font-sans antialiased selection:bg-brand-500 selection:text-white pb-20 md:pb-0">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-gray-100 z-50 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-900 flex items-center justify-center text-white shadow-md">
+                    <i class="ph-fill ph-steering-wheel text-2xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-xl leading-none text-brand-900 tracking-tight">AutoTrust</span>
+                    <span class="text-[10px] font-semibold text-brand-600 tracking-widest uppercase mt-0.5">Premium Used Cars</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-sm font-semibold text-brand-900 border-b-2 border-brand-500 pb-1">Beli Mobil</a>
+                <a href="#" class="text-sm font-semibold text-gray-500 hover:text-brand-900 transition-colors">Tukar Tambah</a>
+                <a href="#" class="text-sm font-semibold text-gray-500 hover:text-brand-900 transition-colors">Garansi & Inspeksi</a>
+                <a href="#" class="text-sm font-semibold text-gray-500 hover:text-brand-900 transition-colors">Testimoni</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/6287888087542" class="hidden md:flex items-center gap-2 bg-brand-900 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-brand-800 transition-all shadow-md hover:shadow-floating">
+                    <i class="ph-fill ph-whatsapp-logo text-lg text-green-400"></i> Hubungi Kami
+                </a>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600 bg-gray-50 rounded-lg">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-white">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-40" style="background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 24px 24px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+            <!-- Left: Value Proposition -->
+            <div class="w-full md:w-1/2 flex flex-col items-start text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 mb-6">
+                    <i class="ph-fill ph-shield-check text-brand-600"></i>
+                    <span class="text-xs font-bold text-brand-900 tracking-wide uppercase">100% Lulus Inspeksi 150 Titik</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-900 leading-[1.15] tracking-tight mb-6">
+                    Beli Mobil Bekas <br class="hidden md:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-500">Tanpa Rasa Khawatir.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
+                    Kualitas layaknya mobil baru. Setiap unit di AutoTrust dilindungi garansi mesin 1 tahun, dijamin bebas banjir, dan bebas tabrak besar. Harga transparan, cicilan ringan.
+                </p>
+
+                <!-- Search Form (Trust building action) -->
+                <div class="w-full bg-white p-2 rounded-2xl border border-gray-200 shadow-soft flex items-center gap-2 relative">
+                    <div class="pl-4 text-gray-400"><i class="ph ph-magnifying-glass text-xl"></i></div>
+                    <input type="text" placeholder="Cari Honda Brio, Innova..." class="flex-1 py-3 text-sm focus:outline-none bg-transparent font-medium">
+                    <button class="bg-brand-900 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-brand-800 transition-colors">
+                        Cari Mobil
+                    </button>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="flex items-center justify-center md:justify-start gap-8 mt-10">
+                    <div>
+                        <div class="text-2xl font-bold text-brand-900">500+</div>
+                        <div class="text-xs text-gray-500 font-medium">Unit Terjual</div>
+                    </div>
+                    <div class="w-px h-8 bg-gray-200"></div>
+                    <div>
+                        <div class="text-2xl font-bold text-brand-900 flex items-center gap-1">4.9 <i class="ph-fill ph-star text-yellow-400 text-lg"></i></div>
+                        <div class="text-xs text-gray-500 font-medium">Rating Pelanggan</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Premium Car Image -->
+            <div class="w-full md:w-1/2 relative h-[300px] md:h-[500px] flex items-center justify-center">
+                <!-- Decorative Blur -->
+                <div class="absolute w-[80%] h-[80%] bg-brand-100 rounded-full blur-[80px] z-0"></div>
+                
+                <!-- Car Image (Using existing Yaris or Pajero) -->
+                <img src="images/Yaris.png" alt="Premium Car" class="relative z-10 w-[110%] max-w-none transform drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out">
+                
+                <!-- Floating Trust Badge 1 -->
+                <div class="absolute top-10 right-0 md:-right-10 bg-white p-4 rounded-xl shadow-floating z-20 flex items-center gap-3 animate-[bounce_3s_infinite_ease-in-out]">
+                    <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+                        <i class="ph-fill ph-certificate text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Garansi Resmi</div>
+                        <div class="text-sm font-extrabold text-brand-900">1 Tahun Mesin</div>
+                    </div>
+                </div>
+
+                <!-- Floating Trust Badge 2 -->
+                <div class="absolute bottom-10 left-0 md:-left-10 bg-white p-4 rounded-xl shadow-floating z-20 flex items-center gap-3 animate-[bounce_4s_infinite_ease-in-out]">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                        <i class="ph-fill ph-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Lulus Uji</div>
+                        <div class="text-sm font-extrabold text-brand-900">Bebas Tabrak & Banjir</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners / Trust Signals Section -->
+    <section class="py-8 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest text-center md:text-left">Partner Pembiayaan Resmi Kami:</p>
+            <div class="flex items-center justify-center gap-8 md:gap-16 grayscale opacity-60">
+                <!-- Using Text as placeholders for Logos to look professional -->
+                <div class="font-black text-2xl tracking-tighter text-gray-800">BCA<span class="font-normal text-lg tracking-normal">finance</span></div>
+                <div class="font-bold text-xl text-gray-800">Clipan<span class="text-gray-900">Finance</span></div>
+                <div class="font-extrabold text-xl text-gray-800 italic">OTO<span class="font-normal">KreditMobil</span></div>
+                <div class="font-bold text-xl text-gray-800 hidden md:block">Adira<span class="font-light">Finance</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us (Unique Selling Proposition) -->
+    <section class="py-20 md:py-28 bg-[#f8fafc]">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-bold tracking-widest uppercase text-sm mb-3">Keunggulan AutoTrust</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-brand-900 tracking-tight leading-tight">Standar Kualitas Tertinggi untuk Ketenangan Anda.</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- USP 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-brand-100">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i class="ph-fill ph-magnifying-glass text-3xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-3">Inspeksi 150 Titik</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Setiap mobil melewati pengecekan ketat oleh mekanik bersertifikat. Laporan kondisi transparan tanpa ada yang ditutupi.</p>
+                </div>
+                <!-- USP 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-brand-100">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i class="ph-fill ph-shield-check text-3xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-3">Garansi Mesin 1 Tahun</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Beli dengan tenang. Kami menjamin mesin dan transmisi selama 1 tahun penuh tanpa biaya tambahan tersembunyi.</p>
+                </div>
+                <!-- USP 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-brand-100">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i class="ph-fill ph-file-text text-3xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-3">Dokumen 100% Aman</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">BPKB, STNK, dan Faktur telah divalidasi keabsahannya oleh tim legal kami. Bebas dari blokir dan sengketa.</p>
+                </div>
+                <!-- USP 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-brand-100">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i class="ph-fill ph-handshake text-3xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-900 mb-3">Harga Jujur & Transparan</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Tidak ada biaya admin siluman. Harga kredit dan cash disajikan dengan jelas di awal negosiasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Inventory -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="text-brand-600 font-bold tracking-widest uppercase text-sm mb-3">Koleksi Premium</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-brand-900 tracking-tight">Temukan Mobil Impian Anda.</h3>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 md:pb-0">
+                    <button class="px-5 py-2.5 rounded-lg bg-brand-900 text-white text-sm font-semibold whitespace-nowrap">Semua Tipe</button>
+                    <button class="px-5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 text-sm font-semibold whitespace-nowrap transition-colors">SUV / Crossover</button>
+                    <button class="px-5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 text-sm font-semibold whitespace-nowrap transition-colors">MPV Keluarga</button>
+                    <button class="px-5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 text-sm font-semibold whitespace-nowrap transition-colors">Hatchback / City Car</button>
+                </div>
+            </div>
+
+            <!-- Car Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Car Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-floating transition-all duration-300">
+                    <div class="relative h-[220px] bg-gray-50 p-6 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-md">
+                            Lulus Inspeksi
+                        </div>
+                        <img src="images/Yaris.png" alt="Toyota Avanza" class="w-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-brand-900 mb-1">Toyota All New Avanza 1.5 G</h4>
+                        <div class="flex items-center gap-3 text-xs text-gray-500 font-medium mb-4 pb-4 border-b border-gray-100">
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-calendar-blank"></i> 2022</span>
+                            <span>&bull;</span>
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-gauge"></i> 25.400 km</span>
+                            <span>&bull;</span>
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-gear"></i> CVT</span>
+                        </div>
+                        <div class="flex justify-between items-end mb-5">
+                            <div>
+                                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Kredit</div>
+                                <div class="text-2xl font-extrabold text-brand-600">Rp 225 Juta</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Cash</div>
+                                <div class="text-sm font-bold text-brand-900">Rp 235 Juta</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-gray-50 hover:bg-brand-900 hover:text-white text-brand-900 font-semibold py-3 rounded-xl transition-colors border border-gray-200 hover:border-brand-900">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-floating transition-all duration-300">
+                    <div class="relative h-[220px] bg-gray-50 p-6 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-md">
+                            Promo DP Ringan
+                        </div>
+                        <img src="images/hero_2.webp" alt="Mitsubishi Xpander" class="w-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-brand-900 mb-1">Mitsubishi Xpander Ultimate</h4>
+                        <div class="flex items-center gap-3 text-xs text-gray-500 font-medium mb-4 pb-4 border-b border-gray-100">
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-calendar-blank"></i> 2021</span>
+                            <span>&bull;</span>
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-gauge"></i> 38.000 km</span>
+                            <span>&bull;</span>
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-gear"></i> AT</span>
+                        </div>
+                        <div class="flex justify-between items-end mb-5">
+                            <div>
+                                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Kredit</div>
+                                <div class="text-2xl font-extrabold text-brand-600">Rp 245 Juta</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Cash</div>
+                                <div class="text-sm font-bold text-brand-900">Rp 255 Juta</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-gray-50 hover:bg-brand-900 hover:text-white text-brand-900 font-semibold py-3 rounded-xl transition-colors border border-gray-200 hover:border-brand-900">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-floating transition-all duration-300">
+                    <div class="relative h-[220px] bg-gray-50 p-6 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-md">
+                            Lulus Inspeksi
+                        </div>
+                        <img src="images/Yaris.png" alt="Honda Brio" class="w-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-brand-900 mb-1">Honda Brio RS Urbanite</h4>
+                        <div class="flex items-center gap-3 text-xs text-gray-500 font-medium mb-4 pb-4 border-b border-gray-100">
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-calendar-blank"></i> 2023</span>
+                            <span>&bull;</span>
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-gauge"></i> 12.000 km</span>
+                            <span>&bull;</span>
+                            <span class="flex items-center gap-1"><i class="ph-fill ph-gear"></i> CVT</span>
+                        </div>
+                        <div class="flex justify-between items-end mb-5">
+                            <div>
+                                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Kredit</div>
+                                <div class="text-2xl font-extrabold text-brand-600">Rp 210 Juta</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Cash</div>
+                                <div class="text-sm font-bold text-brand-900">Rp 218 Juta</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-gray-50 hover:bg-brand-900 hover:text-white text-brand-900 font-semibold py-3 rounded-xl transition-colors border border-gray-200 hover:border-brand-900">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center gap-2 bg-brand-50 text-brand-600 hover:bg-brand-100 font-bold px-8 py-4 rounded-xl transition-colors">
+                    Lihat 150+ Mobil Lainnya <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 md:py-28 bg-brand-900 text-white relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute -right-40 -top-40 w-96 h-96 bg-brand-600 rounded-full blur-[100px] opacity-50 pointer-events-none"></div>
+        <div class="absolute -left-40 -bottom-40 w-96 h-96 bg-brand-500 rounded-full blur-[100px] opacity-30 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-brand-500 font-bold tracking-widest uppercase text-sm mb-3">Proses Mudah</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">Cara Mudah Memiliki Mobil Impian Anda.</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
+                <!-- Desktop connecting line -->
+                <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-brand-800 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-brand-800 rounded-2xl flex items-center justify-center text-3xl font-black text-brand-500 mb-6 border-4 border-brand-900 shadow-xl">
+                        1
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Pilih Mobil</h4>
+                    <p class="text-sm text-brand-100/70">Jelajahi koleksi kami yang telah terinspeksi secara detail melalui website.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-brand-800 rounded-2xl flex items-center justify-center text-3xl font-black text-brand-500 mb-6 border-4 border-brand-900 shadow-xl">
+                        2
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Test Drive</h4>
+                    <p class="text-sm text-brand-100/70">Coba langsung di showroom kami atau kami antar unitnya ke rumah Anda.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-brand-800 rounded-2xl flex items-center justify-center text-3xl font-black text-brand-500 mb-6 border-4 border-brand-900 shadow-xl">
+                        3
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Transaksi Aman</h4>
+                    <p class="text-sm text-brand-100/70">Pembayaran tunai atau pengajuan kredit kami bantu sampai tuntas dengan cepat.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-brand-500 rounded-2xl flex items-center justify-center text-3xl font-black text-white mb-6 border-4 border-brand-900 shadow-[0_0_30px_rgba(14,165,233,0.4)]">
+                        4
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Bawa Pulang</h4>
+                    <p class="text-sm text-brand-100/70">Mobil impian Anda siap dikemudikan dengan tenang beserta dokumen lengkap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 md:py-28 bg-[#f8fafc]">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-bold tracking-widest uppercase text-sm mb-3">Kisah Pelanggan</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-brand-900 tracking-tight leading-tight">Kepercayaan Mereka Adalah Bukti Kami.</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testi 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4 text-lg">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed mb-6">"Awalnya ragu beli mobil bekas, takut dapet yang bekas tabrakan. Tapi di AutoTrust transparan banget, ditunjukin hasil inspeksinya. Sampai sekarang mobil aman jaya dipakai luar kota."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">BW</div>
+                        <div>
+                            <div class="font-bold text-brand-900">Budi Wibowo</div>
+                            <div class="text-xs text-gray-500">Pembeli Innova Reborn</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4 text-lg">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed mb-6">"Proses tukar tambah (trade-in) cepet banget! Mobil lama dihargai tinggi, proses kredit mobil baru dibantu full sama salesnya sampai approval. Pelayanan bintang 5."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">SA</div>
+                        <div>
+                            <div class="font-bold text-brand-900">Siti Aisyah</div>
+                            <div class="text-xs text-gray-500">Tukar Tambah Brio</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4 text-lg">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed mb-6">"Garansi mesin 1 tahunnya beneran aktif. Pernah ada sedikit masalah di sensor, langsung ditangani tanpa biaya sepeserpun. Recommended dealer!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">RK</div>
+                        <div>
+                            <div class="font-bold text-brand-900">Reza Kurniawan</div>
+                            <div class="text-xs text-gray-500">Pembeli Pajero Sport</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 md:py-28 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-5 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h3>
+                <p class="text-gray-600">Temukan jawaban untuk keraguan Anda sebelum membeli mobil bekas.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-[#f8fafc] rounded-2xl p-6 cursor-pointer marker:content-none border border-transparent hover:border-gray-200 transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-lg text-brand-900 outline-none">
+                        Apakah mobil dijamin bebas tabrak dan banjir?
+                        <span class="transition group-open:rotate-180">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">
+                        Ya. 100% mobil yang kami jual telah melewati inspeksi ketat 150 titik. Kami berani memberikan jaminan uang kembali jika terbukti mobil pernah mengalami insiden tabrakan besar atau terendam banjir.
+                    </p>
+                </details>
+                
+                <!-- FAQ Item 2 -->
+                <details class="group bg-[#f8fafc] rounded-2xl p-6 cursor-pointer marker:content-none border border-transparent hover:border-gray-200 transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-lg text-brand-900 outline-none">
+                        Bagaimana sistem garansi mesin bekerja?
+                        <span class="transition group-open:rotate-180">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">
+                        Setiap pembelian unit (kecuali tipe tertentu) akan mendapatkan garansi mesin dan transmisi selama 1 tahun dari partner resmi kami. Klaim sangat mudah melalui bengkel rekanan di seluruh Indonesia.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group bg-[#f8fafc] rounded-2xl p-6 cursor-pointer marker:content-none border border-transparent hover:border-gray-200 transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-lg text-brand-900 outline-none">
+                        Apakah bisa tukar tambah (Trade-In) dengan mobil lama saya?
+                        <span class="transition group-open:rotate-180">
+                            <i class="ph-bold ph-caret-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">
+                        Tentu bisa! Kami menerima tukar tambah segala merek. Tim kami akan melakukan estimasi harga secara fair pada mobil lama Anda untuk dijadikan DP atau pemotongan harga mobil baru.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA & Footer -->
+    <footer class="bg-brand-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+            <!-- CTA Box -->
+            <div class="bg-gradient-to-r from-brand-600 to-brand-500 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 mb-20 shadow-floating transform -translate-y-10 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')] opacity-30"></div>
+                
+                <div class="relative z-10 text-center md:text-left">
+                    <h3 class="text-3xl font-extrabold mb-3">Masih ragu memilih mobil yang pas?</h3>
+                    <p class="text-brand-50 text-lg">Konsultasikan kebutuhan Anda bersama tim ahli kami secara Gratis!</p>
+                </div>
+                <a href="https://wa.me/6287888087542" class="relative z-10 bg-white text-brand-900 font-bold px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-gray-100 transition-colors whitespace-nowrap shadow-lg">
+                    <i class="ph-fill ph-whatsapp-logo text-green-500 text-xl"></i> Chat WhatsApp
+                </a>
+            </div>
+
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-900">
+                            <i class="ph-fill ph-steering-wheel text-2xl"></i>
+                        </div>
+                        <span class="font-extrabold text-2xl tracking-tight">AutoTrust</span>
+                    </div>
+                    <p class="text-brand-100/70 text-sm leading-relaxed mb-6">
+                        Diler mobil bekas premium pilihan keluarga Indonesia. Memastikan setiap perjalanan Anda dimulai dengan rasa aman.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-brand-600 transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-brand-600 transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-brand-600 transition-colors"><i class="ph-fill ph-youtube-logo text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-4 text-sm text-brand-100/70">
+                        <li><a href="#" class="hover:text-white transition-colors">Beli Mobil</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tukar Tambah</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Layanan Garansi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div class="lg:col-span-2">
+                    <h4 class="font-bold text-lg mb-6">Kunjungi Showroom Kami</h4>
+                    <div class="flex gap-4 mb-4">
+                        <i class="ph-fill ph-map-pin text-xl text-brand-500 shrink-0"></i>
+                        <p class="text-sm text-brand-100/70 leading-relaxed">
+                            Jl. Raya Margonda No. 123, Depok, Jawa Barat 16423. <br>
+                            <a href="#" class="text-brand-500 font-semibold hover:underline mt-2 inline-block">Buka di Google Maps &rarr;</a>
+                        </p>
+                    </div>
+                    <div class="flex gap-4 mb-4">
+                        <i class="ph-fill ph-clock text-xl text-brand-500 shrink-0"></i>
+                        <p class="text-sm text-brand-100/70">Senin - Minggu: 08:00 - 20:00 WIB</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="ph-fill ph-phone text-xl text-brand-500 shrink-0"></i>
+                        <p class="text-sm text-brand-100/70">0878-8808-7542</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-800 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-100/50">
+                <p>&copy; 2026 AutoTrust Premium Cars. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                    <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation (Optional but good for mobile UX) -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 pb-safe pt-2 px-6 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] w-full">
+        <div class="flex justify-between items-center pb-2">
+            <a href="#" class="flex flex-col items-center gap-1 text-brand-900">
+                <i class="ph-fill ph-house text-2xl"></i>
+                <span class="text-[10px] font-bold">Beranda</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-1 text-gray-400 hover:text-brand-900 transition-colors">
+                <i class="ph ph-car-profile text-2xl"></i>
+                <span class="text-[10px] font-medium">Beli Mobil</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-1 text-gray-400 hover:text-brand-900 transition-colors">
+                <i class="ph ph-arrows-left-right text-2xl"></i>
+                <span class="text-[10px] font-medium">Trade-in</span>
+            </a>
+            <a href="https://wa.me/6287888087542" class="flex flex-col items-center gap-1 text-green-500">
+                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+                <span class="text-[10px] font-bold">WhatsApp</span>
+            </a>
+        </div>
+        <div class="w-1/3 h-1 bg-gray-200 rounded-full mx-auto mt-2 mb-1"></div>
+    </nav>
+
+</body>
+</html>
