@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Suzuki Karimun Wagon R GL (2015) | Kandang Karimun - Tasikmalaya</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        ajm: {
+                            navy: '#09090B',
+                            darkblue: '#18181B',
+                            blue: '#09090B',
+                            brightblue: '#27272A',
+                            yellow: '#18181B',
+                            yellowlight: '#F4F4F5',
+                            accent: '#3F3F46',
+                            lightblue: '#F4F4F5',
+                            slate: '#71717A',
+                            lightgray: '#FAFAFA',
+                            success: '#18181B',
+                            warning: '#52525B',
+                            danger: '#E11D48'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'premium': '0 12px 35px -5px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03)',
+                        'glow': '0 0 25px -5px rgba(0, 0, 0, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-ajm-lightgray text-ajm-navy font-sans antialiased pb-28 md:pb-16 selection:bg-black selection:text-white">
+
+    <!-- Header Navigation (Floating Glassmorphism Pill) -->
+    <header class="fixed top-0 left-0 right-0 z-50 pt-4 md:pt-6 px-4 flex justify-center pointer-events-none">
+        <div
+            class="pointer-events-auto w-full max-w-[1280px] flex items-center justify-between bg-white/90 backdrop-blur-md rounded-full px-4 py-2.5 shadow-md border border-black/10">
+            <a href="index-kandangkarimun.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 md:w-10 md:h-10 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-zinc-800 transition-colors shadow-sm">
+                    <i class="ph-bold ph-arrow-left text-base md:text-lg"></i>
+                </div>
+                <div class="hidden sm:flex items-center gap-1">
+                    <span class="text-black font-black text-lg md:text-xl leading-none tracking-tight">Kandang <span
+                            class="text-zinc-500">Karimun</span></span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-2">
+                <button onclick="toggleShareModal()"
+                    class="w-9 h-9 md:w-10 md:h-10 bg-zinc-100 hover:bg-zinc-200 text-black rounded-full flex items-center justify-center transition-colors">
+                    <i class="ph-bold ph-share-network text-lg"></i>
+                </button>
+                <button id="favorite-btn" onclick="toggleFavorite()"
+                    class="w-9 h-9 md:w-10 md:h-10 bg-zinc-100 hover:bg-zinc-200 text-black rounded-full flex items-center justify-center transition-colors">
+                    <i class="ph ph-heart text-lg" id="favorite-icon"></i>
+                </button>
+                <a href="https://wa.me/6281320337778?text=Halo%20Kandang%20Karimun,%20saya%20tertarik%20dengan%20Suzuki%20Karimun%20Kotak%20DX"
+                    class="bg-black hover:bg-zinc-800 text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded-full transition-colors flex items-center gap-1.5 shadow-sm">
+                    <i class="ph-bold ph-whatsapp-logo text-base"></i>
+                    <span>Tanya Sales</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="pt-24 md:pt-28 px-4 md:px-8 max-w-[1280px] mx-auto relative z-10">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-ajm-slate mb-6 overflow-x-auto no-scrollbar py-1">
+            <a href="index-kandangkarimun.html" class="hover:text-black font-medium transition-colors">Beranda</a>
+            <i class="ph-bold ph-caret-right text-[10px] text-zinc-400"></i>
+            <a href="index-kandangkarimun.html#katalog" class="hover:text-black font-medium transition-colors">Katalog Mobil</a>
+            <i class="ph-bold ph-caret-right text-[10px] text-zinc-400"></i>
+            <span class="text-black font-semibold truncate">Suzuki Karimun Kotak DX 1.0 MT</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- Left Column: Image Gallery (7 Cols) -->
+            <div class="lg:col-span-7 flex flex-col gap-4">
+
+                <!-- Main Image Preview Card -->
+                <div
+                    class="relative w-full aspect-[4/3] bg-white rounded-2xl md:rounded-3xl border border-zinc-200 shadow-soft overflow-hidden group">
+                    <img id="main-gallery-img" src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                    <!-- Badges Overlay -->
+                    <div class="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
+                        <span
+                            class="bg-black text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                            Garansi Mesin
+                        </span>
+                        <span
+                            class="bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                            Lulus Inspeksi 100+ Titik
+                        </span>
+                    </div>
+
+                    <!-- Watermark / Tag -->
+                    <div
+                        class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg border border-zinc-200 text-[10px] font-bold text-zinc-600">
+                        Inspeksi Verified
+                    </div>
+                </div>
+
+                <!-- Thumbnail Carousel -->
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <button onclick="setGalleryImage('images/karimun/suzuki-karimun-wagon.avif', this)"
+                        class="gallery-thumb active-thumb shrink-0 w-20 h-20 md:w-24 md:h-24 bg-white rounded-xl border-2 border-black p-0.5 shadow-sm overflow-hidden transition-all">
+                        <img src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R Angle 1"
+                            class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="setGalleryImage('images/karimun/suzuki-karimun-wagon-2.avif', this)"
+                        class="gallery-thumb shrink-0 w-20 h-20 md:w-24 md:h-24 bg-white rounded-xl border border-zinc-200 p-0.5 opacity-70 hover:opacity-100 shadow-sm overflow-hidden transition-all">
+                        <img src="images/karimun/suzuki-karimun-wagon-2.avif" alt="Suzuki Karimun Wagon R Angle 2"
+                            class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="setGalleryImage('images/karimun/suzuki-karimun-wagon-3.avif', this)"
+                        class="gallery-thumb shrink-0 w-20 h-20 md:w-24 md:h-24 bg-white rounded-xl border border-zinc-200 p-0.5 opacity-70 hover:opacity-100 shadow-sm overflow-hidden transition-all">
+                        <img src="images/karimun/suzuki-karimun-wagon-3.avif" alt="Suzuki Karimun Wagon R Angle 3"
+                            class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="setGalleryImage('images/karimun/suzuki-karimun-wagon-4.avif', this)"
+                        class="gallery-thumb shrink-0 w-20 h-20 md:w-24 md:h-24 bg-white rounded-xl border border-zinc-200 p-0.5 opacity-70 hover:opacity-100 shadow-sm overflow-hidden transition-all">
+                        <img src="images/karimun/suzuki-karimun-wagon-4.avif" alt="Suzuki Karimun Wagon R Angle 4"
+                            class="w-full h-full object-cover">
+                    </button>
+                </div>
+
+                <!-- Trust Guarantee Features -->
+                <div class="grid grid-cols-3 gap-2 md:gap-3 mt-2">
+                    <div class="bg-white p-2.5 md:p-4 rounded-2xl border border-zinc-200 text-center shadow-soft flex flex-col items-center justify-center h-full">
+                        <i class="ph-bold ph-shield-check text-xl md:text-2xl text-black mb-1.5"></i>
+                        <h4 class="text-[10px] md:text-xs font-bold text-black leading-tight">Bebas Tabrak Banjir</h4>
+                        <p class="text-[9px] md:text-[10px] text-ajm-slate mt-0.5 leading-tight">100% Uang Kembali</p>
+                    </div>
+                    <div class="bg-white p-2.5 md:p-4 rounded-2xl border border-zinc-200 text-center shadow-soft flex flex-col items-center justify-center h-full">
+                        <i class="ph-bold ph-bank text-xl md:text-2xl text-black mb-1.5"></i>
+                        <h4 class="text-[10px] md:text-xs font-bold text-black leading-tight">Kredit Cepat</h4>
+                        <p class="text-[9px] md:text-[10px] text-ajm-slate mt-0.5 leading-tight">Proses Mudah</p>
+                    </div>
+                    <div class="bg-white p-2.5 md:p-4 rounded-2xl border border-zinc-200 text-center shadow-soft flex flex-col items-center justify-center h-full">
+                        <i class="ph-bold ph-wrench text-xl md:text-2xl text-black mb-1.5"></i>
+                        <h4 class="text-[10px] md:text-xs font-bold text-black leading-tight">Garansi Mesin</h4>
+                        <p class="text-[9px] md:text-[10px] text-ajm-slate mt-0.5 leading-tight">Proteksi s/d 12 Bln</p>
+                    </div>
+                </div>
+
+                <!-- Mitra Pembiayaan Section (Outside the cards) -->
+                <div class="mt-4 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 p-3.5 bg-white rounded-2xl border border-zinc-200 shadow-sm">
+                    <span class="text-[10px] md:text-xs text-zinc-500 font-semibold uppercase tracking-widest shrink-0">Mitra Resmi:</span>
+                    <div class="flex items-center gap-3">
+                        <img src="images/BCA_Finance.svg.webp" alt="BCA Finance" class="h-[14px] md:h-[18px] w-auto object-contain">
+                        <div class="w-px h-3 bg-zinc-300"></div>
+                        <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance" class="h-[14px] md:h-[18px] w-auto object-contain">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Car Details & Pricing (5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+
+                <!-- Title & Price Card -->
+                <div class="bg-white p-6 rounded-2xl md:rounded-3xl border border-zinc-200 shadow-soft">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span
+                            class="bg-zinc-100 text-black text-[11px] font-bold px-3 py-1 rounded-full border border-zinc-200">
+                            Tersedia di Showroom Tasikmalaya
+                        </span>
+                    </div>
+
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-black tracking-tight leading-tight">
+                        Suzuki Karimun Wagon R GL 1.0 MT
+                    </h1>
+                    <p class="text-xs md:text-sm text-ajm-slate font-medium mt-1">
+                        2015 &bull; 80.000 KM &bull; Bensin &bull; Manual
+                    </p>
+
+                    <div class="my-5 border-t border-zinc-100 pt-5">
+                        <span class="text-xs font-bold text-ajm-slate uppercase tracking-wider">Harga Tunai</span>
+                        <div class="flex items-baseline gap-2 mt-1">
+                            <span class="text-3xl md:text-4xl font-extrabold text-black">Rp 79.000.000</span>
+                        </div>
+
+                        <!-- Credit Offer Badge -->
+                        <div
+                            class="mt-3 p-3.5 rounded-xl bg-zinc-100 border border-zinc-200 flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] font-bold text-ajm-slate uppercase tracking-wider">Estimasi
+                                    Kredit (BCA & Clipan Finance)</span>
+                                <p class="text-sm md:text-base font-extrabold text-black">Mulai Rp 1,6 Jt / bulan</p>
+                            </div>
+                            <span class="text-[10px] font-bold bg-black text-white px-2.5 py-1 rounded-md">DP Murah</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col gap-3">
+                        <a href="https://wa.me/6281320337778?text=Halo%20Kandang%20Karimun,%20saya%20tertarik%20dengan%20Suzuki%20Karimun%20Wagon%20R%20GL%202015%20(Rp79Jt)"
+                            class="w-full bg-black hover:bg-zinc-800 text-white font-bold py-3.5 rounded-xl transition-all shadow-md text-center flex items-center justify-center gap-2 text-sm">
+                            <i class="ph-bold ph-whatsapp-logo text-xl"></i>
+                            Hubungi Penjual via WhatsApp
+                        </a>
+                        <button onclick="scrollToCreditCalc()"
+                            class="w-full bg-white hover:bg-zinc-50 text-black border border-zinc-300 font-bold py-3.5 rounded-xl transition-all text-center flex items-center justify-center gap-2 text-sm">
+                            <i class="ph-bold ph-calculator text-xl"></i>
+                            Simulasi Kredit Interaktif
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="bg-white p-6 rounded-2xl md:rounded-3xl border border-zinc-200 shadow-soft">
+                    <h3 class="text-base font-bold text-black mb-4">Spesifikasi Utama</h3>
+
+                    <div class="grid grid-cols-2 gap-4 text-xs">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                            <i class="ph-bold ph-calendar text-xl text-black"></i>
+                            <div>
+                                <span class="text-ajm-slate block text-[10px]">Tahun Pembuatan</span>
+                                <span class="font-bold text-black text-sm">2015</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                            <i class="ph-bold ph-gauge text-xl text-black"></i>
+                            <div>
+                                <span class="text-ajm-slate block text-[10px]">Jarak Tempuh</span>
+                                <span class="font-bold text-black text-sm">80.000 KM</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                            <i class="ph-bold ph-gear-six text-xl text-black"></i>
+                            <div>
+                                <span class="text-ajm-slate block text-[10px]">Transmisi</span>
+                                <span class="font-bold text-black text-sm">Manual (MT)</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                            <i class="ph-bold ph-drop text-xl text-black"></i>
+                            <div>
+                                <span class="text-ajm-slate block text-[10px]">Bahan Bakar</span>
+                                <span class="font-bold text-black text-sm">Bensin</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                            <i class="ph-bold ph-paint-bucket text-xl text-black"></i>
+                            <div>
+                                <span class="text-ajm-slate block text-[10px]">Warna Bodi</span>
+                                <span class="font-bold text-black text-sm">Silver Metalik</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-zinc-50 border border-zinc-100">
+                            <i class="ph-bold ph-cardholder text-xl text-black"></i>
+                            <div>
+                                <span class="text-ajm-slate block text-[10px]">Status Pajak</span>
+                                <span class="font-bold text-black text-sm">Hidup (11/2026)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Detail Tabs Section -->
+        <div class="mt-10 bg-white rounded-2xl md:rounded-3xl border border-zinc-200 shadow-soft p-6 md:p-8">
+
+            <!-- Tab Buttons -->
+            <div class="flex gap-4 border-b border-zinc-200 pb-4 overflow-x-auto no-scrollbar">
+                <button onclick="switchTab('tab-deskripsi', this)"
+                    class="tab-btn font-bold text-sm text-black border-b-2 border-black pb-2 transition-all shrink-0">
+                    Deskripsi Kendaraan
+                </button>
+                <button onclick="switchTab('tab-inspeksi', this)"
+                    class="tab-btn font-medium text-sm text-ajm-slate hover:text-black pb-2 transition-all shrink-0">
+                    Hasil Inspeksi 100+ Titik
+                </button>
+                <button onclick="switchTab('tab-kredit', this)" id="credit-tab-btn"
+                    class="tab-btn font-medium text-sm text-ajm-slate hover:text-black pb-2 transition-all shrink-0">
+                    Kalkulator Kredit
+                </button>
+            </div>
+
+            <!-- Tab Content 1: Deskripsi -->
+            <div id="tab-deskripsi" class="tab-content py-6 text-sm text-ajm-slate leading-relaxed space-y-4">
+                <p>
+                    <strong class="text-black font-bold">Suzuki Karimun Wagon R GL 1.0 Manual (2015)</strong> yang dalam kondisi
+                    sangat istimewa, mulus, dan siap pakai. Mobil ini dirawat dengan baik, kabin lapang dan praktis khas Wagon R, AC dingin menggigil, suspensi empuk nyaman, mesin K10B kering dan bertenaga.
+                </p>
+
+                <h4 class="font-bold text-black text-base pt-2">Fitur & Kelengkapan Utama:</h4>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs font-medium text-black">
+                    <li class="flex items-center gap-2">
+                        <i class="ph-bold ph-check text-black"></i> Mesin F10A 4-Silinder 1.000cc Tangguh & Irit
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="ph-bold ph-check text-black"></i> Power Window depan aktif lancar
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="ph-bold ph-check text-black"></i> Air Conditioning (AC) Dingin Menggigil
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="ph-bold ph-check text-black"></i> Head Unit Single Din (Radio, Aux, USB)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="ph-bold ph-check text-black"></i> Jok Bludru Original dilapisi sarung jok rapi
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="ph-bold ph-check text-black"></i> Roof Rail Bawaan Pabrik Siap Pasang Roofrack
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content 2: Hasil Inspeksi -->
+            <div id="tab-inspeksi" class="tab-content hidden py-6 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-black text-sm">Mesin & Transmisi</span>
+                            <span class="text-xs font-bold bg-black text-white px-2 py-0.5 rounded">LULUS (100%)</span>
+                        </div>
+                        <p class="text-xs text-ajm-slate">Kompresi mesin padat, suara halus khas F10A, kopling empuk dan operan transmisi manual presisi.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-black text-sm">Bodi & Cat</span>
+                            <span class="text-xs font-bold bg-black text-white px-2 py-0.5 rounded">LULUS (95%)</span>
+                        </div>
+                        <p class="text-xs text-ajm-slate">Kaleng muter, sasis aman utuh tanpa bekas tabrakan hebat, tidak ada karat keropos di kolong.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-black text-sm">Interior & Kelistrikan</span>
+                            <span class="text-xs font-bold bg-black text-white px-2 py-0.5 rounded">LULUS (100%)</span>
+                        </div>
+                        <p class="text-xs text-ajm-slate">Semua indikator spidometer menyala normal, AC dingin, power window dan central lock aktif.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-bold text-black text-sm">Legilitas & Dokumen</span>
+                            <span class="text-xs font-bold bg-black text-white px-2 py-0.5 rounded">TERVERIFIKASI</span>
+                        </div>
+                        <p class="text-xs text-ajm-slate">Faktur asli pembelian, STNK, BPKB lengkap aman di tangan. Nomor rangka dan nomor mesin akurat cocok.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 3: Kalkulator Kredit -->
+            <div id="tab-kredit" class="tab-content hidden py-6 space-y-6">
+                <div class="max-w-xl mx-auto space-y-5">
+                    <!-- Partner Selection -->
+                    <div>
+                        <label class="block text-xs font-bold text-black mb-2">Pilih Mitra Pembiayaan (Leasing):</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button type="button" onclick="setDetailLeasing('BCA Finance', this)"
+                                class="detail-leasing-btn active-detail-leasing h-12 py-2.5 px-4 rounded-xl border-2 border-black bg-white flex items-center justify-center transition-all shadow-sm">
+                                <img src="images/BCA_Finance.svg.webp" alt="BCA Finance" class="h-5 md:h-6 max-h-7 max-w-[120px] w-auto object-contain">
+                            </button>
+                            <button type="button" onclick="setDetailLeasing('Clipan Finance', this)"
+                                class="detail-leasing-btn h-12 py-2.5 px-4 rounded-xl border border-zinc-300 bg-white hover:border-black flex items-center justify-center transition-all">
+                                <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance" class="h-5 md:h-6 max-h-7 max-w-[120px] w-auto object-contain">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-black mb-2">Pilih Uang Muka (DP): <span id="dp-val"
+                                class="font-extrabold text-sm">Rp 15.000.000</span></label>
+                        <input type="range" min="10000000" max="30000000" step="2000000" value="15000000" id="dp-range"
+                            oninput="updateCreditCalc()" class="w-full accent-black cursor-pointer">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-black mb-2">Tenor Pinjaman:</label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button onclick="setTenor(12, this)"
+                                class="tenor-btn py-2 rounded-xl border border-zinc-300 text-xs font-bold hover:border-black">12
+                                Bulan</button>
+                            <button onclick="setTenor(24, this)"
+                                class="tenor-btn py-2 rounded-xl border border-zinc-300 text-xs font-bold hover:border-black">24
+                                Bulan</button>
+                            <button onclick="setTenor(36, this)"
+                                class="tenor-btn active-tenor py-2 rounded-xl border-2 border-black bg-black text-white text-xs font-bold">36
+                                Bulan</button>
+                            <button onclick="setTenor(48, this)"
+                                class="tenor-btn py-2 rounded-xl border border-zinc-300 text-xs font-bold hover:border-black">48
+                                Bulan</button>
+                        </div>
+                    </div>
+
+                    <!-- Result Box -->
+                    <div class="p-5 rounded-2xl bg-zinc-100 border border-zinc-200 text-center">
+                        <span class="text-xs font-bold text-ajm-slate uppercase">Estimasi Angsuran Bulanan</span>
+                        <p class="text-3xl font-extrabold text-black mt-1" id="monthly-installment">Rp 1.250.000 / bln
+                        </p>
+                        <p class="text-[10px] text-ajm-slate mt-2" id="leasing-note">*Simulasi estimasi tidak mengikat, pengajuan pinjaman dibantu sales Kandang Karimun via BCA Finance</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Related Cars (Mobil Serupa) -->
+        <div class="mt-12 mb-16">
+            <div class="flex justify-between items-end mb-6">
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-black">Karimun Pilihan Lainnya</h3>
+                    <p class="text-xs text-ajm-slate">Rekomendasi Suzuki Karimun dengan penawaran terbaik</p>
+                </div>
+                <a href="index-kandangkarimun.html#katalog"
+                    class="text-xs font-bold text-black hover:underline flex items-center gap-1">
+                    Lihat Semua <i class="ph-bold ph-caret-right"></i>
+                </a>
+            </div>
+
+            <!-- Grid 3 Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Related 1 -->
+                <a href="detail-mobil-karimun.html"
+                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                        <img src="images/karimun/Karimun-GS.webp" alt="Suzuki Karimun Wagon R GS"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-base text-black group-hover:text-zinc-600 transition-colors">Suzuki Karimun Wagon R GS</h4>
+                        <p class="text-xs text-ajm-slate mt-1 font-medium">2016 &bull; 75.000 km &bull; AGS</p>
+                        <p class="text-lg font-extrabold text-black mt-3">Rp 88.000.000</p>
+                    </div>
+                </a>
+
+                <!-- Related 2 -->
+                <a href="detail-mobil-karimun.html"
+                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                        <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-base text-black group-hover:text-zinc-600 transition-colors">Suzuki Karimun Estilo</h4>
+                        <p class="text-xs text-ajm-slate mt-1 font-medium">2008 &bull; 98.000 km &bull; Bensin</p>
+                        <p class="text-lg font-extrabold text-black mt-3">Rp 62.000.000</p>
+                    </div>
+                </a>
+
+                <!-- Related 3 -->
+                <a href="detail-mobil-karimun.html"
+                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                        <img src="images/karimun/karimun_kotak_biru.jpg" alt="Suzuki Karimun Kotak GX"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-base text-black group-hover:text-zinc-600 transition-colors">Suzuki Karimun Kotak GX</h4>
+                        <p class="text-xs text-ajm-slate mt-1 font-medium">2002 &bull; 140.000 km &bull; Manual</p>
+                        <p class="text-lg font-extrabold text-black mt-3">Rp 58.000.000</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-zinc-200 py-8 px-5">
+        <div
+            class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs text-ajm-slate">
+            <div>
+                <span class="font-black text-black text-sm tracking-tight">Kandang Karimun</span>
+                <p class="mt-1">&copy; 2026 Kandang Karimun. Diler Mobil Bekas Terpercaya.</p>
+            </div>
+            <div class="flex gap-4 font-semibold text-black">
+                <a href="index-kandangkarimun.html" class="hover:underline">Beranda</a>
+                <a href="index-kandangkarimun.html#katalog" class="hover:underline">Katalog Mobil</a>
+                <a href="https://wa.me/6281320337778" class="hover:underline">Hubungi WA</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Bottom CTA for Mobile -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-zinc-200 p-3 flex items-center gap-2 shadow-lg">
+        <a href="https://wa.me/6281320337778?text=Halo%20Kandang%20Karimun,%20saya%20tertarik%20dengan%20Suzuki%20Karimun%20Kotak%20DX"
+            class="flex-1 bg-black text-white font-bold py-3 rounded-full text-center text-xs flex items-center justify-center gap-1.5 shadow-md">
+            <i class="ph-bold ph-whatsapp-logo text-base"></i> Hubungi WhatsApp
+        </a>
+        <button onclick="scrollToCreditCalc()"
+            class="w-12 h-12 bg-zinc-100 border border-zinc-300 text-black rounded-full flex items-center justify-center shrink-0">
+            <i class="ph-bold ph-calculator text-lg"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Gallery switcher
+        function setGalleryImage(src, btnEl) {
+            document.getElementById('main-gallery-img').src = src;
+            document.querySelectorAll('.gallery-thumb').forEach(el => {
+                el.classList.remove('border-2', 'border-black', 'active-thumb');
+                el.classList.add('border', 'border-zinc-200', 'opacity-70');
+            });
+            btnEl.classList.remove('border', 'border-zinc-200', 'opacity-70');
+            btnEl.classList.add('border-2', 'border-black', 'active-thumb', 'opacity-100');
+        }
+
+        // Tab Switcher
+        function switchTab(tabId, btnEl) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('font-bold', 'text-black', 'border-b-2', 'border-black');
+                el.classList.add('font-medium', 'text-ajm-slate');
+            });
+
+            btnEl.classList.remove('font-medium', 'text-ajm-slate');
+            btnEl.classList.add('font-bold', 'text-black', 'border-b-2', 'border-black');
+        }
+
+        // Scroll to Credit Calculator
+        function scrollToCreditCalc() {
+            const creditTabBtn = document.getElementById('credit-tab-btn');
+            switchTab('tab-kredit', creditTabBtn);
+            document.getElementById('tab-kredit').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Credit Calculator Logic
+        let selectedTenor = 36;
+        let selectedDetailLeasing = 'BCA Finance';
+        const carPrice = 79000000;
+
+        function setDetailLeasing(leasingName, btnEl) {
+            selectedDetailLeasing = leasingName;
+            document.querySelectorAll('.detail-leasing-btn').forEach(el => {
+                el.classList.remove('active-detail-leasing', 'border-2', 'border-black', 'shadow-sm');
+                el.classList.add('border', 'border-zinc-300');
+            });
+            btnEl.classList.remove('border', 'border-zinc-300', 'border');
+            btnEl.classList.add('active-detail-leasing', 'border-2', 'border-black', 'shadow-sm');
+            updateCreditCalc();
+        }
+
+        function setTenor(tenorMonths, btnEl) {
+            selectedTenor = tenorMonths;
+            document.querySelectorAll('.tenor-btn').forEach(el => {
+                el.classList.remove('active-tenor', 'border-2', 'border-black', 'bg-black', 'text-white');
+                el.classList.add('border', 'border-zinc-300');
+            });
+            btnEl.classList.remove('border', 'border-zinc-300');
+            btnEl.classList.add('active-tenor', 'border-2', 'border-black', 'bg-black', 'text-white');
+            updateCreditCalc();
+        }
+
+        function updateCreditCalc() {
+            const dpVal = parseInt(document.getElementById('dp-range').value);
+            document.getElementById('dp-val').innerText = 'Rp ' + dpVal.toLocaleString('id-ID');
+
+            const loanAmount = carPrice - dpVal;
+            const interestRate = 0.08; // 8% annual
+            const totalInterest = loanAmount * interestRate * (selectedTenor / 12);
+            const monthly = Math.round((loanAmount + totalInterest) / selectedTenor);
+
+            document.getElementById('monthly-installment').innerText = 'Rp ' + monthly.toLocaleString('id-ID') + ' / bln';
+
+            const leasingNote = document.getElementById('leasing-note');
+            if (leasingNote) {
+                leasingNote.innerText = `*Simulasi estimasi tidak mengikat, pengajuan pinjaman dibantu sales Kandang Karimun via ${selectedDetailLeasing} sampai approved`;
+            }
+        }
+
+        // Favorite Button Toggle
+        let isFavorite = false;
+        function toggleFavorite() {
+            isFavorite = !isFavorite;
+            const icon = document.getElementById('favorite-icon');
+            if (isFavorite) {
+                icon.className = 'ph-fill ph-heart text-lg text-rose-600';
+            } else {
+                icon.className = 'ph ph-heart text-lg text-black';
+            }
+        }
+
+        function toggleShareModal() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Suzuki Karimun Kotak DX 1.0 MT',
+                    text: 'Cek unit Suzuki Karimun Kotak DX 2003 di Kandang Karimun Tasikmalaya',
+                    url: window.location.href,
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link detail mobil telah disalin ke clipboard!');
+            }
+        }
+    </script>
+</body>
+
+</html>
