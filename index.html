@@ -104,7 +104,7 @@
     </style>
 </head>
 
-<body class="bg-ajm-lightgray text-ajm-navy font-sans antialiased pb-24 selection:bg-ajm-blue selection:text-white">
+<body class="bg-ajm-lightgray text-ajm-navy font-sans antialiased pb-24 md:pb-0 selection:bg-ajm-blue selection:text-white">
 
     <!-- Main Container -->
     <div class="w-full bg-white min-h-screen relative overflow-x-hidden">
@@ -243,7 +243,7 @@
 
                 <!-- Pilihan Mobil untukmu Header -->
                 <div class="flex justify-between items-end">
-                    <h3 class="text-lg md:text-3xl font-bold text-ajm-navy tracking-tight">Pilihan Mobil untukmu</h3>
+                    <h3 class="text-lg md:text-3xl font-bold text-ajm-navy tracking-tight">Kategori Mobil</h3>
                     <a href="#"
                         class="text-ajm-blue text-sm md:text-base font-semibold flex items-center gap-1 hover:underline">Lihat
                         semua <i class="ph-bold ph-caret-right text-[10px] md:text-xs"></i></a>
@@ -1050,9 +1050,9 @@
                         </div>
                     </a>
 
-                    <!-- Card 24 -->
+                    <!-- Card 24 (Hidden on Mobile) -->
                     <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                        class="hidden md:flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                         <div
                             class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
                             <i class="ph ph-heart text-lg md:text-xl"></i>
@@ -1084,9 +1084,9 @@
                         </div>
                     </a>
 
-                    <!-- View More Card (Mobile Only) -->
+                    <!-- View More Card (Mobile Only - Replaces Card 24) -->
                     <div
-                        class="row-start-4 snap-start shrink-0 w-[120px] md:hidden bg-ajm-lightgray rounded-2xl border border-gray-100 flex flex-col items-center justify-center group cursor-pointer hover:bg-ajm-lightblue transition-colors duration-300 min-h-[200px]">
+                        class="snap-start shrink-0 w-[260px] md:hidden bg-ajm-lightgray rounded-2xl border border-gray-100 flex flex-col items-center justify-center group cursor-pointer hover:bg-ajm-lightblue transition-colors duration-300 h-full">
                         <div
                             class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-ajm-blue shadow-sm group-hover:bg-ajm-blue group-hover:text-white transition-colors">
                             <i class="ph-bold ph-arrow-right text-xl"></i>
