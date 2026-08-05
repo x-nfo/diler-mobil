@@ -263,562 +263,574 @@
                         class="snap-start whitespace-nowrap px-5 py-2 md:px-6 md:py-2.5 rounded-full border border-gray-200 bg-white text-ajm-slate hover:bg-ajm-lightgray text-sm md:text-base font-medium transition-colors">Wagon R GS</button>
                 </div>
 
-                <!-- Car Cards Scrollable (Mobile) / Grid (Desktop) -->
+                <!-- Car Cards Scrollable per row (Mobile) / Grid (Desktop) -->
                 <div
-                    class="grid grid-rows-3 grid-flow-col gap-4 overflow-x-auto no-scrollbar mt-5 md:mt-8 pb-6 -mx-5 px-5 md:mx-0 md:px-0 snap-x md:grid md:grid-flow-row md:grid-rows-none md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0">
+                    class="flex flex-col gap-4 mt-5 md:mt-8 pb-6 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6">
 
-                    <!-- Card 1 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-Kotak.webp" alt="Suzuki Karimun Kotak DX"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- Row 1 (Cards 1 - 4) -->
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x -mx-5 px-5 md:contents">
+                        <!-- Card 1 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak DX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 120.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 55.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('55000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,2 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 2 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-GS.webp" alt="Suzuki Karimun Wagon R GS"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-Kotak.webp" alt="Suzuki Karimun Kotak DX"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Wagon R GS</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2016 &bull; 75.000 km
-                                    &bull; AGS</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak DX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 120.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 55.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('55000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,2 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 88.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('88000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,8 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <!-- Card 3 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/karimun_kotak_biru.jpg" alt="Suzuki Karimun Kotak Biru"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- Card 2 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak GX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2002 &bull; 140.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 58.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('58000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,3 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 4 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-GS.webp" alt="Suzuki Karimun Wagon R GS"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Estilo</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2008 &bull; 98.000 km
-                                    &bull; Manual</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Wagon R GS</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2016 &bull; 75.000 km
+                                        &bull; AGS</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 88.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('88000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,8 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 62.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('62000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,4 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <!-- Card 5 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/karimun_hitam.jpeg" alt="Suzuki Karimun Kotak Hitam"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- Card 3 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak DX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2001 &bull; 150.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 52.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('52000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,1 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 6 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R GL"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/karimun_kotak_biru.jpg" alt="Suzuki Karimun Kotak Biru"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Wagon R GL</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2015 &bull; 80.000 km
-                                    &bull; Manual</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak GX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2002 &bull; 140.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 58.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('58000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,3 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 79.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('79000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,6 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <!-- Card 7 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Beli-Suzuki-Karimun-Kotak-Bekas.jpg" alt="Suzuki Karimun Kotak GX"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- Card 4 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak GX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2005 &bull; 110.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 60.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('60000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,4 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 8 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/karimun-coklat.webp" alt="Suzuki Karimun Wagon R Dilago"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Wagon R Dilago</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2017 &bull; 60.000 km
-                                    &bull; AGS</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Estilo</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2008 &bull; 98.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 62.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('62000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,4 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 95.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('95000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 2 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
 
-                    <!-- Card 9 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-Kotak.webp" alt="Suzuki Karimun Kotak GX Silver"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- Row 2 (Cards 5 - 8) -->
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x -mx-5 px-5 md:contents">
+                        <!-- Card 5 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak GX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2004 &bull; 115.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 57.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('57000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,3 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 10 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R GA"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/karimun_hitam.jpeg" alt="Suzuki Karimun Kotak Hitam"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Wagon R GA</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2014 &bull; 90.000 km
-                                    &bull; Manual</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak DX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2001 &bull; 150.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 52.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('52000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,1 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 68.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('68000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,5 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <!-- Card 11 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo VXI"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- Card 6 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Estilo VXI</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2011 &bull; 85.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 69.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('69000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,5 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 12 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/karimun_hitam.jpeg" alt="Suzuki Karimun Kotak DX Hitam"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R GL"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak DX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2000 &bull; 160.000 km
-                                    &bull; Manual</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Wagon R GL</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2015 &bull; 80.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 79.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('79000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,6 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 49.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('49000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,1 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <!-- Card 13 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-GS.webp" alt="Suzuki Karimun Wagon R GS Putih"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- Card 7 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Wagon R GS</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2018 &bull; 55.000 km
-                                    &bull; AGS</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 99.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('99000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 2,1 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 14 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R GL Silver"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Beli-Suzuki-Karimun-Kotak-Bekas.jpg" alt="Suzuki Karimun Kotak GX"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Wagon R GL</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2016 &bull; 72.000 km
-                                    &bull; Manual</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak GX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2005 &bull; 110.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 60.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('60000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,4 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 82.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('82000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,7 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    <!-- Card 15 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/karimun_kotak_biru.jpg" alt="Suzuki Karimun Kotak GX Biru"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- Card 8 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Garansi Mesin
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Kotak GX</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 125.000 km
-                                    &bull; Manual</p>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 56.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('56000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,3 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Card 16 -->
-                    <a href="detail-mobil-karimun.html"
-                        class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
-                            <i class="ph ph-heart text-lg md:text-xl"></i>
-                        </div>
-                        <div
-                            class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                            <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo Merah"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div
-                                class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
-                                Lulus Inspeksi
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/karimun-coklat.webp" alt="Suzuki Karimun Wagon R Dilago"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <h4
-                                    class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
-                                    Suzuki Karimun Estilo</h4>
-                                <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2007 &bull; 105.000 km
-                                    &bull; Manual</p>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Wagon R Dilago</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2017 &bull; 60.000 km
+                                        &bull; AGS</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 95.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('95000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 2 jt/bln &darr;
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-black font-extrabold text-lg md:text-xl">Rp 59.000.000</p>
-                                <button onclick="event.preventDefault(); selectCarInSimulator('59000000')"
-                                    class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
-                                    Kredit mulai 1,3 jt/bln &darr;
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
 
-                    <!-- View More Card (Mobile Only) -->
-                    <div
-                        class="snap-start shrink-0 w-[120px] md:hidden bg-ajm-lightgray rounded-2xl border border-gray-100 flex flex-col items-center justify-center group cursor-pointer hover:bg-ajm-lightblue transition-colors duration-300 min-h-[200px]">
+                    <!-- Row 3 (Cards 9 - 12) -->
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x -mx-5 px-5 md:contents">
+                        <!-- Card 9 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-Kotak.webp" alt="Suzuki Karimun Kotak GX Silver"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak GX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2004 &bull; 115.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 57.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('57000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,3 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 10 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/suzuki-karimun-wagon.avif" alt="Suzuki Karimun Wagon R GA"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Wagon R GA</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2014 &bull; 90.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 68.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('68000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,5 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 11 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo VXI"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Estilo VXI</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2011 &bull; 85.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 69.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('69000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,5 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 12 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/karimun_hitam.jpeg" alt="Suzuki Karimun Kotak DX Hitam"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak DX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2000 &bull; 160.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 49.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('49000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,1 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Row 4 (Cards 13 - 16 / View More) -->
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x -mx-5 px-5 md:contents">
+                        <!-- Card 13 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/karimun-coklat.webp" alt="Suzuki Karimun Wagon R GS"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Wagon R GS</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2018 &bull; 55.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 99.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('99000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 2,1 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 14 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-GS.webp" alt="Suzuki Karimun Wagon R GL"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-900 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Garansi Mesin
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Wagon R GL</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2016 &bull; 72.000 km
+                                        &bull; AGS</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 82.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('82000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,7 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 15 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-Kotak.webp" alt="Suzuki Karimun Kotak GX"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Kotak GX</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 130.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 56.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('56000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,2 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 16 -->
+                        <a href="detail-mobil-karimun.html"
+                            class="block flex flex-col snap-start shrink-0 w-[260px] md:w-full bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                                <i class="ph ph-heart text-lg md:text-xl"></i>
+                            </div>
+                            <div
+                                class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
+                                <img src="images/karimun/Karimun-Estilo.webp" alt="Suzuki Karimun Estilo Merah"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
+                                    Lulus Inspeksi
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-5 flex flex-col flex-1 justify-between">
+                                <div>
+                                    <h4
+                                        class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
+                                        Suzuki Karimun Estilo</h4>
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2007 &bull; 105.000 km
+                                        &bull; Manual</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-black font-extrabold text-lg md:text-xl">Rp 59.000.000</p>
+                                    <button onclick="event.preventDefault(); selectCarInSimulator('59000000')"
+                                        class="inline-block bg-zinc-100 hover:bg-zinc-200 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md mt-2 border border-zinc-200 transition-colors">
+                                        Kredit mulai 1,3 jt/bln &darr;
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- View More Card (Mobile Only) -->
                         <div
-                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-ajm-blue shadow-sm group-hover:bg-ajm-blue group-hover:text-white transition-colors">
-                            <i class="ph-bold ph-arrow-right text-xl"></i>
+                            class="snap-start shrink-0 w-[260px] md:hidden bg-ajm-lightgray rounded-2xl md:rounded-[20px] border border-zinc-200 shadow-soft flex flex-col items-center justify-center group cursor-pointer hover:bg-ajm-lightblue hover:shadow-premium hover:-translate-y-1 transition-all duration-300 self-stretch">
+                            <div
+                                class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-ajm-blue shadow-sm group-hover:bg-ajm-blue group-hover:text-white transition-colors">
+                                <i class="ph-bold ph-arrow-right text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-ajm-blue mt-3">Lihat Semua</span>
                         </div>
-                        <span class="text-xs font-bold text-ajm-blue mt-3">Lihat Semua</span>
                     </div>
 
                 </div>
