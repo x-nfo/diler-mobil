@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Katalog & List Mobil Bekas | MobilBekas.id - AJM</title>
+    <meta name="description" content="Koleksi mobil bekas berkualitas terlengkap di MobilBekas.id AJM. Bergaransi resmi, bebas tabrak & banjir, simulasi kredit DP murah BCA & Clipan Finance.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        ajm: {
+                            navy: '#09090B',
+                            darkblue: '#18181B',
+                            blue: '#09090B',
+                            brightblue: '#27272A',
+                            yellow: '#18181B',
+                            yellowlight: '#F4F4F5',
+                            accent: '#3F3F46',
+                            lightblue: '#F4F4F5',
+                            slate: '#71717A',
+                            lightgray: '#FAFAFA',
+                            success: '#18181B',
+                            warning: '#52525B',
+                            danger: '#E11D48'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'premium': '0 12px 35px -5px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03)',
+                        'glow': '0 0 25px -5px rgba(0, 0, 0, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom scrollbar for desktop dropdowns */
+        select::-webkit-scrollbar {
+            width: 6px;
+        }
+        select::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="bg-ajm-lightgray text-ajm-navy font-sans antialiased pb-24 md:pb-12 selection:bg-black selection:text-white">
+
+    <!-- Header Navigation (Floating Glassmorphism Pill) -->
+    <header class="fixed top-0 left-0 right-0 z-50 pt-3 md:pt-5 px-4 flex justify-center pointer-events-none">
+        <div
+            class="pointer-events-auto w-full max-w-[1280px] flex items-center justify-between bg-white/95 backdrop-blur-md rounded-full px-4 py-2.5 shadow-md border border-black/10">
+            
+            <!-- Left: Logo & Back Link -->
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <div
+                    class="w-9 h-9 md:w-10 md:h-10 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-zinc-800 transition-colors shadow-sm shrink-0">
+                    <i class="ph-bold ph-arrow-left text-base md:text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1 leading-none">
+                        <span class="text-black font-black text-lg md:text-xl tracking-tight">AJ<span class="text-zinc-500">M</span></span>
+                        <span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold ml-1 hidden sm:inline">MobilBekas.id</span>
+                    </div>
+                    <span class="text-[10px] text-zinc-500 font-semibold sm:hidden leading-tight">Beranda</span>
+                </div>
+            </a>
+
+            <!-- Center/Right Action Buttons -->
+            <div class="flex items-center gap-2">
+                <!-- Wishlist Badge -->
+                <div class="hidden sm:flex items-center gap-1.5 bg-zinc-100 px-3 py-1.5 rounded-full border border-zinc-200 text-xs font-bold text-zinc-700">
+                    <i class="ph-fill ph-heart text-rose-500 text-sm"></i>
+                    <span>Favorit: <span id="fav-count-header">0</span></span>
+                </div>
+
+                <!-- WA Direct Button -->
+                <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20stok%20mobil%20bekas%20di%20katalog"
+                    class="bg-black hover:bg-zinc-800 text-white text-xs md:text-sm font-bold px-4 md:px-5 py-2 md:py-2.5 rounded-full transition-colors flex items-center gap-1.5 shadow-sm">
+                    <i class="ph-bold ph-whatsapp-logo text-base"></i>
+                    <span>Tanya Sales</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="pt-20 md:pt-24 px-4 md:px-8 max-w-[1280px] mx-auto relative z-10">
+
+        <!-- Breadcrumb Nav -->
+        <nav class="flex items-center gap-2 text-xs text-ajm-slate mb-4 overflow-x-auto no-scrollbar py-1">
+            <a href="index.html" class="hover:text-black font-medium transition-colors">Beranda</a>
+            <i class="ph-bold ph-caret-right text-[10px] text-zinc-400"></i>
+            <span class="text-black font-semibold">Katalog Mobil Bekas</span>
+        </nav>
+
+        <!-- Banner / Hero Header Section -->
+        <div class="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-800 text-white rounded-3xl p-6 md:p-10 shadow-premium relative overflow-hidden mb-6">
+            <!-- Background Decorative Image Overlay -->
+            <div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay">
+                <img src="images/bg_hero_1.png" alt="Background pattern" class="w-full h-full object-cover">
+            </div>
+
+            <div class="relative z-10 max-w-3xl">
+                <div class="inline-flex items-center gap-1.5 border border-white/20 rounded-full px-3 py-1 mb-3 bg-white/10 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-zinc-200">Garansi 100% Bebas Tabrak & Banjir</span>
+                </div>
+                <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-2">
+                    Katalog Mobil Bekas <br class="hidden sm:inline">
+                    <span class="text-zinc-300">Kualitas Baru & Siap Pakai.</span>
+                </h1>
+                <p class="text-zinc-300 text-xs md:text-base leading-relaxed mb-6 font-medium">
+                    Temukan unit idamanmu dari beragam pilihan MPV, SUV, Hatchback, dan City Car. Seluruh unit lulus tes inspeksi 100+ titik dengan simulasi kredit DP murah.
+                </p>
+
+                <!-- Embedded Live Search Input -->
+                <div class="relative w-full max-w-xl">
+                    <i class="ph-bold ph-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 text-lg md:text-xl"></i>
+                    <input type="text" id="search-input" onkeyup="handleSearchInput()"
+                        placeholder="Cari merk, model, atau spesifikasi (cth: Avanza, Yaris, Automatic)..."
+                        class="w-full pl-11 pr-10 py-3.5 md:py-4 rounded-2xl bg-white text-zinc-900 placeholder:text-zinc-400 text-xs md:text-sm font-semibold shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all">
+                    <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-700 p-1">
+                        <i class="ph-bold ph-x-circle text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Category Pills Track -->
+        <div class="mb-6 overflow-x-auto no-scrollbar">
+            <div class="flex items-center gap-2 py-1 snap-x">
+                <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider shrink-0 mr-1 hidden md:inline">Kategori:</span>
+                <button onclick="setBodyFilter('Semua', this)" class="category-pill active-pill snap-start shrink-0 px-4 py-2 rounded-full border border-black bg-black text-white text-xs font-bold transition-all shadow-sm">
+                    Semua Tipe
+                </button>
+                <button onclick="setBodyFilter('MPV', this)" class="category-pill snap-start shrink-0 px-4 py-2 rounded-full border border-zinc-300 bg-white hover:border-black text-zinc-700 text-xs font-semibold transition-all">
+                    MPV Family
+                </button>
+                <button onclick="setBodyFilter('SUV', this)" class="category-pill snap-start shrink-0 px-4 py-2 rounded-full border border-zinc-300 bg-white hover:border-black text-zinc-700 text-xs font-semibold transition-all">
+                    SUV & Crossover
+                </button>
+                <button onclick="setBodyFilter('Hatchback', this)" class="category-pill snap-start shrink-0 px-4 py-2 rounded-full border border-zinc-300 bg-white hover:border-black text-zinc-700 text-xs font-semibold transition-all">
+                    Hatchback
+                </button>
+                <button onclick="setBodyFilter('City Car', this)" class="category-pill snap-start shrink-0 px-4 py-2 rounded-full border border-zinc-300 bg-white hover:border-black text-zinc-700 text-xs font-semibold transition-all">
+                    City Car / LCGC
+                </button>
+                <button onclick="setBodyFilter('Sedan', this)" class="category-pill snap-start shrink-0 px-4 py-2 rounded-full border border-zinc-300 bg-white hover:border-black text-zinc-700 text-xs font-semibold transition-all">
+                    Sedan
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter & Sorting Controls Area -->
+        <div class="bg-white rounded-2xl md:rounded-3xl border border-zinc-200 p-4 md:p-5 shadow-soft mb-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                
+                <!-- Desktop Filters Row -->
+                <div class="hidden md:flex flex-wrap items-center gap-3 flex-1">
+                    
+                    <!-- Merk / Brand Filter -->
+                    <div class="flex items-center gap-1.5 bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-2">
+                        <i class="ph-bold ph-car text-zinc-500"></i>
+                        <span class="text-xs font-bold text-zinc-500">Merk:</span>
+                        <select id="filter-brand" onchange="applyFilters()" class="bg-transparent text-xs font-bold text-black focus:outline-none cursor-pointer pr-1">
+                            <option value="Semua">Semua Merk</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Daihatsu">Daihatsu</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="flex items-center gap-1.5 bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-2">
+                        <i class="ph-bold ph-currency-dollar text-zinc-500"></i>
+                        <span class="text-xs font-bold text-zinc-500">Harga:</span>
+                        <select id="filter-price" onchange="applyFilters()" class="bg-transparent text-xs font-bold text-black focus:outline-none cursor-pointer pr-1">
+                            <option value="Semua">Semua Harga</option>
+                            <option value="under100">&lt; Rp 100 Juta</option>
+                            <option value="100to200">Rp 100 - 200 Juta</option>
+                            <option value="200to300">Rp 200 - 300 Juta</option>
+                            <option value="above300">&gt; Rp 300 Juta</option>
+                        </select>
+                    </div>
+
+                    <!-- Transmission Filter -->
+                    <div class="flex items-center gap-1.5 bg-zinc-50 border border-zinc-200 rounded-xl px-3 py-2">
+                        <i class="ph-bold ph-gear-six text-zinc-500"></i>
+                        <span class="text-xs font-bold text-zinc-500">Transmisi:</span>
+                        <select id="filter-transmission" onchange="applyFilters()" class="bg-transparent text-xs font-bold text-black focus:outline-none cursor-pointer pr-1">
+                            <option value="Semua">Semua</option>
+                            <option value="Automatic">Automatic (AT/CVT)</option>
+                            <option value="Manual">Manual (MT)</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Filters Button -->
+                    <button onclick="resetAllFilters()" class="text-xs font-bold text-zinc-500 hover:text-black transition-colors px-2 py-1 flex items-center gap-1">
+                        <i class="ph-bold ph-arrow-counter-clockwise"></i> Reset
+                    </button>
+                </div>
+
+                <!-- Mobile Filter Trigger Button -->
+                <div class="flex md:hidden items-center justify-between gap-2">
+                    <button onclick="openMobileFilter()" class="flex-1 bg-zinc-100 hover:bg-zinc-200 border border-zinc-300 text-black text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                        <i class="ph-bold ph-funnel text-base"></i>
+                        <span>Filter & Spesifikasi</span>
+                        <span id="active-filter-badge" class="hidden bg-black text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                    <button onclick="resetAllFilters()" class="bg-zinc-100 text-zinc-600 p-2.5 rounded-xl border border-zinc-300 text-xs font-bold">
+                        <i class="ph-bold ph-arrow-counter-clockwise text-base"></i>
+                    </button>
+                </div>
+
+                <!-- Right: Sorting & Item Counter -->
+                <div class="flex items-center justify-between md:justify-end gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-zinc-100">
+                    <span class="text-xs font-medium text-zinc-500">
+                        Menampilkan <strong id="car-count" class="text-black font-bold">12</strong> unit
+                    </span>
+
+                    <div class="flex items-center gap-1.5 bg-zinc-100 border border-zinc-300 rounded-xl px-3 py-2">
+                        <i class="ph-bold ph-arrows-down-up text-zinc-600"></i>
+                        <select id="sort-select" onchange="applyFilters()" class="bg-transparent text-xs font-bold text-black focus:outline-none cursor-pointer">
+                            <option value="default">Urutkan: Terbaru</option>
+                            <option value="price-low">Harga: Terendah</option>
+                            <option value="price-high">Harga: Tertinggi</option>
+                            <option value="year-new">Tahun: Terbaru</option>
+                            <option value="km-low">KM: Terendah</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Car Cards Inventory Grid (3 Cards per Row on Mobile) -->
+        <div id="car-grid" class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 mb-12">
+            <!-- Dynamic items rendered via Javascript -->
+        </div>
+
+        <!-- Empty State Card (Hidden by default) -->
+        <div id="empty-state" class="hidden bg-white rounded-3xl border border-zinc-200 p-10 text-center shadow-soft my-10 max-w-md mx-auto">
+            <div class="w-16 h-16 bg-zinc-100 rounded-full flex items-center justify-center mx-auto text-zinc-400 mb-4">
+                <i class="ph-bold ph-car-profile text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-black mb-1">Mobil Tidak Ditemukan</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed mb-5">
+                Maaf, tidak ada unit yang cocok dengan kriteria filter atau kata kunci pencarianmu saat ini.
+            </p>
+            <button onclick="resetAllFilters()" class="bg-black hover:bg-zinc-800 text-white text-xs font-bold px-6 py-3 rounded-full transition-colors shadow-md inline-flex items-center gap-2">
+                <i class="ph-bold ph-arrow-counter-clockwise"></i> Reset Semua Filter
+            </button>
+        </div>
+
+        <!-- BCA & Clipan Leasing Banner -->
+        <div class="bg-white rounded-3xl border border-zinc-200 p-6 md:p-8 shadow-soft mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md">
+                    <i class="ph-fill ph-bank text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-base md:text-lg font-extrabold text-black leading-tight">Mitra Pembiayaan Resmi</h3>
+                    <p class="text-xs text-zinc-500 font-medium mt-1">Dapatkan promo bunga rendah, proses kilat 1x24 jam, dan subsidi DP s/d 10%.</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 shrink-0 bg-zinc-50 px-4 py-3 rounded-2xl border border-zinc-200">
+                <img src="images/BCA_Finance.svg.webp" alt="BCA Finance" class="h-6 max-w-[100px] w-auto object-contain">
+                <div class="w-px h-6 bg-zinc-300"></div>
+                <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance" class="h-6 max-w-[100px] w-auto object-contain">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-zinc-200 py-8 px-5">
+        <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs text-ajm-slate">
+            <div>
+                <span class="font-black text-black text-sm tracking-tight">AJM MobilBekas.id</span>
+                <p class="mt-1">&copy; 2026 Agung Jaya Motor 2. Diler Mobil Bekas Terpercaya.</p>
+            </div>
+            <div class="flex gap-4 font-semibold text-black">
+                <a href="index.html" class="hover:underline">Beranda</a>
+                <a href="list-mobil.html" class="hover:underline">Katalog Mobil</a>
+                <a href="https://wa.me/6287888087542" class="hover:underline">Hubungi WA</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Floating Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-zinc-200 p-3 flex items-center gap-2 shadow-lg">
+        <button onclick="openMobileFilter()" class="flex-1 bg-zinc-900 text-white font-bold py-3 rounded-full text-xs flex items-center justify-center gap-2 shadow-md">
+            <i class="ph-bold ph-funnel text-base"></i> Filter Mobil
+        </button>
+        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20unit%20mobil%20di%20katalog"
+            class="flex-1 bg-emerald-600 text-white font-bold py-3 rounded-full text-xs flex items-center justify-center gap-1.5 shadow-md hover:bg-emerald-700 transition-colors">
+            <i class="ph-bold ph-whatsapp-logo text-base"></i> Chat Sales
+        </a>
+    </div>
+
+    <!-- Mobile Filter Drawer Modal -->
+    <div id="mobile-filter-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex flex-col justify-end transition-opacity">
+        <div class="bg-white rounded-t-3xl p-6 w-full max-h-[85vh] overflow-y-auto no-scrollbar shadow-2xl flex flex-col justify-between animate-slide-up">
+            
+            <!-- Drawer Header -->
+            <div>
+                <div class="flex items-center justify-between border-b border-zinc-200 pb-4 mb-4">
+                    <div class="flex items-center gap-2">
+                        <i class="ph-bold ph-funnel text-xl text-black"></i>
+                        <h3 class="text-base font-extrabold text-black">Filter Katalog Mobil</h3>
+                    </div>
+                    <button onclick="closeMobileFilter()" class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600">
+                        <i class="ph-bold ph-x text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Filter Controls inside Modal -->
+                <div class="space-y-4 text-xs font-semibold">
+                    
+                    <!-- Merk -->
+                    <div>
+                        <label class="block text-zinc-500 mb-1.5 uppercase tracking-wider text-[10px] font-bold">Merk Kendaraan</label>
+                        <select id="mobile-filter-brand" class="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-black font-bold focus:outline-none">
+                            <option value="Semua">Semua Merk</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Daihatsu">Daihatsu</option>
+                        </select>
+                    </div>
+
+                    <!-- Tipe Bodi -->
+                    <div>
+                        <label class="block text-zinc-500 mb-1.5 uppercase tracking-wider text-[10px] font-bold">Tipe Bodi</label>
+                        <select id="mobile-filter-body" class="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-black font-bold focus:outline-none">
+                            <option value="Semua">Semua Tipe Bodi</option>
+                            <option value="MPV">MPV Family</option>
+                            <option value="SUV">SUV & Crossover</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="City Car">City Car / LCGC</option>
+                            <option value="Sedan">Sedan</option>
+                        </select>
+                    </div>
+
+                    <!-- Rentang Harga -->
+                    <div>
+                        <label class="block text-zinc-500 mb-1.5 uppercase tracking-wider text-[10px] font-bold">Kisaran Harga</label>
+                        <select id="mobile-filter-price" class="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-black font-bold focus:outline-none">
+                            <option value="Semua">Semua Harga</option>
+                            <option value="under100">&lt; Rp 100 Juta</option>
+                            <option value="100to200">Rp 100 - 200 Juta</option>
+                            <option value="200to300">Rp 200 - 300 Juta</option>
+                            <option value="above300">&gt; Rp 300 Juta</option>
+                        </select>
+                    </div>
+
+                    <!-- Transmisi -->
+                    <div>
+                        <label class="block text-zinc-500 mb-1.5 uppercase tracking-wider text-[10px] font-bold">Transmisi</label>
+                        <select id="mobile-filter-transmission" class="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-black font-bold focus:outline-none">
+                            <option value="Semua">Semua Transmisi</option>
+                            <option value="Automatic">Automatic (AT/CVT)</option>
+                            <option value="Manual">Manual (MT)</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Drawer Footer Buttons -->
+            <div class="flex items-center gap-3 pt-6 mt-6 border-t border-zinc-200">
+                <button onclick="resetAllFilters(); closeMobileFilter();" class="w-1/3 bg-zinc-100 border border-zinc-300 text-black font-bold py-3.5 rounded-xl text-xs">
+                    Reset
+                </button>
+                <button onclick="applyMobileFilterDrawer()" class="w-2/3 bg-black text-white font-bold py-3.5 rounded-xl text-xs shadow-md">
+                    Terapkan Filter
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JavaScript Dataset & Logic Engine -->
+    <script>
+        // Car Dataset (12 Units)
+        const carDatabase = [
+            {
+                id: 'avanza-2019',
+                name: 'Toyota Avanza G 1.5 AT',
+                brand: 'Toyota',
+                bodyType: 'MPV',
+                year: 2019,
+                km: 45000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 158000000,
+                monthlyCredit: '2,6 jt/bln',
+                badge: 'Garansi Mesin',
+                image: 'images/Yaris.png', // Uses styled card asset
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'brio-2018',
+                name: 'Honda Brio Satya E MT',
+                brand: 'Honda',
+                bodyType: 'City Car',
+                year: 2018,
+                km: 38000,
+                fuel: 'Bensin',
+                transmission: 'Manual',
+                price: 118000000,
+                monthlyCredit: '2,0 jt/bln',
+                badge: 'Garansi Mesin',
+                image: 'images/hero_2.webp',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'innova-2021',
+                name: 'Toyota Innova Reborn 2.4 G',
+                brand: 'Toyota',
+                bodyType: 'MPV',
+                year: 2021,
+                km: 25000,
+                fuel: 'Diesel',
+                transmission: 'Manual',
+                price: 355000000,
+                monthlyCredit: '5,6 jt/bln',
+                badge: 'Lulus Inspeksi',
+                image: 'images/Kijang Inova.webp',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'pajero-2020',
+                name: 'Mitsubishi Pajero Sport Dakar',
+                brand: 'Mitsubishi',
+                bodyType: 'SUV',
+                year: 2020,
+                km: 52000,
+                fuel: 'Diesel',
+                transmission: 'Automatic',
+                price: 385000000,
+                monthlyCredit: '6,1 jt/bln',
+                badge: 'Garansi Mesin',
+                image: 'images/harga-pajero-sport.webp',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'hrv-2022',
+                name: 'Honda HR-V SE CVT',
+                brand: 'Honda',
+                bodyType: 'SUV',
+                year: 2022,
+                km: 18000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 335000000,
+                monthlyCredit: '5,3 jt/bln',
+                badge: 'Lulus Inspeksi',
+                image: 'images/hrv.jpeg',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'yaris-2020',
+                name: 'Toyota Yaris TRD Sportivo 1.5 AT',
+                brand: 'Toyota',
+                bodyType: 'Hatchback',
+                year: 2020,
+                km: 32000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 215000000,
+                monthlyCredit: '3,4 jt/bln',
+                badge: 'Garansi Mesin',
+                image: 'images/toyota-yaris_1.webp',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'karimun-wagon-2019',
+                name: 'Suzuki Karimun Wagon R GS',
+                brand: 'Suzuki',
+                bodyType: 'City Car',
+                year: 2019,
+                km: 40000,
+                fuel: 'Bensin',
+                transmission: 'Manual',
+                price: 85000000,
+                monthlyCredit: '1,4 jt/bln',
+                badge: 'DP Murah',
+                image: 'images/karimun/Karimun-GS.webp',
+                detailUrl: 'detail-mobil-karimun.html'
+            },
+            {
+                id: 'karimun-kotak-2003',
+                name: 'Suzuki Karimun Kotak DX',
+                brand: 'Suzuki',
+                bodyType: 'City Car',
+                year: 2003,
+                km: 95000,
+                fuel: 'Bensin',
+                transmission: 'Manual',
+                price: 55000000,
+                monthlyCredit: '900 rb/bln',
+                badge: 'Collector Item',
+                image: 'images/karimun/Karimun-Kotak.webp',
+                detailUrl: 'detail-mobil-karimun.html'
+            },
+            {
+                id: 'terios-2021',
+                name: 'Daihatsu Terios R Deluxe AT',
+                brand: 'Daihatsu',
+                bodyType: 'SUV',
+                year: 2021,
+                km: 29000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 205000000,
+                monthlyCredit: '3,2 jt/bln',
+                badge: 'Garansi Mesin',
+                image: 'images/mobil_second1.jpg',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'civic-2019',
+                name: 'Honda Civic Turbo 1.5 Sedan',
+                brand: 'Honda',
+                bodyType: 'Sedan',
+                year: 2019,
+                km: 35000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 365000000,
+                monthlyCredit: '5,8 jt/bln',
+                badge: 'Lulus Inspeksi',
+                image: 'images/hero_3.png',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'calya-2020',
+                name: 'Toyota Calya G AT',
+                brand: 'Toyota',
+                bodyType: 'MPV',
+                year: 2020,
+                km: 42000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 125000000,
+                monthlyCredit: '2,1 jt/bln',
+                badge: 'DP Murah',
+                image: 'images/toyota-yaris.webp',
+                detailUrl: 'detail-mobil.html'
+            },
+            {
+                id: 'xpander-2021',
+                name: 'Mitsubishi Xpander Ultimate AT',
+                brand: 'Mitsubishi',
+                bodyType: 'MPV',
+                year: 2021,
+                km: 30000,
+                fuel: 'Bensin',
+                transmission: 'Automatic',
+                price: 228000000,
+                monthlyCredit: '3,6 jt/bln',
+                badge: 'Garansi Mesin',
+                image: 'images/bg_hero_2.png',
+                detailUrl: 'detail-mobil.html'
+            }
+        ];
+
+        // State Management
+        let currentBodyFilter = 'Semua';
+        let favoriteItems = new Set(JSON.parse(localStorage.getItem('ajm_favorites') || '[]'));
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            updateFavoriteHeaderCounter();
+            applyFilters();
+        });
+
+        // Search Input Handler
+        function handleSearchInput() {
+            const inputVal = document.getElementById('search-input').value;
+            const clearBtn = document.getElementById('clear-search-btn');
+            if (inputVal.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+            applyFilters();
+        }
+
+        function clearSearch() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('clear-search-btn').classList.add('hidden');
+            applyFilters();
+        }
+
+        // Quick Category Pills Handler
+        function setBodyFilter(bodyType, btnEl) {
+            currentBodyFilter = bodyType;
+            document.querySelectorAll('.category-pill').forEach(el => {
+                el.classList.remove('active-pill', 'bg-black', 'text-white', 'border-black');
+                el.classList.add('bg-white', 'text-zinc-700', 'border-zinc-300');
+            });
+            btnEl.classList.remove('bg-white', 'text-zinc-700', 'border-zinc-300');
+            btnEl.classList.add('active-pill', 'bg-black', 'text-white', 'border-black');
+
+            // Sync mobile drawer body select if changed
+            document.getElementById('mobile-filter-body').value = bodyType;
+
+            applyFilters();
+        }
+
+        // Main Filtering & Sorting Logic Engine
+        function applyFilters() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            const selectedBrand = document.getElementById('filter-brand').value;
+            const selectedPrice = document.getElementById('filter-price').value;
+            const selectedTrans = document.getElementById('filter-transmission').value;
+            const selectedSort = document.getElementById('sort-select').value;
+
+            // Update desktop & mobile controls sync
+            document.getElementById('mobile-filter-brand').value = selectedBrand;
+            document.getElementById('mobile-filter-price').value = selectedPrice;
+            document.getElementById('mobile-filter-transmission').value = selectedTrans;
+
+            // Filter array
+            let filtered = carDatabase.filter(car => {
+                // Search Query filter
+                if (searchQuery !== '') {
+                    const matchText = `${car.name} ${car.brand} ${car.bodyType} ${car.transmission} ${car.fuel} ${car.year}`.toLowerCase();
+                    if (!matchText.includes(searchQuery)) return false;
+                }
+
+                // Body Type filter
+                if (currentBodyFilter !== 'Semua' && car.bodyType !== currentBodyFilter) {
+                    return false;
+                }
+
+                // Brand filter
+                if (selectedBrand !== 'Semua' && car.brand !== selectedBrand) {
+                    return false;
+                }
+
+                // Transmission filter
+                if (selectedTrans !== 'Semua' && car.transmission !== selectedTrans) {
+                    return false;
+                }
+
+                // Price filter range
+                if (selectedPrice === 'under100' && car.price >= 100000000) return false;
+                if (selectedPrice === '100to200' && (car.price < 100000000 || car.price > 200000000)) return false;
+                if (selectedPrice === '200to300' && (car.price < 200000000 || car.price > 300000000)) return false;
+                if (selectedPrice === 'above300' && car.price <= 300000000) return false;
+
+                return true;
+            });
+
+            // Sorting array
+            if (selectedSort === 'price-low') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (selectedSort === 'price-high') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (selectedSort === 'year-new') {
+                filtered.sort((a, b) => b.year - a.year);
+            } else if (selectedSort === 'km-low') {
+                filtered.sort((a, b) => a.km - b.km);
+            }
+
+            renderCarGrid(filtered);
+            updateFilterBadgeCount(selectedBrand, selectedPrice, selectedTrans);
+        }
+
+        // Render Cards to Grid
+        function renderCarGrid(cars) {
+            const gridEl = document.getElementById('car-grid');
+            const emptyEl = document.getElementById('empty-state');
+            const countEl = document.getElementById('car-count');
+
+            countEl.innerText = cars.length;
+
+            if (cars.length === 0) {
+                gridEl.innerHTML = '';
+                emptyEl.classList.remove('hidden');
+                return;
+            }
+
+            emptyEl.classList.add('hidden');
+
+            gridEl.innerHTML = cars.map(car => {
+                const isFav = favoriteItems.has(car.id);
+                const formattedPrice = 'Rp ' + (car.price / 1000000).toLocaleString('id-ID') + ' Jt';
+                const fullPrice = 'Rp ' + car.price.toLocaleString('id-ID');
+                const compactKm = (car.km / 1000).toFixed(0) + 'k km';
+                const compactTrans = car.transmission === 'Automatic' ? 'AT' : 'MT';
+                const waText = encodeURIComponent(`Halo AJM, saya tertarik dengan unit ${car.name} (${fullPrice}) di katalog.`);
+
+                return `
+                <div class="block bg-white rounded-xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    
+                    <!-- Favorite Heart Toggle -->
+                    <button onclick="toggleFav('${car.id}', this)" class="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                        <i class="${isFav ? 'ph-fill ph-heart text-rose-600' : 'ph ph-heart text-zinc-600'} text-xs sm:text-base md:text-lg"></i>
+                    </button>
+
+                    <!-- Image Thumbnail Container -->
+                    <a href="${car.detailUrl}" class="relative h-[90px] sm:h-[150px] md:h-[200px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center block">
+                        <img src="${car.image}" alt="${car.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 md:bottom-3 md:left-3 bg-zinc-900/90 text-white text-[7px] sm:text-[10px] md:text-xs font-bold px-1 py-0.5 sm:px-2.5 sm:py-1 rounded sm:rounded-md shadow-sm z-10 truncate max-w-[90%]">
+                            ${car.badge}
+                        </div>
+                    </a>
+
+                    <!-- Card Body -->
+                    <div class="p-1.5 sm:p-3 md:p-5 flex flex-col flex-1 justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-[8px] sm:text-[10px] text-zinc-400 font-bold uppercase tracking-tight md:tracking-wider mb-0.5">
+                                <span>${car.brand}</span>
+                                <span>&bull;</span>
+                                <span class="truncate">${car.bodyType}</span>
+                            </div>
+                            <a href="${car.detailUrl}">
+                                <h4 class="font-bold text-[10px] sm:text-xs md:text-base text-black leading-tight group-hover:text-zinc-600 transition-colors line-clamp-2 md:line-clamp-1">
+                                    ${car.name}
+                                </h4>
+                            </a>
+                            <p class="text-[8px] sm:text-xs text-zinc-500 mt-0.5 sm:mt-1.5 font-medium leading-tight">
+                                ${car.year} &bull; <span class="sm:hidden">${compactKm} &bull; ${compactTrans}</span><span class="hidden sm:inline">${car.km.toLocaleString('id-ID')} km &bull; ${car.transmission}</span>
+                            </p>
+                        </div>
+
+                        <!-- Price & Actions -->
+                        <div class="mt-1.5 pt-1 sm:mt-3 sm:pt-2 md:mt-4 md:pt-3 border-t border-zinc-100">
+                            <span class="text-[7px] sm:text-[10px] font-bold text-zinc-400 uppercase tracking-wider block hidden sm:block">Harga Tunai</span>
+                            <p class="text-black font-extrabold text-[11px] sm:text-sm md:text-xl leading-tight">
+                                <span class="sm:hidden">${formattedPrice}</span>
+                                <span class="hidden sm:inline">${fullPrice}</span>
+                            </p>
+                            
+                            <div class="inline-block bg-zinc-100 text-black text-[7px] sm:text-[10px] md:text-xs font-bold px-1 sm:px-2 py-0.5 rounded mt-0.5 border border-zinc-200 truncate max-w-full">
+                                Kredit ${car.monthlyCredit}
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-2 sm:mt-3.5">
+                                <a href="${car.detailUrl}" class="w-full bg-zinc-100 hover:bg-zinc-200 text-black text-center text-[8px] sm:text-xs font-bold py-1 sm:py-2 rounded-lg sm:rounded-xl border border-zinc-200 transition-colors flex items-center justify-center">
+                                    Detail
+                                </a>
+                                <a href="https://wa.me/6287888087542?text=${waText}" class="w-full bg-black hover:bg-zinc-800 text-white text-center text-[8px] sm:text-xs font-bold py-1 sm:py-2 rounded-lg sm:rounded-xl transition-colors flex items-center justify-center gap-0.5 shadow-sm">
+                                    <i class="ph-bold ph-whatsapp-logo text-[10px] sm:text-sm"></i> Sales
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        // Toggle Favorite Item State
+        function toggleFav(carId, btnEl) {
+            const icon = btnEl.querySelector('i');
+            if (favoriteItems.has(carId)) {
+                favoriteItems.delete(carId);
+                icon.className = 'ph ph-heart text-zinc-600 text-lg';
+            } else {
+                favoriteItems.add(carId);
+                icon.className = 'ph-fill ph-heart text-rose-600 text-lg';
+            }
+            localStorage.setItem('ajm_favorites', JSON.stringify(Array.from(favoriteItems)));
+            updateFavoriteHeaderCounter();
+        }
+
+        function updateFavoriteHeaderCounter() {
+            const favCounter = document.getElementById('fav-count-header');
+            if (favCounter) {
+                favCounter.innerText = favoriteItems.size;
+            }
+        }
+
+        // Reset All Filters
+        function resetAllFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('clear-search-btn').classList.add('hidden');
+            document.getElementById('filter-brand').value = 'Semua';
+            document.getElementById('filter-price').value = 'Semua';
+            document.getElementById('filter-transmission').value = 'Semua';
+            document.getElementById('sort-select').value = 'default';
+
+            document.getElementById('mobile-filter-brand').value = 'Semua';
+            document.getElementById('mobile-filter-body').value = 'Semua';
+            document.getElementById('mobile-filter-price').value = 'Semua';
+            document.getElementById('mobile-filter-transmission').value = 'Semua';
+
+            setBodyFilter('Semua', document.querySelectorAll('.category-pill')[0]);
+        }
+
+        // Mobile Filter Drawer Logic
+        function openMobileFilter() {
+            document.getElementById('mobile-filter-drawer').classList.remove('hidden');
+        }
+
+        function closeMobileFilter() {
+            document.getElementById('mobile-filter-drawer').classList.add('hidden');
+        }
+
+        function applyMobileFilterDrawer() {
+            const mBrand = document.getElementById('mobile-filter-brand').value;
+            const mBody = document.getElementById('mobile-filter-body').value;
+            const mPrice = document.getElementById('mobile-filter-price').value;
+            const mTrans = document.getElementById('mobile-filter-transmission').value;
+
+            document.getElementById('filter-brand').value = mBrand;
+            document.getElementById('filter-price').value = mPrice;
+            document.getElementById('filter-transmission').value = mTrans;
+
+            // Find matching pill button for body filter
+            const pillBtns = document.querySelectorAll('.category-pill');
+            pillBtns.forEach(btn => {
+                if (btn.innerText.includes(mBody) || (mBody === 'Semua' && btn.innerText.includes('Semua'))) {
+                    currentBodyFilter = mBody;
+                    pillBtns.forEach(el => el.classList.remove('active-pill', 'bg-black', 'text-white', 'border-black'));
+                    btn.classList.add('active-pill', 'bg-black', 'text-white', 'border-black');
+                }
+            });
+
+            closeMobileFilter();
+            applyFilters();
+        }
+
+        function updateFilterBadgeCount(brand, price, trans) {
+            let activeCount = 0;
+            if (brand !== 'Semua') activeCount++;
+            if (price !== 'Semua') activeCount++;
+            if (trans !== 'Semua') activeCount++;
+            if (currentBodyFilter !== 'Semua') activeCount++;
+
+            const badge = document.getElementById('active-filter-badge');
+            if (badge) {
+                if (activeCount > 0) {
+                    badge.innerText = activeCount;
+                    badge.classList.remove('hidden');
+                } else {
+                    badge.classList.add('hidden');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
