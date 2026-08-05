@@ -113,68 +113,31 @@
         <!-- Main Content -->
         <main class="px-5 md:px-0 flex flex-col md:block">
 
-            <!-- New Hero Section -->
-            <div id="beranda" class="-mx-5 md:mx-0 relative bg-ajm-blue flex flex-col items-center">
+            <!-- Hero Section (Clean Image Banner Only) -->
+            <div id="beranda" class="-mx-5 md:mx-0 relative bg-zinc-950 flex flex-col items-center overflow-hidden">
 
-                <!-- Background Image (Crashed Car Placeholder) -->
-                <div class="absolute inset-0 w-full h-full overflow-hidden bg-ajm-navy">
-                    <img src="images/hero_4.png" alt="Wrecked Car" class="w-full h-full object-cover opacity-60">
-                    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-zinc-950">
-                    </div>
-                </div>
-
-                <!-- Header / Pill -->
-                <header class="relative z-50 pt-3 md:pt-8 w-full flex justify-center px-5">
+                <!-- Floating Header / Pill Nav -->
+                <header
+                    class="absolute top-0 left-0 right-0 z-50 pt-3 md:pt-6 w-full flex justify-center px-4 pointer-events-none">
                     <div
-                        class="flex items-center bg-white/95 rounded-full p-1 shadow-lg backdrop-blur-md border border-black/10">
+                        class="pointer-events-auto flex items-center bg-zinc-950/90 rounded-full p-1 shadow-lg backdrop-blur-md border border-zinc-800">
                         <div
-                            class="w-auto px-3 h-9 md:h-10 bg-zinc-100 rounded-full flex items-center justify-center shadow-inner">
-                            <span class="text-black font-black text-lg md:text-xl leading-none tracking-tight">AJ<span
-                                    class="text-zinc-500">M</span></span>
+                            class="w-auto px-3.5 h-8 md:h-9 bg-amber-400 rounded-full flex items-center justify-center shadow-inner">
+                            <span
+                                class="text-zinc-950 font-black text-xs md:text-base leading-none tracking-tight">AJ<span
+                                    class="text-zinc-800">M</span></span>
                         </div>
                         <a href="https://wa.me/6288292074288"
-                            class="bg-black text-white text-xs md:text-[13px] font-bold px-5 md:px-6 py-2 md:py-2.5 rounded-full ml-1 hover:bg-zinc-800 transition-colors shadow-sm">
-                            Hubungi WhatsApp
+                            class="bg-white text-zinc-950 text-[11px] md:text-xs font-extrabold px-3.5 md:px-4 py-1 md:py-1.5 rounded-full ml-1 hover:bg-amber-100 transition-colors shadow-sm">
+                            Hubungi WA
                         </a>
                     </div>
                 </header>
 
-                <!-- Hero Content -->
-                <div class="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-10 pt-5 pb-8 md:pt-64 md:pb-32">
-                    <div
-                        class="inline-flex items-center gap-1.5 border border-white/20 rounded-full px-2.5 py-0.5 mb-2 md:mb-4 bg-white/10 backdrop-blur-md">
-                        <div class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"></div>
-                        <span
-                            class="text-[9px] md:text-[11px] font-bold text-zinc-200 tracking-widest uppercase">Layanan
-                            Premium</span>
-                    </div>
-
-                    <h1
-                        class="text-2xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight mb-2 md:mb-6">
-                        Mobil Bekas <br class="hidden sm:inline">
-                        <span class="text-zinc-200">Kualitas Baru.</span>
-                    </h1>
-
-                    <p
-                        class="text-ajm-lightblue/90 text-xs md:text-lg max-w-[300px] md:max-w-2xl leading-relaxed font-medium md:font-normal">
-                        Koleksi kendaraan premium diinspeksi ketat. Jaminan bebas tabrak dan banjir. Proses tukar tambah
-                        dan pengajuan kredit cepat dibantu sampai tuntas.
-                    </p>
-
-                    <!-- Mitra Pembiayaan Badge dengan Logo -->
-                    <div class="mt-3 md:mt-4 flex flex-row items-center gap-2 sm:gap-3">
-                        <span class="text-[10px] md:text-xs text-zinc-300 font-medium shrink-0">Mitra Pembiayaan:</span>
-                        <div class="flex items-center gap-1.5 md:gap-2">
-                            <div class="inline-flex items-center px-2 py-0.5 md:px-2.5 md:py-1 rounded shadow-sm">
-                                <img src="images/BCA_Finance.svg.webp" alt="BCA Finance"
-                                    class="h-[14px] md:h-[22px] max-w-[70px] md:max-w-[110px] w-auto object-contain">
-                            </div>
-                            <div class="inline-flex items-center px-2 py-0.5 md:px-2.5 md:py-1 rounded shadow-sm">
-                                <img src="images/LOGO-CLIPAN-FINAL.png" alt="Clipan Finance"
-                                    class="h-[14px] md:h-[22px] max-w-[70px] md:max-w-[110px] w-auto object-contain">
-                            </div>
-                        </div>
-                    </div>
+                <!-- Pure Banner Image Only (No Overlaid Text or Titles) -->
+                <div class="w-full relative flex justify-center">
+                    <img src="images/Hero_Affan Motor 2.png" alt="Promo Hero Banner Affan Jaya Mobil"
+                        class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-[580px] block">
                 </div>
             </div>
 
@@ -189,7 +152,8 @@
                     class="flex justify-between items-center mx-auto md:mx-2xl overflow-x-auto no-scrollbar pb-2 scroll-smooth">
 
                     <!-- Item 1 -->
-                    <a href="list-mobil.html" class="flex flex-col items-center gap-2 group min-w-[65px] md:min-w-[80px]">
+                    <a href="list-mobil.html"
+                        class="flex flex-col items-center gap-2 group min-w-[65px] md:min-w-[80px]">
                         <div
                             class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-ajm-blue text-white flex items-center justify-center group-hover:bg-ajm-yellow group-hover:text-ajm-navy transition-colors shrink-0">
                             <i class="ph-fill ph-car text-3xl md:text-4xl"></i>
@@ -199,7 +163,8 @@
                     </a>
 
                     <!-- Item 2 -->
-                    <a href="list-mobil.html" class="flex flex-col items-center gap-2 group min-w-[65px] md:min-w-[80px]">
+                    <a href="list-mobil.html"
+                        class="flex flex-col items-center gap-2 group min-w-[65px] md:min-w-[80px]">
                         <div
                             class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-ajm-blue text-white flex items-center justify-center group-hover:bg-ajm-yellow group-hover:text-ajm-navy transition-colors shrink-0">
                             <i class="ph-fill ph-tag text-3xl md:text-4xl"></i>
@@ -796,7 +761,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak DX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 120.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 120.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -864,7 +830,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak GX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2002 &bull; 140.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2002 &bull; 140.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -935,7 +902,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak DX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2001 &bull; 150.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2001 &bull; 150.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -991,7 +959,8 @@
                             </div>
                             <div
                                 class="relative h-[180px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center">
-                                <img src="images/karimun/Beli-Suzuki-Karimun-Kotak-Bekas.jpg" alt="Suzuki Karimun Kotak GX"
+                                <img src="images/karimun/Beli-Suzuki-Karimun-Kotak-Bekas.jpg"
+                                    alt="Suzuki Karimun Kotak GX"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <div
                                     class="absolute bottom-2 left-2 md:bottom-3 md:left-3 bg-zinc-100 border border-zinc-300 text-black text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md shadow-sm z-10">
@@ -1003,7 +972,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak GX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2005 &bull; 110.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2005 &bull; 110.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -1074,7 +1044,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak GX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2004 &bull; 115.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2004 &bull; 115.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -1176,7 +1147,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak DX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2000 &bull; 160.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2000 &bull; 160.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -1281,7 +1253,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Kotak GX</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 130.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2003 &bull; 130.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -1315,7 +1288,8 @@
                                     <h4
                                         class="font-bold text-[15px] md:text-lg text-black leading-tight group-hover:text-zinc-600 transition-colors">
                                         Suzuki Karimun Estilo</h4>
-                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2007 &bull; 105.000 km
+                                    <p class="text-xs md:text-sm text-zinc-500 mt-1.5 font-medium">2007 &bull; 105.000
+                                        km
                                         &bull; Manual</p>
                                 </div>
                                 <div class="mt-4">
@@ -2373,7 +2347,9 @@
                                     <div>
                                         <h5 class="font-bold text-ajm-navy text-sm md:text-base mb-1">Affan Jaya Mobil
                                         </h5>
-                                        <p class="text-xs md:text-sm text-ajm-slate font-medium leading-relaxed">Jl. Perum Jala Yudha Blk. CC4 - CC5 No.18, Ciangsana,<br>Kec. Gn. Putri, Kabupaten Bogor, Jawa Barat 16968</p>
+                                        <p class="text-xs md:text-sm text-ajm-slate font-medium leading-relaxed">Jl.
+                                            Perum Jala Yudha Blk. CC4 - CC5 No.18, Ciangsana,<br>Kec. Gn. Putri,
+                                            Kabupaten Bogor, Jawa Barat 16968</p>
                                     </div>
                                 </div>
 
@@ -2438,8 +2414,11 @@
         <div
             class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs text-ajm-slate">
             <div>
-                <span class="font-black text-black text-sm tracking-tight">AJM MobilBekas.id</span>
-                <p class="mt-1">&copy; 2026 Affan Jaya Mobil. Diler Mobil Bekas Terpercaya.</p>
+
+                <p class="mt-1 text-[11px] text-zinc-500 font-medium">
+                    Powered by <strong class="text-black font-bold">Maknaweb</strong> &bull; *Template
+                    Website Dealer Mobil
+                </p>
             </div>
             <div class="flex gap-4 font-semibold text-black">
                 <a href="index.html" class="hover:underline">Beranda</a>
@@ -2474,11 +2453,10 @@
             <!-- 3. WhatsApp (Center Floating Button) -->
             <div class="flex flex-col items-center justify-center relative">
                 <a href="https://wa.me/6288292074288" target="_blank" aria-label="Hubungi WhatsApp"
-                    class="absolute -top-6 w-14 h-14 rounded-full bg-white text-zinc-950 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.45),0_4px_12px_rgba(0,0,0,0.6)] border-4 border-zinc-950 dark:border-black hover:scale-105 active:scale-95 transition-all duration-300 group z-10">
+                    class="absolute -top-12 w-16 h-16 rounded-full bg-amber-400 text-white flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.45),0_4px_12px_rgba(0,0,0,0.6)] border-2 border-zinc-950 dark:border-black hover:scale-105 active:scale-95 transition-all duration-300 group z-10">
                     <i
-                        class="ph-fill ph-chat-circle-dots text-2xl group-hover:rotate-12 transition-transform text-zinc-950"></i>
+                        class="ph-fill ph-chat-circle text-2xl group-hover:rotate-12 transition-transform text-white"></i>
                 </a>
-                <span class="text-[10px] font-medium tracking-tight text-zinc-400 mt-6">WhatsApp</span>
             </div>
 
             <!-- 4. FAQ -->
