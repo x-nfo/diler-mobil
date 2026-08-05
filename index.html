@@ -178,12 +178,15 @@
                 </div>
             </div>
 
+
+
             <!-- Overlapping Bottom Card (Categories) -->
             <div
-                class="relative z-20 -mt-5 md:-mt-16 bg-white rounded-b-[32px] md:rounded-b-[48px] rounded-t-[32px] md:rounded-t-[48px]  pt-8 px-5 md:px-10 pb-6 w-[calc(100%+40px)] -mx-5 md:w-full md:mx-auto mb-16 max-w-[1280px] shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+                class="relative z-20 -mt-5 md:-mt-16 bg-white rounded-b-[32px] md:rounded-b-[48px] rounded-t-[32px] md:rounded-t-[48px]  pt-8 px-5 md:px-10 pb-6 w-[calc(100%+40px)] -mx-5 md:w-full md:mx-auto max-w-[1280px] shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
 
                 <!-- Category Icons -->
-                <div class="flex justify-between items-center mx-auto md:mx-2xl overflow-x-auto no-scrollbar pb-2">
+                <div id="category-icons-track"
+                    class="flex justify-between items-center mx-auto md:mx-2xl overflow-x-auto no-scrollbar pb-2 scroll-smooth">
 
                     <!-- Item 1 -->
                     <a href="#" class="flex flex-col items-center gap-2 group min-w-[65px] md:min-w-[80px]">
@@ -235,6 +238,229 @@
                         <span
                             class="text-[11px] md:text-sm font-bold text-ajm-navy text-center leading-tight">Cek<br>Lokasi</span>
                     </a>
+
+                </div>
+            </div>
+
+            <!-- Interactive Feature & Promo Banner Slider -->
+            <div id="promo-section" class="mb-5 md:mt-16 mt-5 md:mb-20 max-w-[1280px] mx-auto w-full md:px-10">
+                <!-- Section Title -->
+                <!-- <div class="mt-5 flex justify-between items-center mb-3 md:mb-4 px-5 md:px-0">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+                        <h3 class="text-sm md:text-xl font-bold text-black tracking-tight">Promo Spesial & Keunggulan
+                            AJM</h3>
+                    </div>
+                    <span class="text-xs text-zinc-400 font-medium hidden sm:flex items-center gap-1">
+                        <i class="ph-bold ph-arrows-out-line-horizontal text-amber-500"></i> Geser Otomatis
+                    </span>
+                </div> -->
+
+                <div class="relative overflow-hidden">
+
+                    <!-- Scrollable Cards Track -->
+                    <div id="feature-banner-track"
+                        class="flex gap-3 md:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-3 pt-1 px-5 -mx-5 md:mx-0 md:px-0 scroll-smooth">
+
+                        <!-- Slide Promo 1: Diskon Special 15% (Solid Vibrant Yellow Background) -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20tertarik%20dengan%20Promo%20Diskon%20Kredit"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-amber-400 text-zinc-950 rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-md hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden border border-amber-500/40">
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Badge Percent Icon -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-amber-400 flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-percent text-2xl md:text-3xl"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <div
+                                        class="inline-flex items-center gap-1 bg-zinc-950 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wider">
+                                        <i class="ph-bold ph-lightning text-amber-400"></i> PROMO DISKON 15%
+                                    </div>
+                                    <h4 class="font-extrabold text-xs md:text-sm text-zinc-950 leading-tight">
+                                        Diskon Spesial Unit Pilihan <br>
+                                        <span class="text-black font-black text-sm md:text-base">Potongan s/d Rp 20
+                                            Juta</span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-800 font-bold mt-1">
+                                        Khusus pengajuan minggu ini!
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-xl text-zinc-950 font-black group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                        <!-- Slide Promo 2: Cashback DP BCA & Clipan (Solid Dark Background) -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20Promo%20Cashback%20DP%20BCA%20Clipan"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-zinc-900 text-white rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-md hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden border border-zinc-800">
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Badge Icon -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-amber-400 text-zinc-950 flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-ticket text-2xl md:text-3xl"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <div
+                                        class="inline-flex items-center gap-1 bg-amber-400 text-zinc-950 text-[10px] font-black px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wider">
+                                        <i class="ph-bold ph-bank"></i> SPECIAL LEASING DEAL
+                                    </div>
+                                    <h4 class="font-extrabold text-xs md:text-sm text-white leading-tight">
+                                        Subsidi DP BCA & Clipan <br>
+                                        <span class="text-amber-400 font-black">Cashback DP s/d 10%</span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-300 font-medium mt-1">
+                                        Free angsuran & garansi mesin 1 thn
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-white group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                        <!-- Slide 1: Inspeksi 100+ Titik -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20detail%20hasil%20inspeksi%20unit"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
+                            <!-- Left Gradient Soft Glow -->
+                            <div
+                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
+                            </div>
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Shield Icon Badge -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-shield-check text-2xl md:text-3xl text-white"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
+                                        Setiap Mobil di AJM <br>
+                                        <span class="text-black font-extrabold">Lulus Inspeksi <span
+                                                class="underline decoration-zinc-400">100+ Titik</span></span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
+                                        Kami pastikan mobil berkualitas untukmu
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                        <!-- Slide 2: Garansi Mesin 1 Tahun -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20tentang%20Garansi%20Mesin"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
+                            <!-- Left Gradient Soft Glow -->
+                            <div
+                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
+                            </div>
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Icon Badge -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-wrench text-2xl md:text-3xl text-white"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
+                                        Garansi Resmi AJM <br>
+                                        <span class="text-black font-extrabold">Proteksi Mesin <span
+                                                class="underline decoration-zinc-400">s/d 1 Tahun</span></span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
+                                        Bebas khawatir untuk setiap perjalananmu
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                        <!-- Slide 3: Tukar Tambah Mudah -->
+                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tukar%20tambah%20mobil%20lama"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
+                            <!-- Left Gradient Soft Glow -->
+                            <div
+                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
+                            </div>
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Icon Badge -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-arrows-clockwise text-2xl md:text-3xl text-white"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
+                                        Layanan Trade-In <br>
+                                        <span class="text-black font-extrabold">Tukar Tambah <span
+                                                class="underline decoration-zinc-400">Prosedur Cepat</span></span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
+                                        Mobil lamamu dihargai dengan fair & terbaik
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                        <!-- Slide 4: Paket Kredit DP Murah -->
+                        <a href="#simulasi-cicilan"
+                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
+                            <!-- Left Gradient Soft Glow -->
+                            <div
+                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
+                            </div>
+
+                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
+                                <!-- Icon Badge -->
+                                <div
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
+                                    <i class="ph-fill ph-clipboard-text text-2xl md:text-3xl text-white"></i>
+                                </div>
+                                <!-- Text Block -->
+                                <div>
+                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
+                                        Kredit Mudah & Ringan <br>
+                                        <span class="text-black font-extrabold">DP Mulai <span
+                                                class="underline decoration-zinc-400">10 Juta & Approved
+                                                1x24h</span></span>
+                                    </h4>
+                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
+                                        Proses pengajuan dibantu sampai tuntas
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Caret Arrow -->
+                            <div class="relative z-10 pl-2">
+                                <i
+                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
+                            </div>
+                        </a>
+
+                    </div>
 
                 </div>
             </div>
@@ -1098,7 +1324,7 @@
                 </div>
 
                 <!-- Section Mobil di Bawah 100 Juta -->
-                <div class="mt-12 md:mt-16 flex flex-col">
+                <div class="mt-5 md:mt-16 flex flex-col">
                     <!-- Header -->
                     <div class="flex justify-between items-end">
                         <div>
@@ -1259,232 +1485,12 @@
 
             </div>
 
-            <!-- Interactive Feature & Promo Banner Slider -->
-            <div class="mt-12 md:mt-20 mb-12 md:mb-20 max-w-[1280px] mx-auto w-full md:px-10">
-                <!-- Section Title -->
-                <div class="flex justify-between items-center mb-4 md:mb-6 px-5 md:px-0">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
-                        <h3 class="text-base md:text-2xl font-bold text-black tracking-tight">Promo Spesial & Keunggulan
-                            AJM</h3>
-                    </div>
-                    <span class="text-xs text-zinc-400 font-medium hidden sm:block">&larr; Geser untuk promo lainnya
-                        &rarr;</span>
-                </div>
 
-                <div class="relative overflow-hidden">
-
-                    <!-- Scrollable Cards Track -->
-                    <div id="feature-banner-track"
-                        class="flex gap-3 md:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-3 pt-1 px-5 -mx-5 md:mx-0 md:px-0 scroll-smooth">
-
-                        <!-- Slide Promo 1: Diskon Special 15% (Solid Vibrant Yellow Background) -->
-                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20tertarik%20dengan%20Promo%20Diskon%20Kredit"
-                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-amber-400 text-zinc-950 rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-md hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden border border-amber-500/40">
-
-                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
-                                <!-- Badge Percent Icon -->
-                                <div
-                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-amber-400 flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
-                                    <i class="ph-fill ph-percent text-2xl md:text-3xl"></i>
-                                </div>
-                                <!-- Text Block -->
-                                <div>
-                                    <div
-                                        class="inline-flex items-center gap-1 bg-zinc-950 text-amber-400 text-[10px] font-black px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wider">
-                                        <i class="ph-bold ph-lightning text-amber-400"></i> PROMO DISKON 15%
-                                    </div>
-                                    <h4 class="font-extrabold text-xs md:text-sm text-zinc-950 leading-tight">
-                                        Diskon Spesial Unit Pilihan <br>
-                                        <span class="text-black font-black text-sm md:text-base">Potongan s/d Rp 20
-                                            Juta</span>
-                                    </h4>
-                                    <p class="text-[11px] md:text-xs text-zinc-800 font-bold mt-1">
-                                        Khusus pengajuan minggu ini!
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Right Caret Arrow -->
-                            <div class="relative z-10 pl-2">
-                                <i
-                                    class="ph-bold ph-caret-right text-xl text-zinc-950 font-black group-hover/card:translate-x-1 transition-all"></i>
-                            </div>
-                        </a>
-
-                        <!-- Slide Promo 2: Cashback DP BCA & Clipan (Solid Dark Background) -->
-                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20Promo%20Cashback%20DP%20BCA%20Clipan"
-                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-zinc-900 text-white rounded-2xl md:rounded-3xl p-4 md:p-5 shadow-md hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden border border-zinc-800">
-
-                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
-                                <!-- Badge Icon -->
-                                <div
-                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-amber-400 text-zinc-950 flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
-                                    <i class="ph-fill ph-ticket text-2xl md:text-3xl"></i>
-                                </div>
-                                <!-- Text Block -->
-                                <div>
-                                    <div
-                                        class="inline-flex items-center gap-1 bg-amber-400 text-zinc-950 text-[10px] font-black px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wider">
-                                        <i class="ph-bold ph-bank"></i> SPECIAL LEASING DEAL
-                                    </div>
-                                    <h4 class="font-extrabold text-xs md:text-sm text-white leading-tight">
-                                        Subsidi DP BCA & Clipan <br>
-                                        <span class="text-amber-400 font-black">Cashback DP s/d 10%</span>
-                                    </h4>
-                                    <p class="text-[11px] md:text-xs text-zinc-300 font-medium mt-1">
-                                        Free angsuran & garansi mesin 1 thn
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Right Caret Arrow -->
-                            <div class="relative z-10 pl-2">
-                                <i
-                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-white group-hover/card:translate-x-1 transition-all"></i>
-                            </div>
-                        </a>
-
-                        <!-- Slide 1: Inspeksi 100+ Titik -->
-                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20detail%20hasil%20inspeksi%20unit"
-                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
-                            <!-- Left Gradient Soft Glow -->
-                            <div
-                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
-                            </div>
-
-                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
-                                <!-- Shield Icon Badge -->
-                                <div
-                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
-                                    <i class="ph-fill ph-shield-check text-2xl md:text-3xl text-white"></i>
-                                </div>
-                                <!-- Text Block -->
-                                <div>
-                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
-                                        Setiap Mobil di AJM <br>
-                                        <span class="text-black font-extrabold">Lulus Inspeksi <span
-                                                class="underline decoration-zinc-400">100+ Titik</span></span>
-                                    </h4>
-                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
-                                        Kami pastikan mobil berkualitas untukmu
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Right Caret Arrow -->
-                            <div class="relative z-10 pl-2">
-                                <i
-                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
-                            </div>
-                        </a>
-
-                        <!-- Slide 2: Garansi Mesin 1 Tahun -->
-                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tanya%20tentang%20Garansi%20Mesin"
-                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
-                            <!-- Left Gradient Soft Glow -->
-                            <div
-                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
-                            </div>
-
-                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
-                                <!-- Icon Badge -->
-                                <div
-                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
-                                    <i class="ph-fill ph-wrench text-2xl md:text-3xl text-white"></i>
-                                </div>
-                                <!-- Text Block -->
-                                <div>
-                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
-                                        Garansi Resmi AJM <br>
-                                        <span class="text-black font-extrabold">Proteksi Mesin <span
-                                                class="underline decoration-zinc-400">s/d 1 Tahun</span></span>
-                                    </h4>
-                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
-                                        Bebas khawatir untuk setiap perjalananmu
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Right Caret Arrow -->
-                            <div class="relative z-10 pl-2">
-                                <i
-                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
-                            </div>
-                        </a>
-
-                        <!-- Slide 3: Tukar Tambah Mudah -->
-                        <a href="https://wa.me/6287888087542?text=Halo%20AJM,%20saya%20ingin%20tukar%20tambah%20mobil%20lama"
-                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
-                            <!-- Left Gradient Soft Glow -->
-                            <div
-                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
-                            </div>
-
-                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
-                                <!-- Icon Badge -->
-                                <div
-                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
-                                    <i class="ph-fill ph-arrows-clockwise text-2xl md:text-3xl text-white"></i>
-                                </div>
-                                <!-- Text Block -->
-                                <div>
-                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
-                                        Layanan Trade-In <br>
-                                        <span class="text-black font-extrabold">Tukar Tambah <span
-                                                class="underline decoration-zinc-400">Prosedur Cepat</span></span>
-                                    </h4>
-                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
-                                        Mobil lamamu dihargai dengan fair & terbaik
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Right Caret Arrow -->
-                            <div class="relative z-10 pl-2">
-                                <i
-                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
-                            </div>
-                        </a>
-
-                        <!-- Slide 4: Paket Kredit DP Murah -->
-                        <a href="#simulasi-cicilan"
-                            class="banner-slide-item snap-center shrink-0 w-[calc(100vw-56px)] max-w-[360px] md:w-[410px] bg-white rounded-2xl md:rounded-3xl border border-zinc-200/80 p-4 md:p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-premium transition-all duration-300 flex items-center justify-between group/card relative overflow-hidden">
-                            <!-- Left Gradient Soft Glow -->
-                            <div
-                                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-zinc-100/90 via-zinc-50/40 to-transparent pointer-events-none">
-                            </div>
-
-                            <div class="flex items-center gap-3.5 md:gap-4 relative z-10">
-                                <!-- Icon Badge -->
-                                <div
-                                    class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-zinc-950 text-white flex items-center justify-center shrink-0 shadow-md group-hover/card:scale-105 transition-transform duration-300">
-                                    <i class="ph-fill ph-clipboard-text text-2xl md:text-3xl text-white"></i>
-                                </div>
-                                <!-- Text Block -->
-                                <div>
-                                    <h4 class="font-bold text-xs md:text-sm text-zinc-900 leading-tight">
-                                        Kredit Mudah & Ringan <br>
-                                        <span class="text-black font-extrabold">DP Mulai <span
-                                                class="underline decoration-zinc-400">10 Juta & Approved
-                                                1x24h</span></span>
-                                    </h4>
-                                    <p class="text-[11px] md:text-xs text-zinc-500 font-medium mt-1">
-                                        Proses pengajuan dibantu sampai tuntas
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Right Caret Arrow -->
-                            <div class="relative z-10 pl-2">
-                                <i
-                                    class="ph-bold ph-caret-right text-lg text-zinc-400 group-hover/card:text-black group-hover/card:translate-x-1 transition-all"></i>
-                            </div>
-                        </a>
-
-                    </div>
-
-                </div>
-            </div>
 
 
 
             <!-- Testimoni Pelanggan (Marquee 2 Baris) -->
-            <div id="tentang" class="max-w-[1280px] md:mb-16 mx-auto w-full flex flex-col">
+            <div id="tentang" class="max-w-[1280px] mt-5 md:my-16 mx-auto w-full flex flex-col">
                 <div class="px-5 md:px-10 flex justify-between items-end mb-6 md:mb-8">
                     <div>
                         <div
@@ -2600,6 +2606,119 @@
                     updateSimulator();
                 });
             })();
+    </script>
+
+    <!-- Discrete Full-Banner Auto Promo Slider Script (Visible Viewport Observer) -->
+    <script>
+        (function () {
+            function setupDiscretePromoSlider() {
+                const track = document.getElementById('feature-banner-track');
+                if (!track) return;
+
+                const slides = track.children;
+                if (!slides || slides.length === 0) return;
+
+                let currentSlide = 0;
+                let isVisible = false;
+                let isUserInteracting = false;
+                let slideTimer = null;
+                let resumeTimeout = null;
+
+                function getSlideOffset(index) {
+                    const slide = slides[index];
+                    if (!slide) return 0;
+                    return slide.offsetLeft - track.offsetLeft;
+                }
+
+                function goToNextSlide() {
+                    if (!isVisible || isUserInteracting) return;
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    const targetLeft = getSlideOffset(currentSlide);
+                    track.scrollTo({
+                        left: targetLeft,
+                        behavior: 'smooth'
+                    });
+                }
+
+                function startAutoSlide() {
+                    stopAutoSlide();
+                    slideTimer = setInterval(goToNextSlide, 3500); // Berganti ke slide berikutnya setiap 3.5 detik
+                }
+
+                function stopAutoSlide() {
+                    if (slideTimer) {
+                        clearInterval(slideTimer);
+                        slideTimer = null;
+                    }
+                }
+
+                // Sinkronisasi indeks slide aktif jika user menggeser manual
+                function syncCurrentSlide() {
+                    if (!slides.length) return;
+                    const currentScroll = track.scrollLeft;
+                    let closestIndex = 0;
+                    let minDiff = Infinity;
+
+                    for (let i = 0; i < slides.length; i++) {
+                        const diff = Math.abs(getSlideOffset(i) - currentScroll);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIndex = i;
+                        }
+                    }
+                    currentSlide = closestIndex;
+                }
+
+                // IntersectionObserver: HANYA SLIDING JIKA TERLIHAT DI VIEWPORT!
+                // KETIKA USER SCROLL KE BAWAH -> MATIKAN AUTO-SLIDE TOTAL!
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        isVisible = entry.isIntersecting;
+                        if (isVisible) {
+                            startAutoSlide();
+                        } else {
+                            stopAutoSlide();
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(track);
+
+                // Pause sementara saat kursor hover atau layar disentuh/swipe
+                function pauseInteraction() {
+                    isUserInteracting = true;
+                    stopAutoSlide();
+                    if (resumeTimeout) clearTimeout(resumeTimeout);
+                }
+
+                function resumeInteraction() {
+                    syncCurrentSlide();
+                    if (resumeTimeout) clearTimeout(resumeTimeout);
+                    resumeTimeout = setTimeout(() => {
+                        isUserInteracting = false;
+                        if (isVisible) {
+                            startAutoSlide();
+                        }
+                    }, 3000); // Lanjutkan auto-slide 3 detik setelah interaksi selesai
+                }
+
+                track.addEventListener('mouseenter', pauseInteraction);
+                track.addEventListener('mouseleave', resumeInteraction);
+                track.addEventListener('touchstart', pauseInteraction, { passive: true });
+                track.addEventListener('touchend', resumeInteraction, { passive: true });
+                track.addEventListener('scroll', () => {
+                    if (isUserInteracting) {
+                        syncCurrentSlide();
+                    }
+                }, { passive: true });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', setupDiscretePromoSlider);
+            } else {
+                setupDiscretePromoSlider();
+            }
+        })();
     </script>
 </body>
 

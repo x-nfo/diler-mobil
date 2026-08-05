@@ -2169,6 +2169,119 @@
                 });
             })();
     </script>
+
+    <!-- Discrete Full-Banner Auto Promo Slider Script (Visible Viewport Observer) -->
+    <script>
+        (function () {
+            function setupDiscretePromoSlider() {
+                const track = document.getElementById('feature-banner-track');
+                if (!track) return;
+
+                const slides = track.children;
+                if (!slides || slides.length === 0) return;
+
+                let currentSlide = 0;
+                let isVisible = false;
+                let isUserInteracting = false;
+                let slideTimer = null;
+                let resumeTimeout = null;
+
+                function getSlideOffset(index) {
+                    const slide = slides[index];
+                    if (!slide) return 0;
+                    return slide.offsetLeft - track.offsetLeft;
+                }
+
+                function goToNextSlide() {
+                    if (!isVisible || isUserInteracting) return;
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    const targetLeft = getSlideOffset(currentSlide);
+                    track.scrollTo({
+                        left: targetLeft,
+                        behavior: 'smooth'
+                    });
+                }
+
+                function startAutoSlide() {
+                    stopAutoSlide();
+                    slideTimer = setInterval(goToNextSlide, 3500); // Berganti ke slide berikutnya setiap 3.5 detik
+                }
+
+                function stopAutoSlide() {
+                    if (slideTimer) {
+                        clearInterval(slideTimer);
+                        slideTimer = null;
+                    }
+                }
+
+                // Sinkronisasi indeks slide aktif jika user menggeser manual
+                function syncCurrentSlide() {
+                    if (!slides.length) return;
+                    const currentScroll = track.scrollLeft;
+                    let closestIndex = 0;
+                    let minDiff = Infinity;
+
+                    for (let i = 0; i < slides.length; i++) {
+                        const diff = Math.abs(getSlideOffset(i) - currentScroll);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIndex = i;
+                        }
+                    }
+                    currentSlide = closestIndex;
+                }
+
+                // IntersectionObserver: HANYA SLIDING JIKA TERLIHAT DI VIEWPORT!
+                // KETIKA USER SCROLL KE BAWAH -> MATIKAN AUTO-SLIDE TOTAL!
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        isVisible = entry.isIntersecting;
+                        if (isVisible) {
+                            startAutoSlide();
+                        } else {
+                            stopAutoSlide();
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(track);
+
+                // Pause sementara saat kursor hover atau layar disentuh/swipe
+                function pauseInteraction() {
+                    isUserInteracting = true;
+                    stopAutoSlide();
+                    if (resumeTimeout) clearTimeout(resumeTimeout);
+                }
+
+                function resumeInteraction() {
+                    syncCurrentSlide();
+                    if (resumeTimeout) clearTimeout(resumeTimeout);
+                    resumeTimeout = setTimeout(() => {
+                        isUserInteracting = false;
+                        if (isVisible) {
+                            startAutoSlide();
+                        }
+                    }, 3000); // Lanjutkan auto-slide 3 detik setelah interaksi selesai
+                }
+
+                track.addEventListener('mouseenter', pauseInteraction);
+                track.addEventListener('mouseleave', resumeInteraction);
+                track.addEventListener('touchstart', pauseInteraction, { passive: true });
+                track.addEventListener('touchend', resumeInteraction, { passive: true });
+                track.addEventListener('scroll', () => {
+                    if (isUserInteracting) {
+                        syncCurrentSlide();
+                    }
+                }, { passive: true });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', setupDiscretePromoSlider);
+            } else {
+                setupDiscretePromoSlider();
+            }
+        })();
+    </script>
 </body>
 
 </html>
