@@ -613,7 +613,19 @@
         // Initialize page
         document.addEventListener('DOMContentLoaded', () => {
             updateFavoriteHeaderCounter();
-            applyFilters();
+            
+            // Read URL search parameter if redirected from header search
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchParam = urlParams.get('search') || urlParams.get('q');
+            if (searchParam) {
+                const searchInput = document.getElementById('search-input');
+                if (searchInput) {
+                    searchInput.value = searchParam;
+                    handleSearchInput();
+                }
+            } else {
+                applyFilters();
+            }
         });
 
         // Search Input Handler

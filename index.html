@@ -12,6 +12,10 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <!-- Swiper CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +59,49 @@
     </script>
 
     <style>
+        /* Swiper Hero Slider Styles */
+        .hero-swiper .swiper-pagination {
+            z-index: 30 !important;
+        }
+
+        .hero-swiper .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 0.4;
+            width: 8px;
+            height: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-swiper .swiper-pagination-bullet-active {
+            background: #ffffff;
+            opacity: 1;
+            width: 24px;
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-swiper .swiper-button-next,
+        .hero-swiper .swiper-button-prev {
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(6px);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .hero-swiper .swiper-button-next:hover,
+        .hero-swiper .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-swiper .swiper-button-next:after,
+        .hero-swiper .swiper-button-prev:after {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
         /* Hide scrollbar for horizontal scrolling elements */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -113,31 +160,78 @@
         <!-- Main Content -->
         <main class="px-5 md:px-0 flex flex-col md:block">
 
-            <!-- Hero Section (Clean Image Banner Only) -->
+            <!-- Hero Section (Swiper Image Banner Slider) -->
             <div id="beranda" class="-mx-5 md:mx-0 relative bg-zinc-950 flex flex-col items-center overflow-hidden">
 
-                <!-- Floating Header / Pill Nav -->
+                <!-- Floating Header / Pill Nav (Aligned to Left) -->
                 <header
-                    class="absolute top-0 left-0 right-0 z-50 pt-3 md:pt-6 w-full flex justify-center px-4 pointer-events-none">
+                    class="absolute top-0 left-0 right-0 z-50 pt-3 md:pt-6 w-full flex justify-start px-4 md:px-6 pointer-events-none">
                     <div
-                        class="pointer-events-auto flex items-center bg-zinc-950/90 rounded-full p-1 shadow-lg backdrop-blur-md border border-zinc-800">
-                        <div
-                            class="w-auto px-3.5 h-8 md:h-9 bg-amber-400 rounded-full flex items-center justify-center shadow-inner">
+                        class="pointer-events-auto flex items-center bg-zinc-950/90 rounded-full p-1 shadow-lg backdrop-blur-md border border-zinc-800 transition-all duration-300">
+
+                        <!-- Left Expandable Search Button (Circle initially, expands on click) -->
+                        <div id="header-search-box"
+                            class="relative flex items-center bg-zinc-800/90 hover:bg-zinc-800 rounded-full h-8 md:h-9 w-8 md:w-9 transition-all duration-300 ease-out overflow-hidden border border-zinc-700/60 mr-1.5 cursor-pointer shadow-sm group">
+
+                            <!-- Search Icon Button -->
+                            <button id="header-search-btn" type="button" aria-label="Cari Mobil"
+                                class="w-8 md:w-9 h-8 md:h-9 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-amber-400 transition-colors">
+                                <i class="ph-bold ph-magnifying-glass text-sm md:text-base"></i>
+                            </button>
+
+                            <!-- Expanding Input Search Form -->
+                            <form id="header-search-form" action="list-mobil.html" method="GET"
+                                class="flex-1 flex items-center pr-1.5 hidden opacity-0 transition-opacity duration-300">
+                                <input type="text" id="header-search-input" name="search"
+                                    placeholder="Cari Karimun, Innova..."
+                                    class="w-full bg-transparent text-white text-xs md:text-sm font-medium outline-none placeholder-zinc-400 pl-0 pr-1">
+                                <button type="button" id="header-search-close" aria-label="Tutup pencarian"
+                                    class="text-zinc-400 hover:text-white shrink-0 p-1">
+                                    <i class="ph-bold ph-x text-xs"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- AJM Logo Pill -->
+                        <!-- <a href="index.html"
+                            class="w-auto px-3.5 h-8 md:h-9 bg-amber-400 rounded-full flex items-center justify-center shadow-inner hover:bg-amber-300 transition-colors">
                             <span
                                 class="text-zinc-950 font-black text-xs md:text-base leading-none tracking-tight">AJ<span
                                     class="text-zinc-800">M</span></span>
-                        </div>
-                        <a href="https://wa.me/6288292074288"
-                            class="bg-white text-zinc-950 text-[11px] md:text-xs font-extrabold px-3.5 md:px-4 py-1 md:py-1.5 rounded-full ml-1 hover:bg-amber-100 transition-colors shadow-sm">
+                        </a> -->
+
+                        <!-- Hubungi WhatsApp Button -->
+                        <!-- <a href="https://wa.me/6288292074288"
+                            class="bg-white text-zinc-950 text-[11px] md:text-xs font-extrabold px-3.5 md:px-4 py-1 md:py-1.5 rounded-full ml-1.5 hover:bg-amber-100 transition-colors shadow-sm shrink-0">
                             Hubungi WA
-                        </a>
+                        </a> -->
                     </div>
                 </header>
 
-                <!-- Pure Banner Image Only (No Overlaid Text or Titles) -->
-                <div class="w-full relative flex justify-center">
-                    <img src="images/Hero_Promo_Agustus.png" alt="Promo Hero Banner Affan Jaya Mobil"
-                        class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-[580px] block">
+                <!-- Hero Swiper Carousel Container -->
+                <div class="w-full relative swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1: Promo Merdeka / Promo Agustus -->
+                        <div class="swiper-slide flex justify-center bg-zinc-950">
+                            <img src="images/Hero_Promo_Agustus.png" alt="Promo Agustus Hero Banner"
+                                class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-[600px] block">
+                        </div>
+
+                        <!-- Slide 2: Spesialis Karimun & Mobil Pilihan -->
+                        <div class="swiper-slide flex justify-center bg-zinc-950">
+                            <img src="images/hero_3.png" alt="Spesialis Karimun & Mobil Bekas Pilihan Banner"
+                                class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-[600px] block">
+                        </div>
+
+                        <!-- Slide 3: Penawaran Spesial AJM -->
+                        <div class="swiper-slide flex justify-center bg-zinc-950">
+                            <img src="images/Hero_2.png" alt="Promo Diler Mobil Bekas AJM"
+                                class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-[600px] block">
+                        </div>
+                    </div>
+
+                    <!-- Pagination Bullets (Elevated Above Card on Mobile & Desktop) -->
+                    <div class="swiper-pagination !bottom-9 md:!bottom-20 !z-30"></div>
                 </div>
             </div>
 
@@ -2714,6 +2808,101 @@
                 setupDiscretePromoSlider();
             }
         })();
+
+        // Initialize Hero Swiper Slider & Header Search Box
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('.hero-swiper', {
+                    loop: true,
+                    speed: 700,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.hero-swiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.hero-swiper .swiper-button-next',
+                        prevEl: '.hero-swiper .swiper-button-prev',
+                    },
+                });
+            }
+
+            // Expandable Header Search Box Handler
+            const searchBox = document.getElementById('header-search-box');
+            const searchBtn = document.getElementById('header-search-btn');
+            const searchForm = document.getElementById('header-search-form');
+            const searchInput = document.getElementById('header-search-input');
+            const searchClose = document.getElementById('header-search-close');
+
+            if (searchBox && searchBtn && searchForm && searchInput) {
+                let isExpanded = false;
+
+                function expandSearch() {
+                    if (isExpanded) return;
+                    isExpanded = true;
+                    searchBox.classList.remove('w-8', 'md:w-9', 'bg-zinc-800/90');
+                    searchBox.classList.add('w-44', 'sm:w-56', 'md:w-64', 'bg-zinc-900', 'px-1', 'border-amber-400');
+                    searchForm.classList.remove('hidden');
+                    setTimeout(() => {
+                        searchForm.classList.remove('opacity-0');
+                        searchInput.focus();
+                    }, 50);
+                }
+
+                function collapseSearch() {
+                    if (!isExpanded) return;
+                    isExpanded = false;
+                    searchForm.classList.add('opacity-0');
+                    setTimeout(() => {
+                        searchForm.classList.add('hidden');
+                        searchBox.classList.remove('w-44', 'sm:w-56', 'md:w-64', 'bg-zinc-900', 'px-1', 'border-amber-400');
+                        searchBox.classList.add('w-8', 'md:w-9', 'bg-zinc-800/90');
+                        searchInput.value = '';
+                    }, 150);
+                }
+
+                searchBox.addEventListener('click', function (e) {
+                    if (!isExpanded) {
+                        e.stopPropagation();
+                        expandSearch();
+                    }
+                });
+
+                searchBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    if (!isExpanded) {
+                        expandSearch();
+                    } else if (searchInput.value.trim() !== '') {
+                        searchForm.submit();
+                    } else {
+                        collapseSearch();
+                    }
+                });
+
+                if (searchClose) {
+                    searchClose.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        collapseSearch();
+                    });
+                }
+
+                document.addEventListener('click', function (e) {
+                    if (isExpanded && !searchBox.contains(e.target)) {
+                        collapseSearch();
+                    }
+                });
+
+                searchForm.addEventListener('submit', function (e) {
+                    if (searchInput.value.trim() === '') {
+                        e.preventDefault();
+                        collapseSearch();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 
