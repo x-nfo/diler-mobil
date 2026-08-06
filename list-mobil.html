@@ -268,8 +268,8 @@
             </div>
         </div>
 
-        <!-- Car Cards Inventory Grid (3 Cards per Row on Mobile) -->
-        <div id="car-grid" class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 mb-12">
+        <!-- Car Cards Inventory Grid (2 Columns) -->
+        <div id="car-grid" class="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-12">
             <!-- Dynamic items rendered via Javascript -->
         </div>
 
@@ -750,54 +750,53 @@
                 <div class="block bg-white rounded-xl md:rounded-[20px] border border-zinc-200 shadow-soft overflow-hidden relative group cursor-pointer hover:shadow-premium hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
                     
                     <!-- Favorite Heart Toggle -->
-                    <button onclick="toggleFav('${car.id}', this)" class="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
+                    <button onclick="toggleFav('${car.id}', this)" class="absolute top-2 right-2 sm:top-3 sm:right-3 w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-white transition-colors z-20 shadow-sm">
                         <i class="${isFav ? 'ph-fill ph-heart text-rose-600' : 'ph ph-heart text-zinc-600'} text-xs sm:text-base md:text-lg"></i>
                     </button>
 
                     <!-- Image Thumbnail Container -->
-                    <a href="${car.detailUrl}" class="relative h-[90px] sm:h-[150px] md:h-[200px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center block">
+                    <a href="${car.detailUrl}" class="relative h-[120px] sm:h-[160px] md:h-[210px] bg-zinc-100 w-full overflow-hidden flex items-center justify-center block">
                         <img src="${car.image}" alt="${car.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 md:bottom-3 md:left-3 bg-zinc-900/90 text-white text-[7px] sm:text-[10px] md:text-xs font-bold px-1 py-0.5 sm:px-2.5 sm:py-1 rounded sm:rounded-md shadow-sm z-10 truncate max-w-[90%]">
+                        <div class="absolute bottom-1.5 left-1.5 sm:bottom-2 sm:left-2 md:bottom-3 md:left-3 bg-zinc-900/90 text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded sm:rounded-md shadow-sm z-10 truncate max-w-[90%]">
                             ${car.badge}
                         </div>
                     </a>
 
                     <!-- Card Body -->
-                    <div class="p-1.5 sm:p-3 md:p-5 flex flex-col flex-1 justify-between">
+                    <div class="p-2.5 sm:p-3.5 md:p-5 flex flex-col flex-1 justify-between">
                         <div>
-                            <div class="flex items-center gap-1 text-[8px] sm:text-[10px] text-zinc-400 font-bold uppercase tracking-tight md:tracking-wider mb-0.5">
+                            <div class="flex items-center gap-1 text-[9px] sm:text-[10px] text-zinc-400 font-bold uppercase tracking-tight md:tracking-wider mb-0.5">
                                 <span>${car.brand}</span>
                                 <span>&bull;</span>
                                 <span class="truncate">${car.bodyType}</span>
                             </div>
                             <a href="${car.detailUrl}">
-                                <h4 class="font-bold text-[10px] sm:text-xs md:text-base text-black leading-tight group-hover:text-zinc-600 transition-colors line-clamp-2 md:line-clamp-1">
+                                <h4 class="font-bold text-xs sm:text-sm md:text-base text-black leading-tight group-hover:text-zinc-600 transition-colors line-clamp-2 md:line-clamp-1">
                                     ${car.name}
                                 </h4>
                             </a>
-                            <p class="text-[8px] sm:text-xs text-zinc-500 mt-0.5 sm:mt-1.5 font-medium leading-tight">
-                                ${car.year} &bull; <span class="sm:hidden">${compactKm} &bull; ${compactTrans}</span><span class="hidden sm:inline">${car.km.toLocaleString('id-ID')} km &bull; ${car.transmission}</span>
+                            <p class="text-[10px] sm:text-xs text-zinc-500 mt-1 sm:mt-1.5 font-medium leading-tight">
+                                ${car.year} &bull; ${car.km.toLocaleString('id-ID')} km &bull; ${car.transmission}
                             </p>
                         </div>
 
                         <!-- Price & Actions -->
-                        <div class="mt-1.5 pt-1 sm:mt-3 sm:pt-2 md:mt-4 md:pt-3 border-t border-zinc-100">
-                            <span class="text-[7px] sm:text-[10px] font-bold text-zinc-400 uppercase tracking-wider block hidden sm:block">Harga Tunai</span>
-                            <p class="text-black font-extrabold text-[11px] sm:text-sm md:text-xl leading-tight">
-                                <span class="sm:hidden">${formattedPrice}</span>
-                                <span class="hidden sm:inline">${fullPrice}</span>
+                        <div class="mt-2 pt-1.5 sm:mt-3 sm:pt-2 md:mt-4 md:pt-3 border-t border-zinc-100">
+                            <span class="text-[8px] sm:text-[10px] font-bold text-zinc-400 uppercase tracking-wider block">Harga Tunai</span>
+                            <p class="text-black font-extrabold text-xs sm:text-base md:text-xl leading-tight">
+                                ${fullPrice}
                             </p>
                             
-                            <div class="inline-block bg-zinc-100 text-black text-[7px] sm:text-[10px] md:text-xs font-bold px-1 sm:px-2 py-0.5 rounded mt-0.5 border border-zinc-200 truncate max-w-full">
+                            <div class="inline-block bg-zinc-100 text-black text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded mt-1 border border-zinc-200 truncate max-w-full">
                                 Kredit ${car.monthlyCredit}
                             </div>
 
-                            <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-2 sm:mt-3.5">
-                                <a href="${car.detailUrl}" class="w-full bg-zinc-100 hover:bg-zinc-200 text-black text-center text-[8px] sm:text-xs font-bold py-1 sm:py-2 rounded-lg sm:rounded-xl border border-zinc-200 transition-colors flex items-center justify-center">
+                            <div class="grid grid-cols-2 gap-1.5 sm:gap-2 mt-2 sm:mt-3.5">
+                                <a href="${car.detailUrl}" class="w-full bg-zinc-100 hover:bg-zinc-200 text-black text-center text-[10px] sm:text-xs font-bold py-1.5 sm:py-2 rounded-lg sm:rounded-xl border border-zinc-200 transition-colors flex items-center justify-center">
                                     Detail
                                 </a>
-                                <a href="https://wa.me/6288292074288?text=${waText}" class="w-full bg-black hover:bg-zinc-800 text-white text-center text-[8px] sm:text-xs font-bold py-1 sm:py-2 rounded-lg sm:rounded-xl transition-colors flex items-center justify-center gap-0.5 shadow-sm">
-                                    <i class="ph-bold ph-whatsapp-logo text-[10px] sm:text-sm"></i> Sales
+                                <a href="https://wa.me/6288292074288?text=${waText}" class="w-full bg-black hover:bg-zinc-800 text-white text-center text-[10px] sm:text-xs font-bold py-1.5 sm:py-2 rounded-lg sm:rounded-xl transition-colors flex items-center justify-center gap-0.5 shadow-sm">
+                                    <i class="ph-bold ph-whatsapp-logo text-xs sm:text-sm"></i> Sales
                                 </a>
                             </div>
                         </div>
