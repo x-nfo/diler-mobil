@@ -457,79 +457,116 @@
 
         </div>
 
-        <!-- Related Cars (Mobil Serupa) -->
+        <!-- Related Cars (Mobil Serupa Slider) -->
         <div class="mt-12 mb-16">
             <div class="flex justify-between items-end mb-6">
                 <div>
                     <h3 class="text-xl md:text-2xl font-bold text-black">Mobil Serupa Pilihan</h3>
                     <p class="text-xs text-ajm-slate">Rekomendasi unit sekelas dengan penawaran terbaik</p>
                 </div>
-                <a href="list-mobil.html"
-                    class="text-xs font-bold text-black hover:underline flex items-center gap-1">
-                    Lihat Semua <i class="ph-bold ph-caret-right"></i>
-                </a>
+                <div class="flex items-center gap-3">
+                    <!-- Slider Navigation Buttons -->
+                    <div class="flex items-center gap-1.5">
+                        <button onclick="scrollRelatedCars(-300)" aria-label="Sebelumnya"
+                            class="w-8 h-8 md:w-9 md:h-9 bg-zinc-100 hover:bg-zinc-200 text-black rounded-full flex items-center justify-center transition-colors border border-zinc-200 shadow-sm active:scale-95">
+                            <i class="ph-bold ph-caret-left text-sm md:text-base"></i>
+                        </button>
+                        <button onclick="scrollRelatedCars(300)" aria-label="Berikutnya"
+                            class="w-8 h-8 md:w-9 md:h-9 bg-zinc-100 hover:bg-zinc-200 text-black rounded-full flex items-center justify-center transition-colors border border-zinc-200 shadow-sm active:scale-95">
+                            <i class="ph-bold ph-caret-right text-sm md:text-base"></i>
+                        </button>
+                    </div>
+                    <a href="list-mobil.html"
+                        class="text-xs font-bold text-black hover:underline flex items-center gap-1 ml-1">
+                        Lihat Semua <i class="ph-bold ph-caret-right"></i>
+                    </a>
+                </div>
             </div>
 
-            <!-- Grid 2 Columns -->
-            <div class="grid grid-cols-2 gap-3 sm:gap-6">
+            <!-- Horizontal Slider List -->
+            <div id="related-cars-slider"
+                class="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x scroll-smooth pb-4 -mx-4 px-4 md:mx-0 md:px-0">
+                
                 <!-- Related 1 -->
                 <a href="#"
-                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                    <div class="h-36 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                    class="block snap-start shrink-0 w-[240px] sm:w-[270px] md:w-[290px] bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
                         <img src="images/hero_2.webp" alt="Honda Brio"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-3.5 sm:p-5">
-                        <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Honda
-                            Brio Satya E MT</h4>
-                        <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2018 &bull; 38.000 km &bull; Bensin</p>
-                        <p class="text-sm sm:text-lg font-extrabold text-black mt-2 sm:mt-3">Rp 118.000.000</p>
+                    <div class="p-3.5 sm:p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Honda Brio Satya E MT</h4>
+                            <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2018 &bull; 38.000 km &bull; Bensin</p>
+                        </div>
+                        <p class="text-sm sm:text-lg font-extrabold text-black mt-3">Rp 118.000.000</p>
                     </div>
                 </a>
 
                 <!-- Related 2 -->
                 <a href="#"
-                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                    <div class="h-36 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                    class="block snap-start shrink-0 w-[240px] sm:w-[270px] md:w-[290px] bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
                         <img src="images/hrv.jpeg" alt="Honda HR-V"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-3.5 sm:p-5">
-                        <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Honda
-                            HR-V SE CVT</h4>
-                        <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2022 &bull; 18.000 km &bull; Bensin</p>
-                        <p class="text-sm sm:text-lg font-extrabold text-black mt-2 sm:mt-3">Rp 335.000.000</p>
+                    <div class="p-3.5 sm:p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Honda HR-V SE CVT</h4>
+                            <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2022 &bull; 18.000 km &bull; Bensin</p>
+                        </div>
+                        <p class="text-sm sm:text-lg font-extrabold text-black mt-3">Rp 335.000.000</p>
                     </div>
                 </a>
 
                 <!-- Related 3 -->
                 <a href="#"
-                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                    <div class="h-36 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                    class="block snap-start shrink-0 w-[240px] sm:w-[270px] md:w-[290px] bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
                         <img src="images/Kijang Inova.webp" alt="Innova Reborn"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-3.5 sm:p-5">
-                        <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Toyota
-                            Innova Reborn 2.4 G</h4>
-                        <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2021 &bull; 25.000 km &bull; Diesel</p>
-                        <p class="text-sm sm:text-lg font-extrabold text-black mt-2 sm:mt-3">Rp 355.000.000</p>
+                    <div class="p-3.5 sm:p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Toyota Innova Reborn 2.4 G</h4>
+                            <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2021 &bull; 25.000 km &bull; Diesel</p>
+                        </div>
+                        <p class="text-sm sm:text-lg font-extrabold text-black mt-3">Rp 355.000.000</p>
                     </div>
                 </a>
 
                 <!-- Related 4 -->
                 <a href="#"
-                    class="block bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                    <div class="h-36 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
-                        <img src="images/avanza.jpeg" alt="Toyota Avanza"
+                    class="block snap-start shrink-0 w-[240px] sm:w-[270px] md:w-[290px] bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                        <img src="images/Yaris.png" alt="Toyota Avanza"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-3.5 sm:p-5">
-                        <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Toyota Avanza G 1.5 AT</h4>
-                        <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2020 &bull; 42.000 km &bull; Bensin</p>
-                        <p class="text-sm sm:text-lg font-extrabold text-black mt-2 sm:mt-3">Rp 158.000.000</p>
+                    <div class="p-3.5 sm:p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Toyota Avanza G 1.5 AT</h4>
+                            <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2020 &bull; 42.000 km &bull; Bensin</p>
+                        </div>
+                        <p class="text-sm sm:text-lg font-extrabold text-black mt-3">Rp 158.000.000</p>
                     </div>
                 </a>
+
+                <!-- Related 5 -->
+                <a href="#"
+                    class="block snap-start shrink-0 w-[240px] sm:w-[270px] md:w-[290px] bg-white rounded-2xl md:rounded-[20px] border border-zinc-200 overflow-hidden shadow-soft group hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-40 sm:h-48 md:h-52 bg-zinc-100 overflow-hidden relative flex items-center justify-center">
+                        <img src="images/harga-pajero-sport.webp" alt="Mitsubishi Pajero Sport"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-3.5 sm:p-5 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-xs sm:text-base text-black group-hover:text-zinc-600 transition-colors">Mitsubishi Pajero Sport</h4>
+                            <p class="text-[10px] sm:text-xs text-ajm-slate mt-1 font-medium">2020 &bull; 52.000 km &bull; Diesel</p>
+                        </div>
+                        <p class="text-sm sm:text-lg font-extrabold text-black mt-3">Rp 385.000.000</p>
+                    </div>
+                </a>
+
             </div>
         </div>
 
@@ -667,6 +704,14 @@
             } else {
                 navigator.clipboard.writeText(window.location.href);
                 alert('Link detail mobil telah disalin ke clipboard!');
+            }
+        }
+
+        // Related Cars Slider Helper
+        function scrollRelatedCars(amount) {
+            const slider = document.getElementById('related-cars-slider');
+            if (slider) {
+                slider.scrollBy({ left: amount, behavior: 'smooth' });
             }
         }
     </script>
