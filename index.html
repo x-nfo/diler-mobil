@@ -161,7 +161,8 @@
         <main class="px-5 md:px-0 flex flex-col md:block">
 
             <!-- Hero Section (Swiper Image Banner Slider) -->
-            <div id="beranda" class="-mx-5 md:mx-0 relative bg-amber-400 flex flex-col items-center overflow-hidden">
+            <div id="beranda"
+                class="-mx-5 md:mx-0 relative bg-amber-400 flex flex-col items-center overflow-hidden lg:h-[80vh]">
 
                 <!-- Floating Header / Pill Nav (Aligned to Left) -->
                 <header
@@ -195,24 +196,24 @@
                 </header>
 
                 <!-- Hero Swiper Carousel Container -->
-                <div class="w-full relative swiper hero-swiper">
-                    <div class="swiper-wrapper">
+                <div class="w-full h-full relative swiper hero-swiper">
+                    <div class="swiper-wrapper h-full">
                         <!-- Slide 1: Promo Merdeka / Promo Agustus -->
-                        <div class="swiper-slide flex justify-center bg-amber-400">
+                        <div class="swiper-slide flex justify-center items-center bg-amber-400 h-full">
                             <img src="images/Hero_Promo_Agustus.png" alt="Promo Agustus Hero Banner"
-                                class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-none block">
+                                class="w-full h-full object-cover block">
                         </div>
 
                         <!-- Slide 2: Spesialis Karimun & Mobil Pilihan -->
-                        <div class="swiper-slide flex justify-center bg-amber-400">
+                        <div class="swiper-slide flex justify-center items-center bg-amber-400 h-full">
                             <img src="images/hero_3.png" alt="Spesialis Karimun & Mobil Bekas Pilihan Banner"
-                                class="w-full h-auto object-cover max-h-[320px] sm:max-h-[480px] md:max-h-none block">
+                                class="w-full h-full object-cover block">
                         </div>
 
                     </div>
 
                     <!-- Pagination Bullets (Elevated Above Card on Mobile & Desktop) -->
-                    <div class="swiper-pagination !bottom-5 sm:!bottom-16 md:!bottom-24 !z-30"></div>
+                    <div class="swiper-pagination !bottom-5 sm:!bottom-16 md:!bottom-20 !z-30"></div>
                 </div>
             </div>
 
